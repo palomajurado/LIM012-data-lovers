@@ -1,6 +1,4 @@
-link de gh pages✨<br>
-https://luzcry.github.io/LIM012-data-lovers/src/index.html 🌟<br>
-No olvides darle a la estrellita ⭐
+
 
 # Definición del producto DIGITAL: 💻
 

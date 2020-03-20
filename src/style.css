@@ -21,6 +21,7 @@
 Invision https://mararodriguez597039.invisionapp.com/freehand/datalovers-lol-AYIeTKBpY?v=X6JP0IPtqctW100IADvc3w%3D%3D&linkshare=urlcopied
 Links FIGMA https://www.figma.com/file/lr2q13Jdqztgdy6ag3oV7a/Untitled?node-id=77%3A177
 TRELLO : https://trello.com/b/ZbxxiHvY/datalovers */
+
 body,
 html {
   margin: 0;
@@ -29,7 +30,7 @@ html {
   color: #333;
   /* overflow-x: hidden; */
   /* overflow-y: hidden; */
-  background: url(./assets/backNegro.png);
+  background: url(./assets/backgroundNero.jpeg);
   background-size: cover;
   height: 100%;
   width: 100%;
@@ -121,28 +122,6 @@ html {
 }
 
 .corner {
-  border: #07cbe9 2px solid;
-  border-radius: 30px 0px 30px 0px;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-  width: 95%;
-  margin-left: 2rem;
-  padding: 5px;
-}
-
-.builds {
-  background-color: #0ca6beb7;
-  border-radius: 25px 0px 25px 0px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  height: 50px;
-  text-align: center;
-  color: #dfc981;
-  align-items: center;
-  text-decoration: none;
-}
-
-.corner {
   border: #07cbe9 1px solid;
   border-radius: 30px 0px 30px 0px;
   margin-top: 3rem;
@@ -214,7 +193,7 @@ html {
   margin-top: 5px;
   display: grid;
   grid-template-columns: 33% 33% 34%;
-  grid-template-rows: 25% 20% 20% 15% 15%;
+  grid-template-rows: 25% 20% 20% 12% 10%;
 }
 
 #mainElements1 {
@@ -248,105 +227,91 @@ html {
 #mainElements3 {
   grid-row: 3;
   grid-column: 2/3;
+  margin: auto;
+  margin-left: 20%;
+}
+
+.form {
+  min-width: 80%;
   position: relative;
-}
-
-#mainElements3 input {
-  height: 60%;
-  width: 100%;
+  min-height: 100px;
+  padding-top: 30px;
   border: none;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.form input {
+  min-width: 80%;
+  min-height: 100%;
+  color: rgba(252, 250, 250, 0.932);
+  text-transform: capitalize;
   outline: none;
-  color: wheat;
-  padding-top: 75px;
-  margin-left: 3%;
   text-align: center;
-  letter-spacing: 10px;
-  font-size: 30px;
-  background: transparent;
-  background: transparent;
-  /*
-
-cursor: pointer;
-
-text-shadow: #B48643; */
-  background: transparent;
-  /* font-family: 'Roboto', sans-serif;
-border-bottom: 3px solid #B48643;
- */
-}
-
-/* #mainElements3 input:hover {
-    border-bottom: 3px solid #07CBE9;
-    letter-spacing: 10px;
-    text-align: center;
-    font-weight: bolder;
-} */
-
-.label_name {
-  position: absolute;
-  width: 100%;
-  height: 50%;
-  bottom: 0px;
-  /* margin-left: 25px; */
-  margin-bottom: 75px;
-  padding-bottom: 5px;
-  color: wheat;
+  font-size: 20px;
+  padding-top: 53px;
+  background-color: transparent;
   font-family: "Roboto", sans-serif;
-  font-size: 25px;
-  pointer-events: none;
-  border-bottom: 1px solid #feb412;
+  border: transparent;
+  letter-spacing: 10px;
+  text-shadow: 1px 1px 8px #feb412, 0 0 1em #07cbe9, 0 0 0.2em #07cbe9;
 }
 
-.label_name::after {
+.form label {
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  min-width: 80%;
+  min-height: 100%;
+  pointer-events: none;
+  /* margin-left: 140px; */
+  border-bottom: 1px solid #b48643;
+}
+
+.form label::after {
   content: "";
   position: absolute;
-  width: 100%;
-  height: 100%;
-  bottom: -1, 2px;
-  left: 0px;
-  /* margin-right: -1px; */
-  /* border-bottom: 2px solid red; */
+  bottom: -1px;
+  left: 0%;
+  min-height: 100%;
+  min-width: 100%;
+  border-bottom: 2px solid #07cbe9;
   transform: translateX(-100%);
   transition: transform 0.3s ease;
 }
 
-.letraName {
-  position: absolute;
-  /* text-align: center; */
-  /* width: 400px;
-margin-top: 40%; */
-  left: 30px;
-  transition: all 0.3s ease;
-  bottom: 0px;
-  white-space: nowrap;
+.form input:focus + .label_name::after,
+.form input:valid + .label_name::after {
+  transform: translateX(0%);
 }
 
-#inputName {
-  text-transform: capitalize;
+.content-name {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  margin: 0 20% 0 20%;
+  transition: all 0.3s ease;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #dfc981;
+  /* text-shadow: turquoise; */
+}
+
+.form input:focus + .label_name .content-name,
+.form input:valid + .label_name .content-name {
+  transform: translateY(-150%);
+  margin: 0 3% 0 2%;
+  /* padding: 0 140px 0 140px; */
+  font-size: 20px;
+  letter-spacing: 5px;
+  color: turquoise;
+  font-family: "Roboto", sans-serif;
+  text-shadow: 1px 1px 8px #feb412, 0 0 1em #07cbe9, 0 0 0.2em #07cbe9;
 }
 
 #searchInputs {
   text-transform: capitalize;
-}
-
-#inputName:focus+.label_name .letraName {
-  transform: translateY(-180%);
-  font-size: 15px;
-  left: 10px;
-  letter-spacing: 9px;
-  text-shadow: 1px 1px 8px #feb412, 0 0 1em #07cbe9, 0 0 0.2em #07cbe9;
-}
-
-#inputName:focus .label_name .letraName::after {
-  transform: translateX(0%);
-}
-
-#nombreIngresado {
-  letter-spacing: 6px;
-  padding-left: 71px;
-  text-shadow: turquoise;
-  background-color: rgba(77, 0, 128, 0.486);
-  font-size: 40px;
 }
 
 #mainElements4 {
@@ -354,13 +319,14 @@ margin-top: 40%; */
   grid-column: 2/3;
 }
 
-#mainElements4>button {
+#mainElements4 > button {
   width: 80%;
   height: 60%;
   outline: none;
   color: wheat;
   font-size: 25px;
   margin-left: 12%;
+  margin-top: 12px;
   border: 1px solid #07cbe9;
   background-color: transparent;
   font-family: "Marcellus SC", serif;
@@ -389,7 +355,7 @@ margin-left: 35%; */
   animation: modal 2s;
 }
 
-#mainElements4>button:hover {
+#mainElements4 > button:hover {
   box-shadow: 0 0 1.25rem #feb412, 0 0 1.25rem #feb412;
   text-shadow: 1px 1px 8px #feb412, 0 0 1em #07cbe9, 0 0 0.2em #07cbe9;
   letter-spacing: 6px;
@@ -404,10 +370,9 @@ margin-left: 35%; */
 
 #imgRiot {
   width: 55%;
-  height: 80%;
+  height: 100%;
   outline: none;
   margin-left: 25%;
-  margin-top: 20%;
   background-color: transparent;
   border: 2px solid #fa2f2f;
 }
@@ -489,7 +454,6 @@ margin-left: 35%; */
   text-align: center;
 }
 
-
 /*SEGUNDA INTERFAZ */
 
 #secondScreen {
@@ -530,7 +494,7 @@ margin-left: 35%; */
   padding: 3rem;
   grid-gap: 3rem;
   padding-bottom: 0;
-  transition: .4s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 
 #filteredList {
@@ -540,7 +504,6 @@ margin-left: 35%; */
   padding: 3rem;
   grid-gap: 3rem;
 }
-
 
 /* #filteredList p {
     font-size: 22px;
@@ -553,8 +516,8 @@ margin-left: 35%; */
   margin-left: 41%;
   grid-template-columns: 12% 20%;
   margin-top: -18px;
+  padding-top: 10px;
 }
-
 
 /*CARD*/
 
@@ -570,7 +533,7 @@ margin-left: 35%; */
   position: relative;
   transform: perspective(600px) rotateY(0deg);
   transform-style: preserve-3d;
-  transition: all ease .5s;
+  transition: all ease 0.5s;
 }
 
 .card:hover {
@@ -580,7 +543,6 @@ margin-left: 35%; */
 .card:hover .championName {
   transform: rotateY(180deg);
 }
-
 
 /*Backcard*/
 
@@ -598,7 +560,7 @@ margin-left: 35%; */
   box-shadow: inset 0 0 1.25rem #07cbe9, 0 0 1.25rem #07cbe9;
   transform: perspective(600px) rotateY(180deg);
   backface-visibility: hidden;
-  transition: all ease .5s;
+  transition: all ease 0.5s;
 }
 
 .back-card__info {
@@ -615,12 +577,8 @@ margin-left: 35%; */
   font-size: 12.8px;
 }
 
-.championNameImage {
-  width: 60px;
-}
-
 .champion-name p {
-  font-family: 'Trade Winds', cursive;
+  font-family: "Trade Winds", cursive;
   font-size: 22px;
   color: #dfc981;
 }
@@ -658,7 +616,6 @@ margin-left: 35%; */
   padding: 4px 8px;
 }
 
-
 /* front card */
 
 .championName {
@@ -667,7 +624,7 @@ margin-left: 35%; */
   font-size: 20px;
   text-align: center;
   font-family: "Trade Winds", cursive;
-  transition: all ease .5s;
+  transition: all ease 0.5s;
 }
 
 .championName:hover {
@@ -687,16 +644,16 @@ margin-left: 35%; */
   animation: 10s ease infinite;
 }
 
-
 /*nav bar second screen*/
 
 .searchbar {
+  top: 0px;
   border: #dfc981;
   height: 50px;
   background-color: rgb(218, 213, 213);
-  color: #dfc981;
+  color: #ab8347;
   display: grid;
-  grid-template-columns: 13% 1% 1fr 1% 10%;
+  grid-template-columns: 13% 1% 1fr 1% 15%;
   padding-left: 16px;
   font-family: "Marcellus SC", serif;
 }
@@ -706,7 +663,8 @@ margin-left: 35%; */
   display: grid;
   grid-template-columns: 5% 95%;
   grid-gap: 20px;
-  padding-top: 16px;
+  width: 100%;
+  margin-top: 17px;
 }
 
 ul {
@@ -737,7 +695,7 @@ li.active a {
   letter-spacing: 4px;
 }
 
-.menu>p {
+.menu > p {
   align-self: center;
 }
 
@@ -768,11 +726,13 @@ li.active a {
   border: 0;
   background-color: rgb(218, 213, 213);
   color: #a87e3e;
-  width: 130px;
+  width: 100%;
+  height: 40px;
   margin-left: 2px;
   font-size: 24px;
   margin-top: -16px;
   font-family: "Marcellus SC", serif;
+  box-sizing: border-box;
 }
 
 #searchInputs:hover {
@@ -815,6 +775,7 @@ li.active a {
 .levelBtn {
   outline: none;
   text-decoration: none;
+  height: 40px;
   background-color: rgb(218, 213, 213);
   margin-top: 8px;
 }
@@ -867,6 +828,7 @@ li.active a {
 }
 
 /* Dropdown Content (Hidden by Default) */
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -878,8 +840,8 @@ li.active a {
   color: #a87e3e;
   cursor: pointer;
 }
-
 /* Links inside the dropdown */
+
 .dropdown-content div {
   color: black;
   padding: 12px 16px;
@@ -888,6 +850,125 @@ li.active a {
 }
 
 /* Show the dropdown menu on hover */
+
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+#btnPlayFree {
+  display: grid;
+  grid-template-columns: 20% 60%;
+  align-items: center;
+  border-radius: 25px 0px 25px 0px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.733);
+  margin: 8px;
+  padding-left: 5px;
+  grid-gap: 3px;
+}
+
+#logoLol {
+  width: 30px;
+  margin: 5px;
+}
+
+#conerFreeBtn {
+  border: #07cbe9 2px solid;
+  border-radius: 30px 0px 30px 0px;
+  margin-left: 45%;
+  margin-bottom: 4rem;
+  width: 200px;
+}
+
+#freePlay {
+  text-decoration: none;
+  text-align: center;
+  color: #a87e3e;
+  font-size: 20px;
+  font-family: "Marcellus SC", serif;
+  font-weight: bold;
+}
+
+#responsiveBar {
+  display: none;
+}
+#responsiveBar > .searchbar {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+@media (max-width: 668px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+  }
+  #searchBar {
+    display: none;
+  }
+
+  #searchInputs {
+    border: 0;
+    background-color: rgb(218, 213, 213);
+    color: #a87e3e;
+    width: 400px;
+    height: 40px;
+    margin-left: 2px;
+    font-size: 15px;
+    margin-top: -16px;
+    font-family: "Marcellus SC", serif;
+  }
+  #responsiveBar {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .responsiveBar {
+    top: 0px;
+    border: #dfc981;
+    height: 60px;
+    background-color: rgb(218, 213, 213);
+    color: #ab8347;
+    display: grid;
+    grid-template-columns: 35% 5% 1fr 5% 25%;
+    padding-left: 33px;
+    font-family: "Marcellus SC", serif;
+  }
+  #role {
+    height: 50px;
+    height: 50px;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #dfdfdf2a;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 7px;
+    color: #a87e3e;
+    cursor: pointer;
+  }
+  .text1 h3 {
+    font-size: 28px;
+    font-family: "Marcellus SC", serif;
+    text-align: center;
+    color: #dfc981;
+  }
+  #mainElements1 {
+    font-size: 14px;
+  }
+  #mainElements2 {
+    margin-bottom: 2rem;
+  }
+
+  #divider2 {
+    display: grid;
+    grid-template-columns: 20% 20%;
+    margin-top: -18px;
+    padding-top: 10px;
+    grid-gap: 6px;
+  }
+  #champion {
+    font-size: 60px;
+  }
 }

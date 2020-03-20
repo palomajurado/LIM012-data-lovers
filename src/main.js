@@ -1,10 +1,9 @@
-import data from "./data/lol/lol.js";
+import data from './data/lol/lol.js';
 import {
   filterByName,
   filteredbyClass,
   filteredByDifficulty
-} from "./data.js"
-
+} from './data.js';
 
 /*Muestra en interfaz dos mas saludo y letra capital*/
 const primeraInterfaz = document.getElementById('primeraInterfaz');
@@ -95,10 +94,10 @@ let input = document.querySelector('#searchInputs');
 let filteredList = document.querySelector('#filteredList');
 
 //target : lo que sea a lo que se le aplique add event listener
-if (typeof input.addEventListener != "undefined") {
+if (typeof input.addEventListener != 'undefined') {
   input.addEventListener(
-    "keyup",
-    evt => {
+    'keyup',
+    (evt) => {
       let term = evt.target.value.toLowerCase();
 
       /*let filteredChampions = Object.values(championList).filter(champion => {
@@ -110,23 +109,23 @@ if (typeof input.addEventListener != "undefined") {
       let filteredChampions = filterByName(championList, term);
       //mensaje de error en la busqueda por nombre
       if (term.length != 0) {
-        list.classList.add("hidden");
-        filteredList.classList.remove("hidden");
+        list.classList.add('hidden');
+        filteredList.classList.remove('hidden');
       } else {
-        list.classList.remove("hidden");
-        filteredList.classList.add("hidden");
+        list.classList.remove('hidden');
+        filteredList.classList.add('hidden');
       }
-      let errorMessage = document.querySelector("#error");
+      let errorMessage = document.querySelector('#error');
       if (filteredChampions.length === 0) {
-        errorMessage.classList.remove("hidden");
+        errorMessage.classList.remove('hidden');
       } else {
-        errorMessage.classList.add("hidden");
+        errorMessage.classList.add('hidden');
       }
 
       //vaciar arreglo para que no se duplique
-      filteredList.innerHTML = "";
+      filteredList.innerHTML = '';
       //filteredList ==  <div id="filteredList" ></div>
-      Object.values(filteredChampions).map(champion => {
+      Object.values(filteredChampions).map((champion) => {
         const div = document.createElement('div');
         div.className = 'card';
         div.style.backgroundImage = `url("${champion.splash}")`;
@@ -186,30 +185,30 @@ if (typeof input.addEventListener != "undefined") {
     false
   );
 }
-filteredList.innerHTML = "";
+filteredList.innerHTML = '';
 //[p.btn, p.btn, p.btn, p.btn, p.btn, p.btn, p.btn]
 // p.btn == button == <p class="btn" data-value="ALL">ALL</p>
 let ul = document.querySelector('ul');
 let li = document.querySelectorAll('li');
 
-li.forEach(el => {
+li.forEach((el) => {
   el.addEventListener('click', function () {
     ul.querySelector('.active').classList.remove('active');
     el.classList.add('active');
-  })
-
+  });
 });
 
-li.forEach(button => {
-  button.addEventListener("click", () => {
-    let term = button.getAttribute("data-value");
+/*para recrrer cada clase */
+li.forEach((button) => {
+  button.addEventListener('click', () => {
+    let term = button.getAttribute('data-value');
     // <p class="btn" data-value="ALL">ALL</p>
-    if (term === "ALL") {
-      list.classList.remove("hidden");
-      filteredList.classList.add("hidden");
+    if (term === 'ALL') {
+      list.classList.remove('hidden');
+      filteredList.classList.add('hidden');
     } else {
-      list.classList.add("hidden");
-      filteredList.classList.remove("hidden");
+      list.classList.add('hidden');
+      filteredList.classList.remove('hidden');
     }
     // filteredChampions == []
     /*let filteredChampions = Object.values(championList).filter(champion => {
@@ -217,11 +216,11 @@ li.forEach(button => {
         return champion;
       }
     });*/
-    filteredList.innerHTML = "";
+    filteredList.innerHTML = '';
     let filteredChampions = filteredbyClass(championList, term);
 
     //filteredList ==  <div id="filteredList" ></div>
-    Object.values(filteredChampions).map(champion => {
+    Object.values(filteredChampions).map((champion) => {
       const div = document.createElement('div');
       div.className = 'card';
       div.style.backgroundImage = `url("${champion.splash}")`;
@@ -285,20 +284,19 @@ li.forEach(button => {
   <div class="difficulty1" data-value="2" id="medium" href="#">medium</div>,
   <div class="difficulty1" data-value="3" id="hard" href="#">hard</div>]
 */
-let difficulty1 = document.querySelectorAll(".difficulty1");
-difficulty1.forEach(option => {
-  option.addEventListener("click", () => {
-    let term = option.getAttribute("data-value");
+let difficulty1 = document.querySelectorAll('.difficulty1');
+difficulty1.forEach((option) => {
+  option.addEventListener('click', () => {
+    let term = option.getAttribute('data-value');
 
-    list.classList.add("hidden");
-    filteredList.classList.remove("hidden");
+    list.classList.add('hidden');
+    filteredList.classList.remove('hidden');
 
-
-    filteredList.innerHTML = "";
+    filteredList.innerHTML = '';
     let filteredChampions = filteredByDifficulty(championList, term);
 
     //filteredList ==  <div id="filteredList" ></div>
-    Object.values(filteredChampions).map(champion => {
+    Object.values(filteredChampions).map((champion) => {
       const div = document.createElement('div');
       div.className = 'card';
       div.style.backgroundImage = `url("${champion.splash}")`;
@@ -354,6 +352,6 @@ difficulty1.forEach(option => {
       div.appendChild(backCard);
       filteredList.appendChild(div);
     });
-  })
+  });
 });
-filteredList.innerHTML = "";
+filteredList.innerHTML = '';

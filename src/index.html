@@ -4,12 +4,14 @@
 <head>
   <meta charset="utf-8" />
   <title>LOL</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="icon" type="image/png" href="./assets/logoURL.png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
   <link href="https://fonts.googleapis.com/css?family=Cuprum|Marcellus+SC|Roboto|Trade+Winds&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <meta charset="utf-8" />
+
   <title>LOL</title>
 </head>
 
@@ -23,7 +25,7 @@
       <img src="./assets/logoLOL.png" id="logoLOL" />
       <div class="header-content">
         <div class="videoCentral">
-          <video src="./assets/videoLol.mp4" autoplay loop muted height="600" width="650"></video>
+          <video src="./assets/videoLol.mp4" autoplay loop muted height="600" width="100%"></video>
         </div>
         <div id="cuadroLinea"></div>
       </div>
@@ -31,20 +33,20 @@
     <main class="mainContainer">
       <div id="mainElements1">
         <p>
-          League of Legends is a MOBA type game (Multiplayer Online Battle Arena) where players work as a team to
-          destroy the central structure (called Nexus) and gain victory.
+          League of Legends is a MOBA type game (Multiplayer Online Battle
+          Arena) where players work as a team to destroy the central structure
+          (called Nexus) and gain victory.
         </p>
       </div>
       <div id="mainElements2"><img src="./assets/divider.png" /></div>
-      <div id="mainElements3">
-        <input type="text" id="inputName" name="modal" /><label for="name" class="label_name"><span
-            class="letraName">ENTER YOUR NAME</span></label>
+      <div id="mainElements3" class="form">
+        <input type="text" name="name" autocomplete="off" required spellcheck="false" id="inputName" />
+        <label for="name" class="label_name">
+          <span class="content-name">ENTER YOUR NAME</span>
+        </label>
       </div>
       <div id="mainElements4">
         <button id="buttonEnter">ENTER</button>
-        <!-- <input type="radio" id="buttonEnter1" name="modal" style="visibility:hidden" />
-                <input type="radio" id="cerrar-modal" name="modal" /><label for="cerrar-modal">X</label>
-                <div id="modal"></div> -->
       </div>
       <div id="mainElements5">
         <a href="https://www.riotgames.com/en" class="nav-link" target="_blank">
@@ -63,28 +65,30 @@
     </div>
 
     <div id="secondScreen">
-      <div class="mainTittle">
-        <h3 id="chooseYour">CHOOSE YOUR</h3>
-        <div id="divider2">
-          <img src="assets/casco1.png" alt="helmet" />
-          <h1 id="champion">CHAMPION</h1>
-        </div>
-      </div>
-      <div class="text1">
-        <h3>
-          Each champion has different statistics where their initial values ​​are measured and how these values
-          ​​rise for each level. To know more click on a champion.
-        </h3>
-      </div>
-      <div class="corner">
-        <div class="searchbar">
-          <div class="nameSearch">
-            <img src="assets/search.png" alt="search" />
-            <input id="searchInputs" type="text" placeholder="Search" spellcheck="false" />
+      <div class="backgroundHead">
+        <div class="mainTittle">
+          <h3 id="chooseYour">CHOOSE YOUR</h3>
+          <div id="divider2">
+            <img src="assets/casco1.png" alt="helmet" />
+            <h1 id="champion">CHAMPION</h1>
           </div>
-          <span class="line"></span>
-          <div class="menu">
-            <ul>
+        </div>
+        <div class="text1">
+          <h3>
+            Each champion has different statistics where their initial values
+            ​​are measured and how these values ​​rise for each level. To know
+            more click on a champion.
+          </h3>
+        </div>
+        <div id="searchBar" class="corner">
+          <div class="searchbar">
+            <div class="nameSearch">
+              <img src="assets/search.png" alt="search" />
+              <input id="searchInputs" type="text" placeholder="Search" spellcheck="false" />
+            </div>
+            <span class="line"></span>
+
+            <ul class="menu">
               <li class="active" data-value="ALL"><a>ALL</a></li>
               <li data-value="Assassin"><a>ASSASSIN</a></li>
               <li data-value="Mage"><a>MAGE</a></li>
@@ -93,28 +97,29 @@
               <li data-value="Support"><a>SUPPORT</a></li>
               <li data-value="Marksman"><a>MARKSMAN</a></li>
             </ul>
-          </div>
 
-          <span class="line"></span>
-          <div class="difficulty levelBtn">
-            <div class="dropdown">
-              <img id="arrow" src="assets/arrow.png" alt="" />
-              <span>Difficulty</span>
-              <div id="myDropdown" class="dropdown-content">
-                <div class="difficulty1" data-value="1" id="easy">
-                  <div class="levelFull"></div>
-                  <div class="levelEmpty"></div>
-                  <div class="levelEmpty"></div>
-                </div>
-                <div class="difficulty1" data-value="2" id="medium">
-                  <div class="levelFull"></div>
-                  <div class="levelFull"></div>
-                  <div class="levelEmpty"></div>
-                </div>
-                <div class="difficulty1" data-value="3" id="hard">
-                  <div class="levelFull"></div>
-                  <div class="levelFull"></div>
-                  <div class="levelFull"></div>
+
+            <span class="line"></span>
+            <div class="difficulty levelBtn">
+              <div class="dropdown">
+                <img id="arrow" src="assets/arrow.png" alt="" />
+                <span>Difficulty</span>
+                <div id="myDropdown" class="dropdown-content">
+                  <div class="difficulty1" data-value="1" id="easy">
+                    <div class="levelFull"></div>
+                    <div class="levelEmpty"></div>
+                    <div class="levelEmpty"></div>
+                  </div>
+                  <div class="difficulty1" data-value="2" id="medium">
+                    <div class="levelFull"></div>
+                    <div class="levelFull"></div>
+                    <div class="levelEmpty"></div>
+                  </div>
+                  <div class="difficulty1" data-value="3" id="hard">
+                    <div class="levelFull"></div>
+                    <div class="levelFull"></div>
+                    <div class="levelFull"></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -122,46 +127,115 @@
         </div>
       </div>
     </div>
+
+    <!-- responsive -->
+
+    <div id="responsiveBar" class="corner">
+      <div class="responsiveBar">
+        <div class="nameSearch">
+          <img src="assets/search.png" alt="search" />
+          <input id="searchInputs" type="text" placeholder="Search" spellcheck="false" />
+        </div>
+        <span class="line"></span>
+        <div class="dropdown">
+          <img id="role" src="assets/knight.png" alt="" />
+          <span>ROLE</span>
+          <div id="myDropdown" class="dropdown-content">
+
+            <ul class="menu">
+              <li data-value="ALL"><a>ALL</a></li>
+              <li data-value="Assassin"><a>ASSASSIN</a></li>
+              <li data-value="Mage"><a>MAGE</a></li>
+              <li data-value="Fighter"><a>FIGTHER</a></li>
+              <li data-value="Tank"><a>TANK</a></li>
+              <li data-value="Support"><a>SUPPORT</a></li>
+              <li data-value="Marksman"><a>MARKSMAN</a></li>
+            </ul>
+
+          </div>
+        </div>
+        <span class="line"></span>
+        <div class="difficulty levelBtn">
+          <div class="dropdown">
+            <img id="arrow" src="assets/arrow.png" alt="" />
+            <span>Difficulty</span>
+            <div id="myDropdown" class="dropdown-content">
+              <div class="difficulty1" data-value="1" id="easy">
+                <div class="levelFull"></div>
+                <div class="levelEmpty"></div>
+                <div class="levelEmpty"></div>
+              </div>
+              <div class="difficulty1" data-value="2" id="medium">
+                <div class="levelFull"></div>
+                <div class="levelFull"></div>
+                <div class="levelEmpty"></div>
+              </div>
+              <div class="difficulty1" data-value="3" id="hard">
+                <div class="levelFull"></div>
+                <div class="levelFull"></div>
+                <div class="levelFull"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div id="list"></div>
     <div id="filteredList" class="hidden"></div>
+
 
     <h3 id="error" class="hidden">
       <img src="./assets/goldSword.png" /> Champion not found
       <img src="./assets/shield1.png" />
     </h3>
-
-    <div class="corner">
-      <div class="builds">
-        <p>CHAMPION'S GUIDE</p>
-        <a href="https://na.op.gg/champion/statistics" target="_blank">OP.GG</a>
-        <a href="https://www.probuilds.net/champions" target="_blank">PROBUILDS</a>
-        <a href="https://morelegends.com/es/champions" target="_blank">MORELEGENDS</a>
+    <div class="endPage">
+      <div class="corner">
+        <div class="builds">
+          <p>CHAMPION'S GUIDE</p>
+          <a href="https://na.op.gg/champion/statistics" target="_blank">OP.GG</a>
+          <a href="https://www.probuilds.net/champions" target="_blank">PROBUILDS</a>
+          <a href="https://morelegends.com/es/champions" target="_blank">MORELEGENDS</a>
+        </div>
       </div>
     </div>
-    <footer class="footer">
-      <div class="right">
-        <p>&copy; 2020 &nbsp;| &nbsp; Todos los Derechos Reservados</p>
+    <div id="conerFreeBtn">
+      <div id="btnPlayFree">
+        <img id="logoLol" src="assets/logoURL.png" alt="" />
+        <a id="freePlay" href="https://signup.euw.leagueoflegends.com/es/signup/redownload?page_referrer=index"
+          target="_blank">PLAY FREE</a>
       </div>
-      <div id="left">
-        <a href="# ">
-          <img src="./assets/shareLOGO.png" id="compartir" class="animated wobble" />
-        </a>
-        <a href="https:/facebook.com" class="nav-link" target="_blank">
-          <img src="./assets/fbLOGO.png" id="facebook" />
-        </a>
+    </div>
 
-        <a href="https://twitter.com" class="nav-link" target="_blank">
-          <img src="./assets/twittLOGO.png" class="imgRedes " />
-        </a>
+  </div>
 
-        <a href="https://www.instagram.com/" class="nav-link" target="_blank">
-          <img src="./assets/instaLOGO11.png" id="instagram" />
-        </a>
-      </div>
-    </footer>
 
-    <script src="./data.js " type="module "></script>
-    <script src="./main.js" type="module"></script>
+
+
+
+  <footer class="footer">
+    <div class="right">
+      <p>&copy; 2020 &nbsp;| &nbsp; Todos los Derechos Reservados</p>
+    </div>
+    <div id="left">
+      <a href="# ">
+        <img src="./assets/shareLOGO.png" id="compartir" class="animated wobble" />
+      </a>
+      <a href="https:/facebook.com" class="nav-link" target="_blank">
+        <img src="./assets/fbLOGO.png" id="facebook" />
+      </a>
+
+      <a href="https://twitter.com" class="nav-link" target="_blank">
+        <img src="./assets/twittLOGO.png" class="imgRedes " />
+      </a>
+
+      <a href="https://www.instagram.com/" class="nav-link" target="_blank">
+        <img src="./assets/instaLOGO11.png" id="instagram" />
+      </a>
+    </div>
+  </footer>
+  <script src="./data.js " type="module "></script>
+  <script src="./main.js" type="module"></script>
 </body>
 
 </html>
