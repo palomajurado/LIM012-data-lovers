@@ -480,7 +480,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 2rem 0;
+    padding: 2rem 0 0 0;
     position: relative;
 }
 
@@ -530,7 +530,7 @@ body {
     padding: 3rem;
     grid-gap: 3rem;
     color: #dfc981;
-    padding-bottom: 0;
+    padding-bottom: 50px;
     transition: 0.4s ease-in-out;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
@@ -567,6 +567,11 @@ body {
     border: 0.0625rem solid #e0cb7e;
     background-position: -170px center;
     transform: perspective(600px) rotateY(0deg);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(auto-fit, 390px);
+    grid-auto-rows: 390px;
+    grid-auto-flow: row dense;
 }
 
 .boxBackImg {
@@ -686,6 +691,42 @@ body {
     box-shadow: inset 0 0 1.25rem #07cbe9, 0 0 1.25rem #07cbe9;
 }
 
+#buttonContainer0 {
+    display: flex;
+    justify-content: center;
+    /* width: 100%; */
+    /* height: 100%; */
+    background-color: transparent;
+    /* border: 0.0625rem solid #07cbe9; */
+    /* padding: 1.5rem 3rem; */
+    /* margin: 3rem 0; */
+    outline: none;
+    color: wheat;
+    font-size: 1.5625rem;
+    font-family: "Marcellus SC", serif;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#buttonContainer0 a {
+    background-color: transparent;
+    border: 0.0625rem solid #07cbe9;
+    padding: 1.5rem 3rem;
+    outline: none;
+    color: wheat;
+    font-size: 1.5625rem;
+    font-family: "Marcellus SC", serif;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#buttonContainer0 a:hover {
+    box-shadow: 0 0 1.25rem #feb412, 0 0 1.25rem #feb412;
+    text-shadow: 1px 1px 8px #feb412, 0 0 1em #07cbe9, 0 0 0.2em #07cbe9;
+    letter-spacing: 6px;
+    border: 0.0625rem solid #b48643;
+}
+
 
 /* front card */
 
@@ -693,7 +734,7 @@ body {
     top: 100%;
     position: absolute;
     font-size: 1.25rem;
-    text-align: center;
+    margin-left: 35%;
     transition: all ease 0.5s;
     font-family: "Trade Winds", cursive;
 }
@@ -784,12 +825,12 @@ li.active a {
 }
 
 .text1 h3 {
-    font-size: 1.125rem;
+    font-size: 1.3rem;
     color: #dfc981;
     text-align: center;
     padding: 0 6rem 0 6rem;
-    padding: 0 0.3125rem 0.0625rem 0.3125rem;
     font-family: "Marcellus SC", serif;
+    padding: 0 0.3125rem 0.0625rem 0.3125rem;
 }
 
 #searchInputs {
@@ -949,7 +990,7 @@ li.active a {
 .corner {
     width: 95%;
     padding: 0.3125rem;
-    margin: 5rem 0 2rem 2rem;
+    margin: 2rem 0 2rem 2rem;
     border: #07cbe9 0.0625rem solid;
     border-radius: 1.875rem 0rem 1.875rem 0rem;
 }
@@ -1012,7 +1053,7 @@ li.active a {
         height: 500px;
     }
     #mainElements1 p {
-        font-size: 1.4375rem;
+        font-size: 18px;
     }
     .footer {
         flex-direction: column-reverse;
@@ -1027,8 +1068,79 @@ li.active a {
     .header {
         height: 350px;
     }
+    .form {
+        width: 60%;
+        margin-top: 3rem;
+    }
+    #mainElements1 {
+        margin: 0 0 1rem 0;
+    }
+    #mainElements1 p {
+        font-size: 13px;
+    }
+    .welcomingBox {
+        height: 65%;
+        width: 100%;
+        font-size: 20px;
+    }
     .right p {
         font-size: 1rem;
+    }
+    .modal {
+        height: 500px;
+        width: 310px;
+        padding: 1rem;
+    }
+    .modal-stats_left p,
+    .modal-stats_right p {
+        font-size: 11px;
+    }
+    .secondScreenBox {
+        height: 38%;
+        width: 100%;
+        padding: 0.5rem 0 0 0;
+    }
+    #chooseYour {
+        font-size: 13px;
+        margin-left: 20px;
+        padding: 0;
+    }
+    #divider2 {
+        margin-left: 18%;
+    }
+    #divider2 img {
+        width: 50px;
+    }
+    #champion {
+        font-size: 30px;
+    }
+    .text1 h3 {
+        font-size: 12px;
+        color: #dfc981;
+        text-align: center;
+        padding: 0 0.3125rem 0.0625rem 0.3125rem;
+    }
+    #list {
+        padding: 0rem;
+        grid-gap: 2rem;
+        grid-template-columns: repeat(auto-fill, minmax(94px, 1%));
+    }
+    .card {
+        width: 120px;
+        text-align: center;
+    }
+    .championName {
+        font-size: 10px;
+        margin-left: 40px;
+        margin-top: 5px;
+    }
+    .back-card__info h3 {
+        font-size: 10px;
+    }
+    .more-stats,
+    .playButton {
+        font-size: 9px;
+        padding: 3px;
     }
 }
 
@@ -1036,10 +1148,23 @@ li.active a {
     .header {
         height: 250px;
     }
+    #mainElements1 p {
+        font-size: 13px;
+    }
     .form {
-        width: 90%;
+        width: 60%;
+        margin-top: 2rem;
     }
     .right p {
         font-size: 0.875rem;
+    }
+    .modal {
+        height: 500px;
+        width: 250px;
+        padding: 1rem;
+    }
+    .modal-stats_left p,
+    .modal-stats_right p {
+        font-size: 12px;
     }
 }

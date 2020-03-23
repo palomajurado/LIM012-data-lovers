@@ -19,7 +19,7 @@ const setName = () => {
     window.scroll({
         top: 0
     });
-    setTimeout(() => (welcome.style.display = 'none'), 2000);
+    setTimeout(() => (welcome.style.display = 'none'), 3000);
 };
 
 /*PASA AL SIGUIENTE SCREEN boton enter y teclado la 2da linea*/
@@ -101,12 +101,14 @@ const functionCardsStructure = (championList_data) => {
         moreStatsButton.className = 'more-stats';
         moreStatsButton.innerHTML = 'More stats';
         moreStatsButton.addEventListener('click', () => {
-            const playButtonContainer = document.getElementById('buttonContainer');
             document.body.style.overflow = 'hidden';
             modalOverlay.style.display = 'flex';
             modalOverlay.style.top = `${window.pageYOffset}px`;
+
+            const playButtonContainer = document.getElementById('buttonContainer');
             playButtonContainer.innerHTML = '';
             playButtonContainer.appendChild(functionPlayButton());
+
             modalStatsUncle(champion);
         });
 
@@ -118,8 +120,11 @@ const functionCardsStructure = (championList_data) => {
         list.appendChild(div);
     });
 };
-
 functionCardsStructure(championList);
+
+const playButtonContainer1 = document.getElementById('buttonContainer0');
+playButtonContainer1.innerHTML = '';
+playButtonContainer1.appendChild(functionPlayButton());
 
 /*-----------------------------------------------------*/
 
