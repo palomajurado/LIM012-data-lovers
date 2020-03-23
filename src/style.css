@@ -1122,8 +1122,6 @@ li.active a {
     }
     .text1 h3 {
         font-size: 12px;
-        color: #dfc981;
-        text-align: center;
         padding: 0 0.3125rem 0.0625rem 0.3125rem;
     }
     #list {
@@ -1155,6 +1153,29 @@ li.active a {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
+    .welcomingBox {
+        height: 65%;
+        width: 100%;
+        font-size: 20px;
+    }
+    #chooseYour {
+        font-size: 13px;
+        margin-left: 20px;
+        padding: 0;
+    }
+    #divider2 {
+        margin-left: 18%;
+    }
+    #divider2 img {
+        width: 50px;
+    }
+    #champion {
+        font-size: 30px;
+    }
+    .text1 h3 {
+        font-size: 12px;
+        padding: 0 0.3125rem 0.0625rem 0.3125rem;
+    }
     .header {
         height: 250px;
     }
