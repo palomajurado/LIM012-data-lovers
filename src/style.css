@@ -1041,9 +1041,20 @@ li.active a {
     .header {
         height: 600px;
     }
+    .card {
+        background-position: -90px center;
+    }
+    #list {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        margin-right: 12px;
+        padding-top: 0;
+    }
 }
 
 @media (max-width: 768px) {
+    #list {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 3fr));
+    }
     .header {
         height: 500px;
     }
@@ -1059,7 +1070,7 @@ li.active a {
     }
 }
 
-@media (max-width: 576px) {
+@media (min-width: 481px) and (max-width: 767px) {
     .header {
         height: 350px;
     }
@@ -1116,13 +1127,17 @@ li.active a {
         padding: 0 0.3125rem 0.0625rem 0.3125rem;
     }
     #list {
-        padding: 0rem;
-        grid-gap: 2rem;
-        grid-template-columns: repeat(auto-fill, minmax(94px, 1%));
+        padding: 5px;
+        grid-gap: 1.5rem;
+        grid-template-columns: 45% 45%;
+        justify-content: center;
     }
     .card {
-        width: 120px;
-        text-align: center;
+        width: 250px;
+        background-position: -140px center;
+    }
+    .corner {
+        padding: 0.3125rem;
     }
     .championName {
         font-size: 10px;
@@ -1130,16 +1145,16 @@ li.active a {
         margin-top: 5px;
     }
     .back-card__info h3 {
-        font-size: 10px;
+        font-size: 13px;
     }
     .more-stats,
     .playButton {
-        font-size: 9px;
-        padding: 3px;
+        font-size: 10px;
+        padding: 5px;
     }
 }
 
-@media (max-width: 350px) {
+@media (min-width: 320px) and (max-width: 480px) {
     .header {
         height: 250px;
     }
@@ -1153,13 +1168,30 @@ li.active a {
     .right p {
         font-size: 0.875rem;
     }
+    #buttonContainer {
+        position: absolute;
+        margin-top: 280px;
+    }
     .modal {
         height: 500px;
         width: 250px;
-        padding: 1rem;
     }
     .modal-stats_left p,
     .modal-stats_right p {
-        font-size: 12px;
+        font-size: 10px;
+    }
+    #list {
+        padding: 1px;
+        grid-gap: 1rem;
+        grid-template-columns: 47% 47%;
+        justify-content: center;
+    }
+    .card {
+        width: 170px;
+        background-position: -140px center;
+        margin-bottom: 15px;
+    }
+    .championName {
+        font-size: 15px;
     }
 }
