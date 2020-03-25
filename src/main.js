@@ -1,7 +1,7 @@
 import data from './data/lol/lol.js';
 import { filterByName, filteredbyClass, filteredByDifficulty, orderList } from './data.js';
 
-/*PASAR DE INTERFACES 1 a 2, coge valor del input y convierte 1posicion en UPPERCASE,presenta resultado en el div welcomming con tiempo de muestra 3 seg*/
+/* PASAR DE INTERFACES 1 a 2, coge valor del input y convierte 1posicion en UPPERCASE,presenta resultado en el div welcomming con tiempo de muestra 3 seg */
 const keyPressEnter = document.getElementById('inputName');
 const firstScreen = document.getElementById('firstScreen');
 const secondScreen_0 = document.getElementById('secondScreen_0');
@@ -22,18 +22,26 @@ const setName = () => {
     setTimeout(() => (welcome.style.display = 'none'), 3000);
 };
 
-/*PASA AL SIGUIENTE SCREEN boton enter y teclado la 2da linea*/
+/* PASA AL SIGUIENTE SCREEN boton enter y teclado la 2da linea */
 document.getElementById('buttonEnter').addEventListener('click', setName);
 keyPressEnter.addEventListener('keypress', ({ keyCode }) => {
     if (keyCode === 13) setName();
 });
 /*-------------------------------------------*/
 
-/*MUESTRAS DATA: Por defecto y coge el div donde sera albergado LIST*/
+/* MUESTRAS DATA: Por defecto y coge el div donde sera albergado LIST */
+
 const championList = data.data;
 const list = document.getElementById('list');
 
-//FUNCION:boton de jugar
+window.onload = () => {
+    const buttonDown = document.getElementById('button-down');
+    buttonDown.addEventListener('click', () => {
+        window.scrollTo(0, 0);
+    });
+};
+
+// FUNCION:boton de jugar
 const functionPlayButton = () => {
     const playButton = document.createElement('a');
     playButton.setAttribute('href', 'https://signup.lan.leagueoflegends.com/es/signup/redownload?page_referrer=index');
@@ -48,7 +56,7 @@ const functionCardsStructure = (championList_data) => {
     const checkData = Array.isArray(championList_data) ? championList_data : Object.values(championList_data);
 
     checkData.map((champion) => {
-        /*FRONT CARDS*/
+        /* FRONT CARDS */
 
         const div = document.createElement('div');
         div.className = 'card';
@@ -58,7 +66,7 @@ const functionCardsStructure = (championList_data) => {
         p.innerHTML = `${champion.name}`;
         div.appendChild(p);
 
-        /*BACK CARDS*/
+        /* BACK CARDS */
 
         const backCard = document.createElement('div');
         backCard.className = 'back-card';
@@ -92,7 +100,7 @@ const functionCardsStructure = (championList_data) => {
         });
         backCardInfo.appendChild(championStats);
 
-        /*Boton de MORESTATS y playButton (funcion fuera de esta ARRIBA)*/
+        /* Boton de MORESTATS y playButton (funcion fuera de esta ARRIBA) */
         const backCardContainer = document.createElement('div');
         backCardContainer.className = 'backCardContainer';
 
@@ -127,7 +135,7 @@ playButtonContainer1.appendChild(functionPlayButton());
 
 /*-----------------------------------------------------*/
 
-/*MODAL MORESTATS*/
+/* MODAL MORESTATS */
 const modalOverlay = document.getElementById('overlay');
 const modalRoles = document.getElementById('modal-roles');
 const modalCloseButton = document.getElementById('closeButton');
@@ -148,7 +156,7 @@ const modalStatsUncle = (champion) => {
     const moreStatsLeft = moreStats_2.slice(0, 11);
     const moreStatsRight = moreStats_2.slice(11, moreStats_2.length);
 
-    /*CASCO del modal TAGS*/
+    /* CASCO del modal TAGS */
     const helmetModal = document.createElement('img');
     helmetModal.setAttribute('src', 'assets/casco.png');
     modalRoles.appendChild(helmetModal);
@@ -180,27 +188,26 @@ window.addEventListener('keypress', ({ keyCode }) => {
 
 /*-------------------------------------------*/
 
-//BUSQUEDA POR NOMBRES
+// BUSQUEDA POR NOMBRES
 const input = document.querySelector('#searchInputs');
 
-//target : lo que sea a lo que se le aplique add event listener
-if (typeof input.addEventListener != 'undefined') {
+// target : lo que sea a lo que se le aplique add event listener
+if (typeof input.addEventListener !== 'undefined') {
     input.addEventListener(
         'keyup',
         (evt) => {
             const term = evt.target.value.toLowerCase();
             const filteredChampions = filterByName(championList, term);
 
-            //CHAMPION NOT FOUND
-            let errorMessage = document.querySelector('#error');
+            // CHAMPION NOT FOUND
+            const errorMessage = document.querySelector('#error');
             if (filteredChampions.length === 0) {
                 errorMessage.classList.remove('hidden');
             } else {
                 errorMessage.classList.add('hidden');
             }
-            /*-----------------------------------------*/
 
-            //vaciar arreglo para que no se duplique
+            // vaciar arreglo para que no se duplique
             list.innerHTML = '';
 
             functionCardsStructure(filteredChampions);
@@ -209,13 +216,13 @@ if (typeof input.addEventListener != 'undefined') {
     );
 }
 
-/*FUNCION: Hover del navbar*/
+/* FUNCION: Hover del navbar */
 const ul = document.querySelector('.menu');
 const ul2 = document.querySelector('.menu2');
 const li = document.querySelectorAll('li');
 
 li.forEach((el) => {
-    el.addEventListener('click', function() {
+    el.addEventListener('click', () => {
         ul.querySelector('.active').classList.remove('active');
         ul2.querySelector('.active').classList.remove('active');
         el.classList.add('active');
@@ -224,7 +231,7 @@ li.forEach((el) => {
 
 /*---------------------------------------------*/
 
-/*FILTRADO: De CLASE */
+/* FILTRADO: De CLASE */
 li.forEach((button) => {
     button.addEventListener('click', () => {
         const term = button.getAttribute('data-value');
@@ -237,7 +244,7 @@ li.forEach((button) => {
     });
 });
 
-let difficulty1 = document.querySelectorAll('.difficulty1');
+const difficulty1 = document.querySelectorAll('.difficulty1');
 difficulty1.forEach((option) => {
     option.addEventListener('click', () => {
         const term = option.getAttribute('data-value');
@@ -249,7 +256,7 @@ difficulty1.forEach((option) => {
     });
 });
 
-let order1 = document.querySelectorAll('.order1');
+const order1 = document.querySelectorAll('.order1');
 order1.forEach((option) => {
     option.addEventListener('click', () => {
         const term = option.getAttribute('data-value');

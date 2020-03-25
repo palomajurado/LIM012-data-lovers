@@ -6,21 +6,21 @@
 }
 
 
-/*Tipos de letras 
+/* Tipos de letras
 - font-family: 'Cuprum', sans-serif;
 - font-family: 'Trade Winds', cursive;
 - font-family: 'Marcellus SC', serif;
 - font-family: 'Roboto', sans-serif;
 -font-family: 'Ruda', sans-serif;
 
- 
- Colores establecidos:
+
+Colores establecidos:
 - celeste #07CBE9
 - morado 9B51E0
 - inputs casi blanco EEEAEA
 - dorado LOL #B48643
- <iframe width="560" height="315" src="https://www.youtube.com/embed/A-wez_wSWEA?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
- https://www.youtube.com/watch?v=A-wez_wSWEA&feature=youtu.be -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/A-wez_wSWEA?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+https://www.youtube.com/watch?v=A-wez_wSWEA&feature=youtu.be -->
 Invision https://mararodriguez597039.invisionapp.com/freehand/datalovers-lol-AYIeTKBpY?v=X6JP0IPtqctW100IADvc3w%3D%3D&linkshare=urlcopied
 Links FIGMA https://www.figma.com/file/lr2q13Jdqztgdy6ag3oV7a/Untitled?node-id=77%3A177
 TRELLO : https://trello.com/b/ZbxxiHvY/datalovers */
@@ -36,7 +36,7 @@ body {
 }
 
 
-/*Scroll Bar*/
+/* Scroll Bar */
 
 ::-webkit-scrollbar {
     width: 0.3125rem;
@@ -60,7 +60,7 @@ body {
 }
 
 
-/*HEADER*/
+/* HEADER */
 
 .header {
     height: 700px;
@@ -135,7 +135,7 @@ body {
 }
 
 
-/*MAIN*/
+/* MAIN */
 
 .mainContainer {
     width: 100%;
@@ -151,6 +151,16 @@ body {
     align-items: center;
     padding: 0 1rem;
     margin: 1rem 0;
+}
+
+.modal-roles p {
+    margin: 0 0.5rem;
+}
+
+.right p {
+    color: rgb(247, 221, 165);
+    font-family: "Marcellus SC", serif;
+    font-size: 1.25rem;
 }
 
 #mainElements1 p {
@@ -357,10 +367,6 @@ body {
     color: rgb(223, 201, 129);
 }
 
-.modal-roles {
-    font-family: "Ruda", sans-serif;
-}
-
 .modal-header img {
     height: 20px;
     width: 20px;
@@ -401,6 +407,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "Ruda", sans-serif;
 }
 
 .modal-roles img {
@@ -408,12 +415,8 @@ body {
     width: 50px;
 }
 
-.modal-roles p {
-    margin: 0 0.5rem;
-}
 
-
-/*FOOTER*/
+/* FOOTER */
 
 .footer {
     width: 100%;
@@ -427,12 +430,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.right p {
-    color: rgb(247, 221, 165);
-    font-family: "Marcellus SC", serif;
-    font-size: 1.25rem;
 }
 
 .right:hover {
@@ -470,7 +467,7 @@ body {
 /*---------------------------------------------------------------------------------------*/
 
 
-/*SEGUNDA INTERFAZ */
+/* SEGUNDA INTERFAZ */
 
 .secondScreenBox {
     height: 38%;
@@ -496,6 +493,10 @@ body {
     top: 0;
     left: 0;
     margin: 0%;
+}
+
+.welcomingBox h3 {
+    text-shadow: 1px 1px 8px #feb412, 0 0 1em #07cbe9, 0 0 0.2em #07cbe9;
 }
 
 .mainTittle {
@@ -549,7 +550,7 @@ body {
 }
 
 
-/*CARD*/
+/* CARD */
 
 .card {
     width: 220px;
@@ -589,7 +590,7 @@ body {
 }
 
 
-/*Backcard*/
+/* Backcard */
 
 .back-card {
     top: 0;
@@ -656,7 +657,7 @@ body {
 }
 
 
-/*Button backcard play & moreStats*/
+/* Button backcard play & moreStats */
 
 .backCardContainer {
     display: flex;
@@ -795,7 +796,7 @@ body {
 }
 
 
-/*FILTRADO por dificultad*/
+/* FILTRADO por dificultad */
 
 #myDropdown:hover {
     display: flex;
@@ -894,9 +895,6 @@ body {
 
 /*MEDIA QUERIES*/
 
-
-/* @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {} */
-
 @media (min-width: 1024px) and (max-width: 1280px) {
     #logoLOL {
         height: auto;
@@ -994,7 +992,7 @@ body {
         font-size: 20px;
     }
     .right p {
-        font-size: 1rem;
+        font-size: 12px;
     }
     .modal {
         height: 500px;
@@ -1145,6 +1143,16 @@ body {
     #buttonEnter {
         margin: 2.5rem 0;
     }
+    #error {
+        width: 80%;
+        padding: 1.25rem;
+        margin-bottom: 10%;
+        font-size: 1rem;
+    }
+    #error img {
+        width: 32px;
+        height: 33px;
+    }
 }
 
 @media (max-width: 320px) {
@@ -1159,4 +1167,50 @@ body {
         position: initial;
         margin-top: 0;
     }
+    .searchbar {
+        padding-left: 0rem;
+        font-size: 10px;
+    }
+    #error {
+        width: 80%;
+        padding: 1.25rem;
+        font-size: 1rem;
+    }
+    #error img {
+        width: 22px;
+        height: 23px;
+    }
+    .builds a,
+    .builds p {
+        font-size: 9px;
+    }
+    .right p {
+        font-size: 0.3rem;
+    }
+    .card {
+        width: 152px;
+    }
+    #list {
+        padding: 1px;
+        grid-gap: 1rem;
+        grid-template-columns: 45% 45%;
+    }
+}
+
+.ir-arriba {
+    display: inline-block;
+    padding: 20px;
+    border: 2px solid yellow;
+    border-radius: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    filter: blur(50%);
+    font-size: 20px;
+    color: rgb(245, 193, 50);
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1;
 }
