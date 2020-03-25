@@ -1,233 +1,278 @@
 /*nav bar second screen*/
 
 .searchbar {
-  top: 0rem;
-  height: 50px;
-  width: 100%;
-  display: inline-flex;
-  color: #ab8347;
-  border: #dfc981;
-  padding-left: 1rem;
-  font-family: "Marcellus SC", serif;
-  background-color: rgb(218, 213, 213);
+    top: 0rem;
+    height: 50px;
+    width: 100%;
+    display: inline-flex;
+    color: #ab8347;
+    border: #dfc981;
+    padding-left: 1rem;
+    font-family: "Marcellus SC", serif;
+    border-radius: 1.6rem 0rem 1.6rem 0rem;
+    background-color: rgb(218, 213, 213);
+}
+
+.order span {
+    font-size: 15px;
 }
 
 #searchInputs:hover {
-  color: #795de6;
-  font-size: 1.5625rem;
-  letter-spacing: 0.375rem;
-  text-shadow: 0.0625rem 0.0625rem 0.5rem #07cbe9, 0 0 1em #07cbe9,
-    0 0 0.2em #07cbe9;
+    color: #795de6;
+    font-size: 1.5625rem;
+    letter-spacing: 0.375rem;
+    text-shadow: 0.0625rem 0.0625rem 0.5rem #07cbe9, 0 0 1em #07cbe9, 0 0 0.2em #07cbe9;
 }
 
 #searchInputs::placeholder {
-  color: #a87e3e;
-  padding-right: 0.3125rem;
+    color: #a87e3e;
+    padding-right: 0.3125rem;
 }
 
 #searchInputs ::placeholder:hover {
-  color: #795de6;
+    color: #795de6;
 }
 
 #searchInputs {
-  text-transform: capitalize;
+    text-transform: capitalize;
 }
 
 .nameSearch {
-  display: grid;
-  grid-gap: 20px;
-  padding-top: 1rem;
-  color: #a87e3e;
-  grid-template-columns: 5% 95%;
+    display: grid;
+    grid-gap: 20px;
+    padding-top: 1rem;
+    color: #a87e3e;
+    grid-template-columns: 5% 95%;
 }
 
 #searchInputs {
-  border: 0;
-  width: 130px;
-  color: #a87e3e;
-  font-size: 1.5rem;
-  margin-top: -1rem;
-  margin-left: 0.125rem;
-  font-family: "Marcellus SC", serif;
-  background-color: rgb(218, 213, 213);
+    border: 0;
+    width: 130px;
+    color: #a87e3e;
+    font-size: 1.5rem;
+    margin-top: -1rem;
+    margin-left: 0.125rem;
+    font-family: "Marcellus SC", serif;
+    background-color: rgb(218, 213, 213);
 }
 
 .dif {
-  margin-left: 10px;
-  cursor: pointer;
-  display: flex;
-  height: 100%;
+    margin-left: 10px;
+    cursor: pointer;
+    display: flex;
+    height: 100%;
 }
 
 .dif>img {
-  justify-self: center;
-  align-self: center;
+    justify-self: center;
+    align-self: center;
 }
 
 .dif>span {
-  justify-self: center;
-  align-self: center;
-  margin-left: 10px;
-  margin-right: 10px;
+    align-self: center;
+    margin-right: 10px;
 }
 
-
 ul {
-  display: flex;
-  list-style: none;
-  width: 100%;
-  text-decoration: none;
-  justify-content: space-evenly;
-  align-items: center;
+    display: flex;
+    list-style: none;
+    width: 100%;
+    text-decoration: none;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 li {
-  list-style: none;
+    list-style: none;
 }
 
 ul li a {
-  cursor: pointer;
-  color: #ab8347;
-  font-weight: bold;
-  text-decoration: none;
+    cursor: pointer;
+    color: #ab8347;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 ul li a:hover {
-  color: #795de6;
-  letter-spacing: 4px;
-  text-shadow: 0.0625rem 0.0625rem 0.5rem #07cbe9, 0 0 1em #07cbe9,
-    0 0 0.2em #07cbe9;
+    color: #795de6;
+    letter-spacing: 4px;
+    text-shadow: 0.0625rem 0.0625rem 0.5rem #07cbe9, 0 0 1em #07cbe9, 0 0 0.2em #07cbe9;
 }
 
 li.active a {
-  letter-spacing: 4px;
-  color: #795de6;
-  text-shadow: 0.0625rem 0.0625rem 0.5rem #07cbe9, 0 0 1em #07cbe9,
-    0 0 0.2em #07cbe9;
+    letter-spacing: 4px;
+    color: #795de6;
+    text-shadow: 0.0625rem 0.0625rem 0.5rem #07cbe9, 0 0 1em #07cbe9, 0 0 0.2em #07cbe9;
 }
 
 .menu>p {
-  align-self: center;
+    align-self: center;
 }
 
 .orderArray {
-  width: 130px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
+    width: 130px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
 .orderArray:hover .SortContent {
-  display: block;
+    display: block;
 }
 
 .SortContent {
-  z-index: 1;
-  display: none;
-  cursor: pointer;
-  min-width: 160px;
-  color: #a87e3e;
-  padding: 0.4375rem;
-  position: absolute;
-  background-color: #dfdfdf2a;
-  box-shadow: 0rem 0.5rem 1rem 0rem rgba(0, 0, 0, 0.2);
-
+    z-index: 1;
+    display: none;
+    cursor: pointer;
+    min-width: 160px;
+    color: #a87e3e;
+    padding: 0.4375rem;
+    position: absolute;
+    background-color: #dfdfdf2a;
+    box-shadow: 0rem 0.5rem 1rem 0rem rgba(0, 0, 0, 0.2);
 }
 
-
 #az {
-  height: 50px;
-  width: 50px;
+    height: 50px;
+    width: 50px;
 }
 
 #za {
-  height: 50px;
-  width: 50px;
+    height: 50px;
+    width: 50px;
 }
 
 .orderArray:hover .SortContent {
-  display: block;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
+    display: block;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
 }
 
 #dropdownSort:hover .SortContent {
-  display: block;
+    display: block;
 }
 
 .dropdownMenu {
-  display: none;
+    display: none;
 }
+
 
 /* Dropdown Content (Hidden by Default) */
 
 .dropdown-content {
-  z-index: 1;
-  display: none;
-  cursor: pointer;
-  min-width: 160px;
-  color: #a87e3e;
-  padding: 0.4375rem;
-  position: absolute;
-  background-color: #dfdfdf2a;
-  box-shadow: 0rem 0.5rem 1rem 0rem rgba(0, 0, 0, 0.2);
-
+    z-index: 1;
+    display: none;
+    cursor: pointer;
+    min-width: 160px;
+    color: #a87e3e;
+    padding: 0.4375rem;
+    position: absolute;
+    background-color: #dfdfdf2a;
+    box-shadow: 0rem 0.5rem 1rem 0rem rgba(0, 0, 0, 0.2);
 }
+
 
 /* Links inside the dropdown */
 
 .dropdown-content div {
-  color: black;
-  display: block;
-  padding: 0.75rem 1rem;
-  text-decoration: none;
+    color: black;
+    display: block;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
 }
 
 
 /* Show the dropdown menu on hover */
 
 .dropdown:hover .dropdown-content {
-  display: block;
+    display: block;
 }
 
 .dropdownMenu:hover .dropdown-content {
-  display: block;
+    display: block;
 }
 
 #role {
-  width: 45px;
-  height: 40px;
+    width: 45px;
+    height: 40px;
 }
 
-
-
 .dropdownStyle {
-  display: flex;
-  height: 100%;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    ul li a {
+        font-size: 11px;
+    }
 }
 
 @media (max-width: 767px) {
-  .menu {
-    display: none;
-  }
+    .menu {
+        display: none;
+    }
+    .menu2 {
+        display: flex;
+        flex-direction: column;
+    }
+    .dropdownMenu {
+        display: block;
+        list-style: none;
+        width: 100%;
+        text-decoration: none;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
 
-  .menu2 {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .dropdownMenu {
-    display: block;
-    list-style: none;
-    width: 100%;
-    text-decoration: none;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-
+@media (min-width: 320px) and (max-width: 480px) {
+    .builds a,
+    .builds p {
+        font-size: 11px;
+    }
+    #searchInputs {
+        width: 59px;
+        font-size: 14px;
+        margin-top: -1rem;
+    }
+    .searchbar {
+        padding-left: 0rem;
+    }
+    .nameSearch {
+        display: grid;
+        grid-gap: 17px;
+        grid-template-columns: 10% 70%;
+    }
+    .nameSearch img {
+        width: 20px;
+        height: 20px;
+        margin-left: 5px;
+    }
+    #role {
+        width: 25px;
+        height: 20px;
+        margin-left: 3px;
+    }
+    .dropdownStyle div span {
+        font-size: 14px;
+    }
+    .dropdownStyle {
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+    .dropdownMenu {
+        display: block;
+        width: 40%;
+        margin-right: 7px;
+    }
+    .line {
+        border-left: 0.06rem solid #07cbe9;
+    }
 }
