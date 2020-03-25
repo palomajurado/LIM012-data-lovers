@@ -29,7 +29,9 @@ const setName = () => {
 
 /*PASA AL SIGUIENTE SCREEN boton enter y teclado la 2da linea*/
 document.getElementById("buttonEnter").addEventListener("click", setName);
-keyPressEnter.addEventListener("keypress", ({ keyCode }) => {
+keyPressEnter.addEventListener("keypress", ({
+  keyCode
+}) => {
   if (keyCode === 13) setName();
 });
 /*-------------------------------------------*/
@@ -64,9 +66,9 @@ orderArray.map(option => {
 
 const functionCardsStructure = championList_data => {
   // Es una arreglo()? si lo es MUESTRAME el arreglo , si no lo es, vuelvelo ARRAYS con Object.value (Le saca los valores de key en forma de ARRAY)
-  const checkData = Array.isArray(championList_data)
-    ? championList_data
-    : Object.values(championList_data);
+  const checkData = Array.isArray(championList_data) ?
+    championList_data :
+    Object.values(championList_data);
 
   checkData.map(champion => {
     /*FRONT CARDS*/
@@ -196,7 +198,9 @@ const modalStatsUncle = champion => {
   });
 };
 modalCloseButton.addEventListener("click", closeModal);
-window.addEventListener("keypress", ({ keyCode }) => {
+window.addEventListener("keypress", ({
+  keyCode
+}) => {
   if (keyCode === 13) closeModal();
 });
 
@@ -237,9 +241,15 @@ const ul2 = document.querySelector(".menu2");
 const li = document.querySelectorAll("li");
 
 li.forEach(el => {
-  el.addEventListener("click", function() {
-    ul.querySelector(".active").classList.remove("active");
-    ul2.querySelector(".active").classList.remove("active");
+  el.addEventListener("click", function () {
+    if (ul.querySelector(".active") !== null) {
+      ul.querySelector(".active").classList.remove("active")
+    }
+    if (ul2.querySelector(".active") !== null) {
+      ul2.querySelector(".active").classList.remove("active")
+    }
+    /* ;
+     ul2.querySelector(".active").classList.remove("active");*/
     el.classList.add("active");
   });
 });
