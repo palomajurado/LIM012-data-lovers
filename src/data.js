@@ -1,11 +1,19 @@
 export const filterByName = (championList, term) => {
+  let error = TypeError;
   let filteredChampions = getArray(championList).filter(champion => {
     //indexof da -1 si no encuentra resultados
     if (champion.name.toLowerCase().indexOf(term) != -1) {
       return champion;
     }
   });
-
+  //typeerror
+  try {
+    if (term == " ") throw error;
+    if (term == "0") throw error;
+    if (term == null) throw error;
+  } catch (error) {
+    throw error();
+  }
   return filteredChampions;
 };
 
@@ -55,8 +63,10 @@ export const orderList = (championList, term) => {
   let orderedList;
   const list = getArray(championList);
 
+
   if (term === "az") {
     orderedList = list.sort((a, b) => {
+
       if (a.name < b.name) {
         return -1;
       }
@@ -68,6 +78,7 @@ export const orderList = (championList, term) => {
   }
   if (term === "za") {
     orderedList = list.sort((a, b) => {
+
       if (a.name < b.name) {
         return -1;
       }
