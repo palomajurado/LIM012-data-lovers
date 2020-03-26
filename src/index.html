@@ -5,9 +5,9 @@
     <meta charset="utf-8" />
     <title>LOL</title>
     <link rel="icon" type="image/png" href="./assets/logoURL.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link href="https://fonts.googleapis.com/css?family=Ruda&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ruda&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Cuprum|Marcellus+SC|Roboto|Trade+Winds&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
@@ -39,8 +39,8 @@
             <div id="mainElements2" class="form">
                 <input type="text" name="name" autocomplete="off" required spellcheck="false" id="inputName" />
                 <label for="name" class="label_name">
-          <span class="content-name">ENTER YOUR NAME</span>
-        </label>
+            <span class="content-name">ENTER YOUR NAME</span>
+          </label>
             </div>
             <div id="mainElements3">
                 <button id="buttonEnter">ENTER</button>
@@ -54,7 +54,7 @@
     </div>
 
     <!-- segunda interfaz -->
-    <div id="secondScreen_0" class="">
+    <div id="secondScreenUno" class="">
         <div id="secondScreen">
             <div class="backgroundHead">
                 <div class="secondScreenBox">
@@ -89,7 +89,7 @@
                             </div>
                             <div id="myDropdown" class="dropdown-content">
                                 <ul class="menu2">
-                                    <li data-value="ALL"><a>ALL</a></li>
+                                    <li class="active" data-value="ALL"><a>ALL</a></li>
                                     <li data-value="Assassin"><a>ASSASSIN</a></li>
                                     <li data-value="Mage"><a>MAGE</a></li>
                                     <li data-value="Fighter"><a>FIGTHER</a></li>
@@ -117,20 +117,10 @@
                                 <span>Difficulty</span>
                             </div>
                             <div id="myDropdown" class="dropdown-content">
-                                <div class="difficulty1" data-value="1" id="easy">
-                                    <div class="levelFull"></div>
-                                    <div class="levelEmpty"></div>
-                                    <div class="levelEmpty"></div>
-                                </div>
-                                <div class="difficulty1" data-value="2" id="medium">
-                                    <div class="levelFull"></div>
-                                    <div class="levelFull"></div>
-                                    <div class="levelEmpty"></div>
-                                </div>
-                                <div class="difficulty1" data-value="3" id="hard">
-                                    <div class="levelFull"></div>
-                                    <div class="levelFull"></div>
-                                    <div class="levelFull"></div>
+                                <div class="difficulty1">
+                                    <div class="levelEmpty" data-value="1" id="easy"></div>
+                                    <div class="levelEmpty" data-value="2" id="medium"></div>
+                                    <div class="levelEmpty" data-value="3" id="hard"></div>
                                 </div>
                             </div>
                         </div>
@@ -140,8 +130,8 @@
                             <div class="order">
                                 <span>A⮃Z</span>
                                 <div id="dropdownSort" class="SortContent">
-                                    <img class="order1" id="az" data-value="az" src="assets/az.png" alt="order A-Z">
-                                    <img class="order1" id="za" data-value="za" src="assets/za.png" alt="order Z-A">
+                                    <img class="order1" id="az" data-value="az" src="assets/az.png" alt="order A-Z" />
+                                    <img class="order1" id="za" data-value="za" src="assets/za.png" alt="order Z-A" />
                                 </div>
                             </div>
                         </div>
@@ -149,72 +139,98 @@
                 </div>
             </div>
         </div>
-        <span class="ir-arriba" id="button-down">⯭</span>
+        <span class="ir-arriba" id="button-down"><img src="./assets/64pxBTNUP.png" alt="UP"
+      /></span>
         <div id="list"></div>
         <div id="filteredList" class="hidden"></div>
 
         <h3 id="error" class="hidden">
-            <img src="./assets/goldSword.png" /> Champion not found <img src="./assets/shield1.png" />
+            <img src="./assets/goldSword.png" /> Champion not found
+            <img src="./assets/shield1.png" />
         </h3>
 
         <div class="endPage">
             <div class="corner">
                 <div class="builds">
                     <p>CHAMPION'S GUIDE&nbsp; &nbsp;⋙</p>
-                    <a href="https://na.op.gg/champion/statistics" target="_blank">OP.GG</a>
-                    <a href="https://www.probuilds.net/champions" target="_blank">PROBUILDS</a>
-                    <a href="https://morelegends.com/es/champions" target="_blank">MORELEGENDS</a>
-                </div>
-            </div>
+                    <a href="https://na.op.gg/champion/statistics" target="_blank">OP.GG</a
+            >
+            <a href="https://www.probuilds.net/champions" target="_blank"
+              >PROBUILDS</a
+            >
+            <a href="https://morelegends.com/es/champions" target="_blank"
+              >MORELEGENDS</a
+            >
+          </div>
         </div>
+      </div>
 
-        <div id="buttonContainer0"></div>
+      <div id="buttonEnterSecondPage"></div>
 
-        <div id="overlay" class="overlay">
-            <div class="modal">
-                <div id="closeButton" class="close-button">
-                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" class="svg-inline--fa fa-times fa-w-11 fa-2x"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z" class=""></path></svg>
-                </div>
-                <div class="modal-header">
-                    <p>Other estadistics:</p>
-                    <img src="assets/goldSword.png" alt="" />
-                </div>
-                <div class="modal-stats">
-                    <div id="modal-stats-left" class="modal-stats_left"></div>
-                    <div id="modal-stats-right" class="modal-stats_right"></div>
-                </div>
-                <div id="modal-roles" class="modal-roles"></div>
-            </div>
-            <div id="buttonContainer"></div>
+      <div id="overlay" class="overlay">
+        <div class="modal">
+          <div id="closeButton" class="close-button">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fas"
+              data-icon="times"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 352 512"
+              class="svg-inline--fa fa-times fa-w-11 fa-2x"
+            >
+              <path
+                fill="currentColor"
+                d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+                class=""
+              ></path>
+            </svg>
+          </div>
+          <div class="modal-header">
+            <p>Other estadistics:</p>
+            <img src="assets/goldSword.png" alt="" />
+          </div>
+          <div class="modal-stats">
+            <div id="modal-stats-left" class="modal-stats_left"></div>
+            <div id="modal-stats-right" class="modal-stats_right"></div>
+          </div>
+          <div id="modal-roles" class="modal-roles"></div>
         </div>
+        <div id="buttonContainer"></div>
+      </div>
     </div>
 
-
     <footer class="footer">
-        <div class="right">
-            <p>&copy; <span id="year"></span> &nbsp;| &nbsp; Todos los Derechos Reservados</p>
-        </div>
-        <div id="left">
-            <a href="# ">
-                <img src="./assets/shareLOGO.png" id="compartir" class="animated wobble" />
-            </a>
-            <a href="https:/facebook.com" class="nav-link" target="_blank">
-                <img src="./assets/fbLOGO.png" class="imgRedes" />
-            </a>
+      <div class="right">
+        <p>
+          &copy; <span id="year"></span> &nbsp;| &nbsp; Todos los Derechos
+          Reservados
+        </p>
+      </div>
+      <div id="left">
+        <a href="# ">
+          <img
+            src="./assets/shareLOGO.png"
+            id="compartir"
+            class="animated wobble"
+          />
+        </a>
+                    <a href="https:/facebook.com" class="nav-link" target="_blank">
+                        <img src="./assets/fbLOGO.png" class="imgRedes" />
+                    </a>
 
-            <a href="https://twitter.com" class="nav-link" target="_blank">
-                <img src="./assets/twittLOGO.png" class="imgRedes" />
-            </a>
+                    <a href="https://twitter.com" class="nav-link" target="_blank">
+                        <img src="./assets/twittLOGO.png" class="imgRedes" />
+                    </a>
 
-            <a href="https://www.instagram.com/" class="nav-link" target="_blank">
-                <img src="./assets/instaLOGO11.png" class="imgRedes" />
-            </a>
-        </div>
-    </footer>
-    <script src="./data.js " type="module "></script>
-    <script src="./main.js" type="module"></script>
-
+                    <a href="https://www.instagram.com/" class="nav-link" target="_blank">
+                        <img src="./assets/instaLOGO11.png" class="imgRedes" />
+                    </a>
+                </div>
+                </footer>
+                <script src="./data.js " type="module "></script>
+                <script src="./main.js" type="module"></script>
 </body>
-
 
 </html>

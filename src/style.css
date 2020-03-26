@@ -55,7 +55,7 @@ body {
 
 /* Interfaces */
 
-#secondScreen_0 {
+#secondScreenUno {
     display: none;
 }
 
@@ -474,7 +474,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 2rem 0 0 0;
+    /* padding: 2rem 0 0 0; */
     position: relative;
 }
 
@@ -563,7 +563,7 @@ body {
     background-repeat: no-repeat;
     transform-style: preserve-3d;
     border: 0.0625rem solid #e0cb7e;
-    background-position: -170px center;
+    background-position: -180px center;
     transform: perspective(600px) rotateY(0deg);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -689,7 +689,7 @@ body {
     box-shadow: inset 0 0 1.25rem #07cbe9, 0 0 1.25rem #07cbe9;
 }
 
-#buttonContainer0 {
+#buttonEnterSecondPage {
     display: flex;
     justify-content: center;
     background-color: transparent;
@@ -701,7 +701,7 @@ body {
     cursor: pointer;
 }
 
-#buttonContainer0 a {
+#buttonEnterSecondPage a {
     background-color: transparent;
     border: 0.0625rem solid #07cbe9;
     padding: 1.5rem 3rem;
@@ -713,7 +713,7 @@ body {
     cursor: pointer;
 }
 
-#buttonContainer0 a:hover {
+#buttonEnterSecondPage a:hover {
     box-shadow: 0 0 1.25rem #feb412, 0 0 1.25rem #feb412;
     text-shadow: 1px 1px 8px #feb412, 0 0 1em #07cbe9, 0 0 0.2em #07cbe9;
     letter-spacing: 6px;
@@ -804,7 +804,7 @@ body {
 }
 
 .levelFull {
-    width: 40px;
+    width: 30px;
     height: 15px;
     transform: skew(20deg);
     -o-transform: skew(20deg);
@@ -833,8 +833,12 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+.levelFull:hover {
+    box-shadow: 0.0625rem 0.0625rem 0.5rem yellow, 0 0 1em #07cbe9, 0 0 0.2em #07cbe9;
+}
+
 .levelEmpty {
-    width: 40px;
+    width: 30px;
     height: 15px;
     transform: skew(20deg);
     -o-transform: skew(20deg);
@@ -1129,7 +1133,7 @@ body {
     }
     .card {
         width: 170px;
-        background-position: -140px center;
+        background-position: -190px center;
         margin-bottom: 15px;
     }
     .championName {
@@ -1198,19 +1202,25 @@ body {
 }
 
 .ir-arriba {
-    display: inline-block;
-    padding: 20px;
-    border: 2px solid yellow;
     border-radius: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    border: 3px solid rgb(28, 98, 91);
+    height: 69px;
     filter: blur(50%);
-    font-size: 20px;
-    color: rgb(245, 193, 50);
+    background: rgb(8, 215, 247);
     cursor: pointer;
-    height: 20px;
-    width: 20px;
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: -28px;
+    right: -20px;
+    transform: translate(-50%, -50%);
     z-index: 1;
+    animation: "fade";
+}
+
+.ir-arriba:hover {
+    box-shadow: 0 0 1.25rem #feb412, 0 0 1.25rem #feb412;
+}
+
+span img {
+    border-radius: 100%;
+    border: 0.1px solid rgb(28, 98, 91);
 }
