@@ -17,42 +17,45 @@ export const filterByName = (championList, term) => {
   return filteredChampions;
 };
 
-// evalua si el term es igual a 'ALL' si lo es retorna la data, sino retornar la data filtrada ok entiendo
-// return condition ? championList : filteredbyClass
+// evalua si el term es igual a 'ALL' si lo es return la data, sino retornar la data filtrada
+// return condition ? championList : filtrdbyClass
 export const filteredbyClass = (championList, term) => {
-  let filteredbyClass = getArray(championList).filter(champion => {
-    if (champion.tags.indexOf(term) != -1) {
+  const filteredbyClass1 = Object.values(championList).filter(champion => {
+    if (champion.tags.indexOf(term) !== -1) {
       return champion;
     }
+    return false;
   });
-  return term === "ALL" ? championList : filteredbyClass;
+  return term === "ALL" ? championList : filteredbyClass1;
 };
 
 export const filteredByDifficulty = (championList, term) => {
-  let filteredByDifficult;
-  const list = getArray(championList);
+  let filteredByDifficult = Object.values(championList);
 
   if (term === "1") {
-    filteredByDifficult = list.filter(champion => {
+    filteredByDifficult = Object.values(championList).filter(champion => {
       if (champion.info.difficulty < 4) {
         return champion;
       }
+      return false;
     });
   }
 
   if (term === "2") {
-    filteredByDifficult = list.filter(champion => {
+    filteredByDifficult = Object.values(championList).filter(champion => {
       if (champion.info.difficulty > 3 && champion.info.difficulty < 7) {
         return champion;
       }
+      return false;
     });
   }
 
   if (term === "3") {
-    filteredByDifficult = list.filter(champion => {
+    filteredByDifficult = Object.values(championList).filter(champion => {
       if (champion.info.difficulty > 6) {
         return champion;
       }
+      return false;
     });
   }
 
@@ -63,10 +66,8 @@ export const orderList = (championList, term) => {
   let orderedList;
   const list = getArray(championList);
 
-
   if (term === "az") {
     orderedList = list.sort((a, b) => {
-
       if (a.name < b.name) {
         return -1;
       }
@@ -77,22 +78,17 @@ export const orderList = (championList, term) => {
     });
   }
   if (term === "za") {
-    orderedList = list.sort((a, b) => {
-
-      if (a.name < b.name) {
-        return -1;
-      }
-      if (a.name > b.name) {
-        return 1;
-      }
-      return 0;
-    }).reverse();
+    orderedList = list
+      .sort((a, b) => {
+        if (a.name < b.name) {
+          return -1;
+        }
+        if (a.name > b.name) {
+          return 1;
+        }
+        return 0;
+      })
+      .reverse();
   }
   return orderedList;
-};
-
-export const getArray = (championList) => {
-  return Array.isArray(championList) ?
-    championList :
-    Object.values(championList)
 };

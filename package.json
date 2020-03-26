@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "htmlhint": "htmlhint src/*.html test/*.html",
+    "lint": "eslint",
     "eslint": "eslint --ext .js src/ test/",
     "pretest": "npm run eslint && npm run htmlhint",
     "test": "jest --verbose --coverage",
@@ -23,6 +24,24 @@
     "serve": "^11.0.0"
   },
   "devDependencies": {
-    "eslint": "^6.8.0"
-  }
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "stylelint": "^13.2.1",
+    "stylelint-config-standard": "^20.0.0"
+  },
+  "description": "Es una página web que permite al usuari@ (entre nuevos y experimentados), poder filtrar y ordenar una lista de campeones de **League of Legends** para seleccionar uno en específico y ver sus estadísticas generales (more stats) y principales (ataque, defensa, magia y dicultad), \r todo esto con el objetivo de tener un campeón con mayor ventaja que otro.[Planning 👉Trello](https://trello.com/b/ZbxxiHvY/datalovers)",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeniferPaloma/LIM012-data-lovers.git"
+  },
+  "keywords": [],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/yeniferPaloma/LIM012-data-lovers/issues"
+  },
+  "homepage": "https://github.com/yeniferPaloma/LIM012-data-lovers#readme"
 }
