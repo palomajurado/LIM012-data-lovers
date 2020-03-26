@@ -251,15 +251,15 @@ li.active a {
 @media (min-width: 320px) and (max-width: 480px) {
     .builds a,
     .builds p {
-        font-size: 11px;
+        font-size: 0.6875rem;
     }
     #searchInputs {
         width: 59px;
-        font-size: 14px;
+        font-size: 0.875rem;
         margin-top: -1rem;
     }
     #searchInputs:hover {
-        font-size: 14px;
+        font-size: 0.875rem;
         letter-spacing: 0.165rem;
     }
     .searchbar {
@@ -273,7 +273,7 @@ li.active a {
     .nameSearch img {
         width: 20px;
         height: 20px;
-        margin-left: 5px;
+        margin-left: 0.3125rem;
     }
     #role {
         width: 25px;

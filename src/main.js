@@ -276,7 +276,6 @@ difficulty1.forEach((option) => {
             option.classList.remove('levelEmpty');
             option.classList.add('levelFull');
         }
-
         list.innerHTML = '';
         const filteredChampions = filteredByDifficulty(championList, term);
 
