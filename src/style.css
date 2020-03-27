@@ -1036,7 +1036,7 @@ span img {
         height: 600px;
     }
     .card {
-        background-position: -90px center;
+        background-position: -190px center;
     }
     #list {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -1100,6 +1100,11 @@ span img {
     .greeting {
         font-size: 30px;
     }
+    .ir-arriba {
+        height: 40px;
+        bottom: 26px;
+        right: -12px;
+    }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
@@ -1141,7 +1146,7 @@ span img {
         font-size: 20px;
     }
     .right p {
-        font-size: 12px;
+        font-size: 11px;
     }
     .modal {
         height: 500px;
@@ -1162,7 +1167,8 @@ span img {
         padding: 0.5rem 0 0 0;
     }
     #chooseYour {
-        font-size: 13px;
+        font-size: 19px;
+        margin-bottom: -30px;
         margin-left: 20px;
         padding: 0;
     }
@@ -1180,15 +1186,16 @@ span img {
         justify-content: center;
     }
     .card {
-        width: 250px;
-        background-position: -140px center;
+        width: 220px;
+        background-position: -130px center;
     }
     .corner {
         padding: 0.3125rem;
+        margin-left: 13px;
     }
     .championName {
-        font-size: 10px;
-        margin-left: 40px;
+        font-size: 13px;
+        margin-left: 78px;
         margin-top: 5px;
     }
     .back-card__info h3 {
@@ -1205,9 +1212,105 @@ span img {
         font-size: 20px;
     }
     .ir-arriba {
+        height: 70px;
+        bottom: 26px;
+        right: -12px;
+    }
+    .builds p {
+        font-size: 9px;
+    }
+    .dropdownMenu {
+        width: 80%;
+    }
+    #lupa {
+        margin-left: 0px;
+    }
+    #searchInputs {
+        width: 60px;
+    }
+}
+
+@media only screen and (min-device-width: 480px) and (max-device-width: 640px) {
+    .modal {
+        height: 330px;
+        width: 310px;
+        /* padding: 1rem; */
+    }
+    .modal-header p,
+    .modal-roles p {
+        font-size: 1rem;
+        margin-bottom: 2px;
+        /* margin-top: -10px; */
+        font-weight: bolder;
+        color: rgb(223, 201, 129);
+    }
+    .modal-header img {
+        height: 20px;
+        width: 20px;
+        margin-left: 5px;
+    }
+    .modal-stats_left,
+    .modal-stats_right {
+        height: 90%;
+        margin-top: 3px;
+        width: 50%;
+        display: flex;
+        text-align: initial;
+        flex-direction: column;
+        /* padding: 1rem 0; */
+    }
+    .modal-stats {
+        height: 90%;
+        width: 100%;
+        margin-top: -3px;
+        /* margin-top: -0px; */
+        display: flex;
+    }
+    .close-button {
+        top: -0.5rem;
+        right: -3rem;
+    }
+    .modal-stats_left p,
+    .modal-stats_right p {
+        font-size: 10px;
+        padding: 0.1rem 0;
+    }
+    .modal-roles img {
+        height: auto;
+        width: 40px;
+    }
+    #list {
+        margin-top: -20px;
+        grid-gap: 0rem;
+        grid-template-columns: 33% 33% 33%;
+        justify-content: center;
+    }
+    .card {
+        width: 200px;
+        margin-bottom: 7px;
+        /* margin-bottom: 4px; */
+        background-position: -130px center;
+    }
+    .text1 p {
+        font-size: 1rem;
+        padding: 0 0.3125rem 0rem 0.3125rem;
+    }
+    #mainElements1 p {
+        font-size: 13px;
+        margin-top: 12px;
+    }
+    .footer {
+        padding-top: 3%;
+    }
+    .ir-arriba {
         height: 40px;
         bottom: 26px;
         right: -12px;
+    }
+    span img {
+        overflow: hidden;
+        width: 35px;
+        height: 35px;
     }
 }
 
@@ -1235,8 +1338,9 @@ span img {
         font-size: 20px;
     }
     #chooseYour {
-        font-size: 13px;
-        margin-left: 20px;
+        font-size: 15px;
+        margin-bottom: -10px;
+        margin-left: 42px;
         padding: 0;
     }
     #divider2 img {
@@ -1367,6 +1471,7 @@ span img {
         font-size: 0.3rem;
     }
     .card {
+        background-position: -190px center;
         width: 152px;
     }
     #list {
@@ -1377,10 +1482,4 @@ span img {
     .greeting {
         font-size: 13px;
     }
-}
-
-font-size: 13px;
-
-}
-
 }
