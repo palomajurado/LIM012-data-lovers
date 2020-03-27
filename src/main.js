@@ -258,7 +258,6 @@ const filterClasses = (element) => {
     list.innerHTML = '';
 
     const filteredChampions = filteredbyClass(championList, term);
-
     functionCardsStructure(filteredChampions);
   });
 };
