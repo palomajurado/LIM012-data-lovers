@@ -13,16 +13,23 @@
     "deploy": "gh-pages -d src"
   },
   "dependencies": {
-    "@babel/core": "^7.6.2",
-    "@babel/plugin-transform-modules-commonjs": "^7.6.0",
-    "babel-jest": "^24.9.0",
-    "gh-pages": "^2.1.1",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-modules-commonjs": "^7.2.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^24.8.0",
+    "eslint": "^6.0.1",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.1.2",
     "htmlhint": "^0.11.0",
-    "jest": "^24.9.0",
-    "opener": "^1.5.1",
-    "serve": "^11.0.0"
+    "jest": "^24.8.0",
+    "regenerator-runtime": "^0.13.1",
+    "serve": "^11.0.2",
+    "stylelint": "^10.1.0",
+    "stylelint-config-recommended": "^2.2.0",
+    "opener": "^1.5.1"
   },
   "devDependencies": {
-    "eslint": "^6.8.0"
+    "eslint-plugin-jest": "^23.8.1"
   }
 }

@@ -1,49 +1,138 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import {
   filterByName,
   filteredbyClass,
-  filteredByDifficulty
-} from "../src/data.js"
+  orderList,
+  filteredByDifficulty,
+  getArray,
+} from '../src/data.js';
+import {
+  array,
+  sortedArray,
+  reversedArray,
+  dataAsObject,
+  championsFilteredAssasins,
+  championsFilteredMages,
+  championsFilteredFighters,
+  championsFilteredTank,
+  championsFilteredSupport,
+  championsFilteredMarskman,
+  championsFilteredByEasy,
+  championsFilteredByMedium,
+  championsFilteredByHard,
+} from './mocks.js';
 
-import data from "../src/data/lol/lol.js";
-let championList = data.data;
-//funcion filtrado por nombre
+import data from '../src/data/lol/lol.js';
+
+const championList = data.data;
+
+describe('getArray', () => {
+  it('debería ser una función', () => {
+    expect(typeof getArray).toBe('function');
+  });
+  it('debería devolver un arreglo con la data', () => {
+    expect(getArray(dataAsObject)).toStrictEqual(sortedArray);
+  });
+  it('debería devolver el mismo arreglo', () => {
+    expect(getArray(array)).toStrictEqual(array);
+  });
+});
+
+describe('orderList', () => {
+  it('debería ser una función', () => {
+    expect(typeof orderList).toBe('function');
+  });
+
+  it('Debería devolver el arreglo ordenado de la A a la Z', () => {
+    expect(orderList(array, 'az')).toStrictEqual(sortedArray);
+  });
+
+  it('Debería devolver el arreglo ordenado de la Z a la A', () => {
+    expect(orderList(array, 'za')).toStrictEqual(reversedArray);
+  });
+});
+
 describe('filterByName', () => {
-
   it('debería ser una función', () => {
     expect(typeof filterByName).toBe('function');
   });
   it('debería retornar Campeon Morgana', () => {
-    expect(filterByName(championList, 'morgana')).toStrictEqual([championList.Morgana]);
+    expect(filterByName(championList, 'morgana')).toStrictEqual([
+      championList.Morgana,
+    ]);
+  });
+  it('debería retornar los campeones que contengan la silaba CO', () => {
+    expect(filterByName(championList, 'co')).toStrictEqual([
+      championList.Corki,
+      championList.Shaco,
+    ]);
   });
 
-  //funcion filtrado por clase
   describe('filteredbyClass', () => {
-
     it('debería ser una función', () => {
-      expect(typeof filteredbyClass).toBe('function');
+      expect(typeof filterByName).toBe('function');
+    });
+    it('debería retornar Campeon Morgana', () => {
+      expect(filterByName(championList, 'morgana')).toStrictEqual([
+        championList.Morgana,
+      ]);
     });
 
-    it('debería retornar clase Mage', () => {
-      let filteredChampions = filteredbyClass(championList, 'Mage')
-      expect(filteredChampions.length).toBe(52);
+    describe('filteredbyClass', () => {
+      it('debería ser una función', () => {
+        expect(typeof filteredbyClass).toBe('function');
+      });
     });
-  })
-})
+    it('debería retornar campeones con clase Assasin', () => {
+      expect(filteredbyClass(championList, 'Assassin')).toStrictEqual(
+        championsFilteredAssasins,
+      );
+    });
+    it('debería retornar campeones con clase Mage', () => {
+      expect(filteredbyClass(championList, 'Mage')).toStrictEqual(
+        championsFilteredMages,
+      );
+    });
+    it('debería retornar campeones con clase Fighter', () => {
+      expect(filteredbyClass(championList, 'Fighter')).toStrictEqual(
+        championsFilteredFighters,
+      );
+    });
+    it('debería retornar campeones con clase Tank', () => {
+      expect(filteredbyClass(championList, 'Tank')).toStrictEqual(
+        championsFilteredTank,
+      );
+    });
+    it('debería retornar campeones con clase Support', () => {
+      expect(filteredbyClass(championList, 'Support')).toStrictEqual(
+        championsFilteredSupport,
+      );
+    });
+    it('debería retornar campeones con clase Marksman', () => {
+      expect(filteredbyClass(championList, 'Marksman')).toStrictEqual(
+        championsFilteredMarskman,
+      );
+    });
+  });
+});
 
-//funcion filtrar por dificultad
+
 it('debería ser una función dificultad', () => {
   expect(typeof filteredByDifficulty).toBe('function');
 });
 
-it('debería retornar dificultad data-value 1', () => {
-  let filteredChampions = filteredByDifficulty(championList, '1')
-  expect(filteredChampions.length).toBe(20);
+it('debería retornar campeones con dificultad fácil', () => {
+  expect(filteredByDifficulty(championList, '1')).toStrictEqual(
+    championsFilteredByEasy,
+  );
 });
-it('debería retornar  dificultad data-value 2', () => {
-  let filteredChampions = filteredByDifficulty(championList, '2')
-  expect(filteredChampions.length).toBe(64);
+it('debería retornar campeones con dificultad media', () => {
+  expect(filteredByDifficulty(championList, '2')).toStrictEqual(
+    championsFilteredByMedium,
+  );
 });
-it('debería retornar dificultad data-value 3', () => {
-  let filteredChampions = filteredByDifficulty(championList, '3')
-  expect(filteredChampions.length).toBe(50);
+it('debería retornar campeones con dificultad dificil', () => {
+  expect(filteredByDifficulty(championList, '3')).toStrictEqual(
+    championsFilteredByHard,
+  );
 });

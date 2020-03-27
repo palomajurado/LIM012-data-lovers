@@ -2,356 +2,318 @@ import data from './data/lol/lol.js';
 import {
   filterByName,
   filteredbyClass,
-  filteredByDifficulty
+  filteredByDifficulty,
+  orderList,
 } from './data.js';
 
-/*Muestra en interfaz dos mas saludo y letra capital*/
-const primeraInterfaz = document.getElementById('primeraInterfaz');
-const segundaInterfaz = document.getElementById('segundaInterfaz');
-primeraInterfaz.style.display = 'block';
-segundaInterfaz.style.display = 'none';
 
-document.getElementById('buttonEnter').addEventListener('click', () => {
+const keyPressEnter = document.getElementById('inputName');
+const firstScreen = document.getElementById('firstScreen');
+const secondScreenOne = document.getElementById('secondScreenOne');
+const footerYear = document.getElementById('year');
+footerYear.innerHTML = new Date().getFullYear();
+
+const setName = () => {
   const name = document.getElementById('inputName').value;
   const newStr = `${name[0].toUpperCase()}${name.slice(1)}`;
-  const parrafo = document.getElementById('nombreIngresado');
-  const welcome = document.querySelector('.cuadraditoDsaludo');
+  const parrafo = document.getElementById('inputName_put');
+  const welcome = document.querySelector('.welcomingBox');
   parrafo.innerHTML = `!\n Welcome ${newStr}\n !`;
-  segundaInterfaz.style.display = 'block';
-  primeraInterfaz.style.display = 'none';
+  secondScreenOne.style.display = 'block';
+  firstScreen.style.display = 'none';
   window.scroll({
-    top: 0
+    top: 0,
   });
-  setTimeout(() => (welcome.style.display = 'none'), 3000);
+  setTimeout(() => {
+    welcome.style.display = 'none';
+  }, 5000);
+};
+
+document.getElementById('buttonEnter').addEventListener('click', setName);
+keyPressEnter.addEventListener('keypress', ({
+  keyCode,
+}) => {
+  if (keyCode === 13) setName();
 });
 
-/*Muestra de la lista de campeones*/
+const buttonDown = document.getElementById('button-down');
+buttonDown.addEventListener('click', () => {
+  window.scroll({
+    top: 0,
+    behavior: 'smooth',
+  });
+});
+window.onscroll = () => {
+  if (window.pageYOffset > 400) {
+    buttonDown.style.display = 'block';
+  } else {
+    buttonDown.style.display = 'none';
+  }
+};
+/*-------------------------------------------*/
 
+// FUNCION:PLAY BUTTON
+const functionPlayButton = () => {
+  const playButton = document.createElement('a');
+  playButton.setAttribute('href', 'https://signup.lan.leagueoflegends.com/es/signup/redownload?page_referrer=index');
+  playButton.setAttribute('target', '_blank');
+  playButton.className = 'playButton';
+  playButton.innerHTML = 'Play Now';
+  return playButton;
+};
+
+const playButtonContainer1 = document.getElementById('buttonEnterSecondPage');
+playButtonContainer1.innerHTML = '';
+playButtonContainer1.appendChild(functionPlayButton());
+/*-------------------------------------------*/
+
+/* CREANDO:Elementos del DOM, inyectando en nodo padre */
 const championList = data.data;
-let list = document.querySelector('#list');
+const list = document.getElementById('list');
 
-//object values le saca los valores de key en forma de arreglo
-Object.values(championList).map((champion) => {
-  const div = document.createElement('div');
-  div.className = 'card';
-  div.style.backgroundImage = `url("${champion.splash}")`;
-  const p = document.createElement('p');
-  p.className = 'championName';
-  p.innerHTML = `${champion.name}`;
-  div.appendChild(p);
+const functionCardsStructure = (listData) => {
+  const checkData = Array.isArray(listData) ? listData : Object.values(listData);
 
-  const backCard = document.createElement('div');
-  backCard.className = 'back-card';
-  const backCardInfo = document.createElement('div');
-  backCardInfo.className = 'back-card__info';
-  backCard.appendChild(backCardInfo);
-  const championName = document.createElement('div');
-  const championNameImage = document.createElement('img');
-  championNameImage.src = `${champion.img}`;
-  championName.appendChild(championNameImage);
-  backCardInfo.appendChild(championName);
-  const backCardInfoTitle = document.createElement('h3');
-  backCardInfoTitle.innerHTML = champion.title;
-  backCardInfo.appendChild(backCardInfoTitle);
-  const championBox = document.createElement('div');
-  championBox.className = 'champion-box';
-  const championClass = document.createElement('div');
-  championClass.className = 'champion-class';
-  const championClassText = document.createElement('p');
-  championClassText.innerHTML = 'CLASS';
-  championClass.appendChild(championClassText);
-  championBox.appendChild(championClass);
-  const championDifficult = document.createElement('div');
-  championDifficult.className = 'champion-difficulty';
-  const championDifficultText = document.createElement('p');
-  championDifficultText.innerHTML = 'DIFFICULTY';
-  championDifficult.appendChild(championDifficultText);
-  championBox.appendChild(championDifficult);
+  checkData.map((champion) => {
+    const div = document.createElement('div');
+    div.className = 'card';
+    div.style.backgroundImage = `url("${champion.splash}")`;
+    const p = document.createElement('p');
+    p.className = 'championName';
+    p.innerHTML = `${champion.name}`;
+    div.appendChild(p);
 
-  const championStats = document.createElement('div');
-  championStats.className = 'champion-stats';
+    /* BACK CARDS */
+    const backCard = document.createElement('div');
+    backCard.className = 'back-card';
+    const backCardInfo = document.createElement('div');
+    backCardInfo.className = 'back-card__info';
+    backCard.appendChild(backCardInfo);
 
-  Object.entries(champion.info).map(([key, value]) => {
-    const championStatsText = document.createElement('p');
-    championStatsText.className = 'champion-stats__item';
-    championStatsText.innerHTML = `${key}: ${value}`;
-    championStats.appendChild(championStatsText);
-  });
+    const championName = document.createElement('div');
+    const championNameImage = document.createElement('img');
+    championNameImage.className = 'boxBackImg';
+    championNameImage.src = `${champion.img}`;
+    championName.appendChild(championNameImage);
+    backCardInfo.appendChild(championName);
 
-  backCardInfo.appendChild(championStats);
+    const backCardInfoTitle = document.createElement('h3');
+    backCardInfoTitle.innerHTML = `' ${champion.title} '`;
+    backCardInfo.appendChild(backCardInfoTitle);
 
-  const moreStatsButton = document.createElement('div');
-  moreStatsButton.className = 'more-stats';
-  moreStatsButton.innerHTML = 'More stats';
-  backCardInfo.appendChild(moreStatsButton);
-  div.appendChild(backCard);
-  list.appendChild(div);
-});
+    // const championBox = document.createElement('div');
+    // championBox.className = 'champion-box';
+    // const championClass = document.createElement('div');
+    // championClass.className = 'champion-class';
 
-//busqueda por nombre
-//probando la subida
-let input = document.querySelector('#searchInputs');
-let filteredList = document.querySelector('#filteredList');
+    const championStats = document.createElement('div');
+    championStats.className = 'champion-stats';
+    Object.entries(champion.info).map(([key, value]) => {
+      const championStatsText = document.createElement('p');
+      championStatsText.className = 'champion-stats__item';
+      championStatsText.innerHTML = `${key}: ${value}`;
+      championStats.appendChild(championStatsText);
+      return false;
+    });
 
-//target : lo que sea a lo que se le aplique add event listener
-if (typeof input.addEventListener != 'undefined') {
-  input.addEventListener(
-    'keyup',
-    (evt) => {
-      let term = evt.target.value.toLowerCase();
+    const divClassWord = document.createElement('div');
+    divClassWord.className = 'divClassWord';
+    const classWord = document.createElement('p');
+    classWord.innerHTML = 'Class: ';
+    divClassWord.appendChild(classWord);
 
-      /*let filteredChampions = Object.values(championList).filter(champion => {
-          //indexof da -1 si no encuentra resultados
-          if (champion.name.toLowerCase().indexOf(term) != -1) {
-              return champion;
-          }
-      });*/
-      let filteredChampions = filterByName(championList, term);
-      //mensaje de error en la busqueda por nombre
-      if (term.length != 0) {
-        list.classList.add('hidden');
-        filteredList.classList.remove('hidden');
-      } else {
-        list.classList.remove('hidden');
-        filteredList.classList.add('hidden');
-      }
-      let errorMessage = document.querySelector('#error');
-      if (filteredChampions.length === 0) {
-        errorMessage.classList.remove('hidden');
-      } else {
-        errorMessage.classList.add('hidden');
-      }
+    champion.tags.map((tag, index) => {
+      const modalRolesP = document.createElement('p');
+      modalRolesP.className = 'pTags';
+      modalRolesP.innerHTML = champion.tags.length - 1 !== index ? `\xa0${tag},` : `\xa0${tag}`;
+      divClassWord.appendChild(modalRolesP);
+      backCard.appendChild(divClassWord);
+      return false;
+    });
+    backCardInfo.appendChild(championStats);
 
-      //vaciar arreglo para que no se duplique
-      filteredList.innerHTML = '';
-      //filteredList ==  <div id="filteredList" ></div>
-      Object.values(filteredChampions).map((champion) => {
-        const div = document.createElement('div');
-        div.className = 'card';
-        div.style.backgroundImage = `url("${champion.splash}")`;
-        const p = document.createElement('p');
-        p.className = 'championName';
-        p.innerHTML = `${champion.name}`;
-        div.appendChild(p);
 
-        const backCard = document.createElement('div');
-        backCard.className = 'back-card';
-        const backCardInfo = document.createElement('div');
-        backCardInfo.className = 'back-card__info';
-        backCard.appendChild(backCardInfo);
-        const championName = document.createElement('div');
-        const championNameImage = document.createElement('img');
-        championNameImage.src = `${champion.img}`;
-        championName.appendChild(championNameImage);
-        backCardInfo.appendChild(championName);
-        const backCardInfoTitle = document.createElement('h3');
-        backCardInfoTitle.innerHTML = champion.title;
-        backCardInfo.appendChild(backCardInfoTitle);
-        const championBox = document.createElement('div');
-        championBox.className = 'champion-box';
-        const championClass = document.createElement('div');
-        championClass.className = 'champion-class';
-        const championClassText = document.createElement('p');
-        championClassText.innerHTML = 'CLASS';
-        championClass.appendChild(championClassText);
-        championBox.appendChild(championClass);
-        const championDifficult = document.createElement('div');
-        championDifficult.className = 'champion-difficulty';
-        const championDifficultText = document.createElement('p');
-        championDifficultText.innerHTML = 'DIFFICULTY';
-        championDifficult.appendChild(championDifficultText);
-        championBox.appendChild(championDifficult);
+    /* MODAL MORESTATS */
+    const modalOverlay = document.getElementById('overlay');
+    const modalRoles = document.getElementById('modal-roles');
+    const modalCloseButton = document.getElementById('closeButton');
+    const modalStatsLeft = document.getElementById('modal-stats-left');
+    const modalStatsRight = document.getElementById('modal-stats-right');
 
-        const championStats = document.createElement('div');
-        championStats.className = 'champion-stats';
+    const closeModal = () => {
+      modalStatsLeft.innerHTML = '';
+      modalStatsRight.innerHTML = '';
+      modalRoles.innerHTML = '';
 
-        Object.entries(champion.info).map(([key, value]) => {
-          const championStatsText = document.createElement('p');
-          championStatsText.className = 'champion-stats__item';
-          championStatsText.innerHTML = `${key}: ${value}`;
-          championStats.appendChild(championStatsText);
-        });
+      document.body.style.overflow = 'visible';
+      modalOverlay.style.display = 'none';
+    };
 
-        backCardInfo.appendChild(championStats);
+    const modalStatsUncle = () => {
+      const moreStatsTwo = Object.entries(champion.stats);
+      const moreStatsLeft = moreStatsTwo.slice(0, 11);
+      const moreStatsRight = moreStatsTwo.slice(11, moreStatsTwo.length);
 
-        const moreStatsButton = document.createElement('div');
-        moreStatsButton.className = 'more-stats';
-        moreStatsButton.innerHTML = 'More stats';
-        backCardInfo.appendChild(moreStatsButton);
-        div.appendChild(backCard);
-        filteredList.appendChild(div);
+      /* CASCO del modal TAGS */
+      const helmetModal = document.createElement('img');
+      helmetModal.setAttribute('src', 'assets/casco.png');
+      modalRoles.appendChild(helmetModal);
+
+      /*-----------------------------------------------------*/
+
+      moreStatsLeft.map(([key, value]) => {
+        const modalStatsLeftList = document.createElement('p');
+        modalStatsLeftList.innerHTML = `${key}: ${value}`;
+        modalStatsLeft.appendChild(modalStatsLeftList);
+        return false;
       });
-    },
-    false
-  );
+
+      moreStatsRight.map(([key, value]) => {
+        const modalStatsRightList = document.createElement('p');
+        modalStatsRightList.innerHTML = `${key}: ${value}`;
+        modalStatsRight.appendChild(modalStatsRightList);
+        return false;
+      });
+
+      champion.tags.map((tag, index) => {
+        const modalRolesP = document.createElement('p');
+        modalRolesP.innerHTML = champion.tags.length - 1 !== index ? `${tag},` : `${tag}`;
+        modalRoles.appendChild(modalRolesP);
+        return false;
+      });
+    };
+    modalCloseButton.addEventListener('click', closeModal);
+    window.addEventListener('keypress', ({
+      keyCode,
+    }) => {
+      if (keyCode === 13) closeModal();
+    });
+
+    const moreStatsButton = document.createElement('div');
+    moreStatsButton.className = 'more-stats';
+    moreStatsButton.innerHTML = 'More stats';
+    moreStatsButton.addEventListener('click', () => {
+      document.body.style.overflow = 'hidden';
+      modalOverlay.style.display = 'flex';
+      modalOverlay.style.top = `${window.pageYOffset}px`;
+
+      const playButtonContainer = document.getElementById('buttonContainer');
+      playButtonContainer.innerHTML = '';
+      playButtonContainer.appendChild(functionPlayButton());
+
+      modalStatsUncle(champion);
+    });
+
+    /* Boton de MORESTATS y playButton (funcion fuera de esta ARRIBA) */
+    const backCardContainer = document.createElement('div');
+    backCardContainer.className = 'backCardContainer';
+
+    backCardContainer.appendChild(functionPlayButton());
+    backCardContainer.appendChild(moreStatsButton);
+    backCardInfo.appendChild(backCardContainer);
+
+    div.appendChild(backCard);
+    list.appendChild(div);
+    return false;
+  });
+};
+functionCardsStructure(championList);
+/*-----------------------------------------------------*/
+
+/* FILTRADO: DIGITANDO NOMBRE (FALTA PULIR) */
+const input = document.querySelector('#searchInputs');
+
+if (typeof input.addEventListener !== 'undefined') {
+  input.addEventListener('keyup', (evt) => {
+    const term = evt.target.value.toLowerCase();
+    const filteredChampions = filterByName(championList, term);
+
+    const errorMessage = document.querySelector('#error');
+    if (filteredChampions.length === 0) {
+      errorMessage.classList.remove('hidden');
+    } else {
+      errorMessage.classList.add('hidden');
+    }
+    list.innerHTML = '';
+
+    functionCardsStructure(filteredChampions);
+  },
+  false);
 }
-filteredList.innerHTML = '';
-//[p.btn, p.btn, p.btn, p.btn, p.btn, p.btn, p.btn]
-// p.btn == button == <p class="btn" data-value="ALL">ALL</p>
-let ul = document.querySelector('ul');
-let li = document.querySelectorAll('li');
+/*---------------------------------------------*/
+
+/* FUNCION: HOVER ACTIVE POR CLASE SELECCIONADA */
+const ul = document.querySelector('.menu');
+const ul2 = document.querySelector('.menu2');
+const li = document.querySelectorAll('.menu li');
+const li2 = document.querySelectorAll('.menu2 li');
 
 li.forEach((el) => {
-  el.addEventListener('click', function () {
+  el.addEventListener('click', () => {
     ul.querySelector('.active').classList.remove('active');
     el.classList.add('active');
   });
 });
 
-/*para recrrer cada clase */
-li.forEach((button) => {
-  button.addEventListener('click', () => {
-    let term = button.getAttribute('data-value');
-    // <p class="btn" data-value="ALL">ALL</p>
-    if (term === 'ALL') {
-      list.classList.remove('hidden');
-      filteredList.classList.add('hidden');
-    } else {
-      list.classList.add('hidden');
-      filteredList.classList.remove('hidden');
-    }
-    // filteredChampions == []
-    /*let filteredChampions = Object.values(championList).filter(champion => {
-      if (champion.tags.indexOf(term) != -1) {
-        return champion;
-      }
-    });*/
-    filteredList.innerHTML = '';
-    let filteredChampions = filteredbyClass(championList, term);
-
-    //filteredList ==  <div id="filteredList" ></div>
-    Object.values(filteredChampions).map((champion) => {
-      const div = document.createElement('div');
-      div.className = 'card';
-      div.style.backgroundImage = `url("${champion.splash}")`;
-      const p = document.createElement('p');
-      p.className = 'championName';
-      p.innerHTML = `${champion.name}`;
-      div.appendChild(p);
-
-      const backCard = document.createElement('div');
-      backCard.className = 'back-card';
-      const backCardInfo = document.createElement('div');
-      backCardInfo.className = 'back-card__info';
-      backCard.appendChild(backCardInfo);
-      const championName = document.createElement('div');
-      const championNameImage = document.createElement('img');
-      championNameImage.src = `${champion.img}`;
-      championName.appendChild(championNameImage);
-      backCardInfo.appendChild(championName);
-      const backCardInfoTitle = document.createElement('h3');
-      backCardInfoTitle.innerHTML = champion.title;
-      backCardInfo.appendChild(backCardInfoTitle);
-      const championBox = document.createElement('div');
-      championBox.className = 'champion-box';
-      const championClass = document.createElement('div');
-      championClass.className = 'champion-class';
-      const championClassText = document.createElement('p');
-      championClassText.innerHTML = 'CLASS';
-      championClass.appendChild(championClassText);
-      championBox.appendChild(championClass);
-      const championDifficult = document.createElement('div');
-      championDifficult.className = 'champion-difficulty';
-      const championDifficultText = document.createElement('p');
-      championDifficultText.innerHTML = 'DIFFICULTY';
-      championDifficult.appendChild(championDifficultText);
-      championBox.appendChild(championDifficult);
-
-      const championStats = document.createElement('div');
-      championStats.className = 'champion-stats';
-
-      Object.entries(champion.info).map(([key, value]) => {
-        const championStatsText = document.createElement('p');
-        championStatsText.className = 'champion-stats__item';
-        championStatsText.innerHTML = `${key}: ${value}`;
-        championStats.appendChild(championStatsText);
-      });
-
-      backCardInfo.appendChild(championStats);
-
-      const moreStatsButton = document.createElement('div');
-      moreStatsButton.className = 'more-stats';
-      moreStatsButton.innerHTML = 'More stats';
-      backCardInfo.appendChild(moreStatsButton);
-      div.appendChild(backCard);
-      filteredList.appendChild(div);
-    });
+li2.forEach((el) => {
+  el.addEventListener('click', () => {
+    ul2.querySelector('.active').classList.remove('active');
+    el.classList.add('active');
   });
 });
 
-/* 
-  [<div class="difficulty1" data-value="1" id="easy" href="#">easy</div>,
-  <div class="difficulty1" data-value="2" id="medium" href="#">medium</div>,
-  <div class="difficulty1" data-value="3" id="hard" href="#">hard</div>]
-*/
-let difficulty1 = document.querySelectorAll('.difficulty1');
+/*---------------------------------------------*/
+
+/* FILTRADO: POR CLASE */
+const filterClasses = (element) => {
+  element.addEventListener('click', () => {
+    const term = element.getAttribute('data-value');
+
+    input.value = '';
+    list.innerHTML = '';
+
+    const filteredChampions = filteredbyClass(championList, term);
+    functionCardsStructure(filteredChampions);
+  });
+};
+
+li.forEach(button => filterClasses(button));
+li2.forEach(button => filterClasses(button));
+
+/*---------------------------------------------*/
+
+/* FILTRADO: POR DIFICULTAD  (FALTA PULIR) */
+const difficulty1 = document.querySelectorAll('.difficulty1 div');
 difficulty1.forEach((option) => {
   option.addEventListener('click', () => {
     let term = option.getAttribute('data-value');
 
-    list.classList.add('hidden');
-    filteredList.classList.remove('hidden');
+    if (option.classList.contains('levelFull')) {
+      option.classList.remove('levelFull');
+      option.classList.add('levelEmpty');
+      term = 0;
+    } else {
+      option.classList.remove('levelEmpty');
+      option.classList.add('levelFull');
+    }
+    list.innerHTML = '';
+    const filteredChampions = filteredByDifficulty(championList, term);
 
-    filteredList.innerHTML = '';
-    let filteredChampions = filteredByDifficulty(championList, term);
-
-    //filteredList ==  <div id="filteredList" ></div>
-    Object.values(filteredChampions).map((champion) => {
-      const div = document.createElement('div');
-      div.className = 'card';
-      div.style.backgroundImage = `url("${champion.splash}")`;
-      const p = document.createElement('p');
-      p.className = 'championName';
-      p.innerHTML = `${champion.name}`;
-      div.appendChild(p);
-
-      const backCard = document.createElement('div');
-      backCard.className = 'back-card';
-      const backCardInfo = document.createElement('div');
-      backCardInfo.className = 'back-card__info';
-      backCard.appendChild(backCardInfo);
-      const championName = document.createElement('div');
-      const championNameImage = document.createElement('img');
-      championNameImage.src = `${champion.img}`;
-      championName.appendChild(championNameImage);
-      backCardInfo.appendChild(championName);
-      const backCardInfoTitle = document.createElement('h3');
-      backCardInfoTitle.innerHTML = champion.title;
-      backCardInfo.appendChild(backCardInfoTitle);
-      const championBox = document.createElement('div');
-      championBox.className = 'champion-box';
-      const championClass = document.createElement('div');
-      championClass.className = 'champion-class';
-      const championClassText = document.createElement('p');
-      championClassText.innerHTML = 'CLASS';
-      championClass.appendChild(championClassText);
-      championBox.appendChild(championClass);
-      const championDifficult = document.createElement('div');
-      championDifficult.className = 'champion-difficulty';
-      const championDifficultText = document.createElement('p');
-      championDifficultText.innerHTML = 'DIFFICULTY';
-      championDifficult.appendChild(championDifficultText);
-      championBox.appendChild(championDifficult);
-
-      const championStats = document.createElement('div');
-      championStats.className = 'champion-stats';
-
-      Object.entries(champion.info).map(([key, value]) => {
-        const championStatsText = document.createElement('p');
-        championStatsText.className = 'champion-stats__item';
-        championStatsText.innerHTML = `${key}: ${value}`;
-        championStats.appendChild(championStatsText);
-      });
-
-      backCardInfo.appendChild(championStats);
-
-      const moreStatsButton = document.createElement('div');
-      moreStatsButton.className = 'more-stats';
-      moreStatsButton.innerHTML = 'More stats';
-      backCardInfo.appendChild(moreStatsButton);
-      div.appendChild(backCard);
-      filteredList.appendChild(div);
-    });
+    functionCardsStructure(filteredChampions);
   });
 });
-filteredList.innerHTML = '';
+
+/*---------------------------------------------*/
+
+/* FILTRADO: ASCENDENTE Y DESCENDENTE */
+const order1 = document.querySelectorAll('.order1');
+order1.forEach((option) => {
+  option.addEventListener('click', () => {
+    const term = option.getAttribute('data-value');
+
+    list.innerHTML = '';
+    const filteredChampions = orderList(championList, term);
+
+    functionCardsStructure(filteredChampions);
+  });
+});
