@@ -121,18 +121,6 @@ it('debería ser una función dificultad', () => {
   expect(typeof filteredByDifficulty).toBe('function');
 });
 
-it('debería retornar la longitud dificultad data-value 1', () => {
-  const filteredChampions = filteredByDifficulty(championList, '1');
-  expect(filteredChampions.length).toBe(20);
-});
-it('debería retornar la longitud  dificultad data-value 2', () => {
-  const filteredChampions = filteredByDifficulty(championList, '2');
-  expect(filteredChampions.length).toBe(64);
-});
-it('debería retornar la longitud de dificultad data-value 3', () => {
-  const filteredChampions = filteredByDifficulty(championList, '3');
-  expect(filteredChampions.length).toBe(50);
-});
 it('debería retornar campeones con dificultad fácil', () => {
   expect(filteredByDifficulty(championList, '1')).toStrictEqual(
     championsFilteredByEasy,
@@ -147,8 +135,4 @@ it('debería retornar campeones con dificultad dificil', () => {
   expect(filteredByDifficulty(championList, '3')).toStrictEqual(
     championsFilteredByHard,
   );
-});
-it('debería arrojar TypeError cuando se invoca con tipos de argumento incorrectos en el input de nombre', () => {
-  expect(() => filterByName([], 0)).toThrow(TypeError);
-  expect(() => filterByName([], null)).toThrow(TypeError);
 });

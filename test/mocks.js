@@ -410,6 +410,7 @@ export const championsFilteredMarskman = [
   championList.Graves,
   championList.Jayce,
   championList.Jhin,
+  championList.Jinx,
   championList.Kalista,
   championList.Kennen,
   championList.Kindred,

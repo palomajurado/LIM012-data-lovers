@@ -3,7 +3,6 @@ export const getArray = (championList) => {
   return Array.isArray(championList) ? championList : Object.values(championList);
 };
 
-
 // evalua si el term es igual a 'ALL' si lo es retorna la data,
 // sino retornar la data filtrada ok entiendo
 // return condition ? championList : filteredbyClass
@@ -20,7 +19,6 @@ export const filteredbyClass = (championList, term) => {
 
 
 export const filterByName = (championList, term) => {
-  const error = TypeError;
   // eslint-disable-next-line
   let filteredChampions = getArray(championList).filter(champion => {
     // indexof da -1 si no encuentra resultados
@@ -28,13 +26,7 @@ export const filterByName = (championList, term) => {
       return champion;
     }
   });
-  // typeerror
-  try {
-    if (term === '0') throw error;
-    if (term == null) throw error;
-  } catch (error2) {
-    throw error2();
-  }
+
   return filteredChampions;
 };
 
