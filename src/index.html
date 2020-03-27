@@ -37,7 +37,7 @@
                 <img src="./assets/divider.png" />
             </div>
             <div id="mainElements2" class="form">
-                <input type="text" name="name" autocomplete="off" required spellcheck="false" id="inputName" />
+                <input type="text" name="name" autocomplete="off" required spellcheck="false" id="inputName" maxlength="13" />
                 <label for="name" class="label_name">
             <span class="content-name">ENTER YOUR NAME</span>
           </label>
@@ -59,33 +59,35 @@
             <div class="backgroundHead">
                 <div class="secondScreenBox">
                     <div class="welcomingBox">
-                        <h3 class="greeting" id="inputName_put"></h3>
+                        <div id="welcomingInside" class="animated pulse">
+                            <p class="greeting" id="inputName_put" class="animated pulse"></p>
+                        </div>
                     </div>
                     <div class="mainTittle">
-                        <h3 id="chooseYour">CHOOSE YOUR</h3>
+                        <p id="chooseYour">CHOOSE YOUR</p>
                         <div id="divider2">
                             <img src="assets/casco1.png" alt="helmet" />
                             <h1 id="champion">CHAMPION</h1>
                         </div>
                     </div>
                     <div class="text1">
-                        <h3>
+                        <p>
                             Each champion has different statistics where their initial values ​​are measured and how these values ​​rise for each level. To know more click on a champion.
-                        </h3>
+                        </p>
                     </div>
                 </div>
                 <div id="searchBar" class="corner">
                     <div class="searchbar">
                         <div class="nameSearch">
-                            <img src="assets/search.png" alt="search" />
-                            <input id="searchInputs" type="text" placeholder="Search" spellcheck="false" />
+                            <img src="assets/search.png" alt="search" class="animated heartBeat" id="lupa" />
+                            <input id="searchInputs" type="text" placeholder="Search" spellcheck="false" maxlength="6" />
                         </div>
                         <span class="line"></span>
 
                         <div class="dropdownMenu">
                             <div class="dropdownStyle">
                                 <img id="role" src="assets/shield1.png" alt="shield" />
-                                <span>ROLE</span>
+                                <span id="roleLetter">ROLE</span>
                             </div>
                             <div id="myDropdown" class="dropdown-content">
                                 <ul class="menu2">
@@ -128,7 +130,7 @@
 
                         <div class="orderArray">
                             <div class="order">
-                                <span>A⮃Z</span>
+                                <span>A<img src="./assets/arrowww.png" alt="Arrow" />Z</span>
                                 <div id="dropdownSort" class="SortContent">
                                     <img class="order1" id="az" data-value="az" src="assets/az.png" alt="order A-Z" />
                                     <img class="order1" id="za" data-value="za" src="assets/za.png" alt="order Z-A" />

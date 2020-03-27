@@ -391,7 +391,7 @@ body {
 
 .modal-stats_right {
     border-left: 0.5px solid #dfc981;
-    padding-left: 1.5rem;
+    padding-left: 0.6rem;
 }
 
 .modal-stats_left p,
@@ -483,7 +483,7 @@ body {
     color: rgb(252, 241, 183);
     font-family: "Marcellus SC", serif;
     font-size: 5rem;
-    background-color: rgb(0, 0, 0);
+    background: url(./assets/backgroundNero.jpeg);
     height: 100%;
     width: 100%;
     display: flex;
@@ -493,17 +493,46 @@ body {
     top: 0;
     left: 0;
     margin: 0%;
+    animation-delay: 0s;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    letter-spacing: 4px;
 }
 
-.welcomingBox h3 {
-    text-shadow: 1px 1px 8px #feb412, 0 0 1em #07cbe9, 0 0 0.2em #07cbe9;
+#welcomingInside {
+    height: 50%;
+    width: 70%;
+    display: flex;
+    color: #f3e1a0;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background: transparent;
+    box-shadow: 0 0 1.25rem #feb412, 0 0 1.25rem #feb412;
+    text-shadow: 1px 1px 8px #ebddc0, 0 0 1em #07cbe9, 0 0 0.2em #07cbe9;
+    animation-delay: 0s;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    /* border: 0.0625rem solid #b48643; */
 }
+
+#lupa {
+    margin-left: 10px;
+    animation-delay: 0s;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+
+/* .welcomingBox p {
+    text-shadow: 1px 1px 8px #feb412, 0 0 1em #07cbe9, 0 0 0.2em #07cbe9;
+} */
 
 .mainTittle {
     margin-top: 1rem;
     text-align: center;
     font-size: 9.375rem;
-    padding-bottom: 1rem;
+    padding-bottom: 0.2rem;
     color: rgb(252, 241, 183);
     text-shadow: 0.0625rem 0.0625rem 0.375rem #07cbe9;
 }
@@ -516,10 +545,10 @@ body {
 }
 
 #champion {
-    margin-left: 13%;
     color: #dfc981;
+    padding-left: 5px;
     font-size: 3.125rem;
-    padding: 0 0.3125rem 0 0.3125rem;
+    padding: 0.1rem 0rem 0.1rem 0rem;
     font-family: "Marcellus SC", serif;
 }
 
@@ -542,11 +571,9 @@ body {
 }
 
 #divider2 {
-    display: grid;
-    margin-left: 41%;
-    margin-top: -1.125rem;
-    padding-top: 0.625rem;
-    grid-template-columns: 12% 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -609,7 +636,8 @@ body {
     box-shadow: inset 0 0 1.25rem #07cbe9, 0 0 1.25rem #07cbe9;
 }
 
-.back-card__info {
+.back-card__info,
+.classBackCard {
     width: 100%;
     height: 100%;
     display: flex;
@@ -621,7 +649,24 @@ body {
     font-family: "Cuprum", sans-serif;
 }
 
-.back-card__info h3 {
+.divClassWord {
+    width: 100%;
+    color: #f8f6ed;
+    font-size: 14px;
+    top: 178px;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: "Cuprum", sans-serif;
+}
+
+.pTags {
+    color: #fcfbf9;
+    text-shadow: 0.0625rem 0.0625rem 0.5rem #ac7e39, 0 0 1em #b68234, 0 0 0.2em #bb8535;
+}
+
+.back-card__info h1 {
     font-size: 0.8125rem;
     color: #f5e2a6;
     font-family: "Marcellus SC", serif;
@@ -649,6 +694,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding-bottom: 18px;
 }
 
 .champion-stats__item {
@@ -665,12 +711,21 @@ body {
     justify-content: space-evenly;
 }
 
+.backCardContainer a {
+    margin-top: 0px;
+}
+
 .more-stats,
 .playButton {
     display: flex;
+    width: 70px;
+    height: 30px;
+    font-size: 4px;
+    align-items: center;
     cursor: pointer;
-    font-size: 0.8125rem;
+    font-size: 10px;
     padding: 0.25rem 0.5rem;
+    margin: 0px;
     font-family: "Marcellus SC", serif;
     border: rgb(80, 234, 245) 0.0625rem solid;
     color: rgb(249, 252, 252);
@@ -679,6 +734,9 @@ body {
 .playButton {
     background: none;
     text-decoration: none;
+    margin-top: -50px;
+    align-items: center;
+    justify-content: center;
 }
 
 .more-stats:hover,
@@ -704,7 +762,9 @@ body {
 #buttonEnterSecondPage a {
     background-color: transparent;
     border: 0.0625rem solid #07cbe9;
-    padding: 1.5rem 3rem;
+    margin: auto;
+    width: auto;
+    padding: 2.5rem 3rem;
     outline: none;
     color: wheat;
     font-size: 1.5625rem;
@@ -762,8 +822,8 @@ body {
     height: 48px;
 }
 
-.text1 h3 {
-    font-size: 1.3rem;
+.text1 p {
+    font-size: 2rem;
     color: #dfc981;
     text-align: center;
     padding: 0 6rem 0 6rem;
@@ -888,6 +948,7 @@ body {
 .builds p {
     font-weight: bold;
     text-decoration: none;
+    color: #dfc981;
 }
 
 .builds a:hover {
@@ -897,9 +958,47 @@ body {
 }
 
 
+/*BUTTON:UP*/
+
+.ir-arriba {
+    border-radius: 100%;
+    border: 3px solid rgb(28, 98, 91);
+    height: 69px;
+    filter: blur(50%);
+    background: rgb(8, 215, 247);
+    cursor: pointer;
+    position: fixed;
+    bottom: 39px;
+    right: -27px;
+    outline: none;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    animation: "fade";
+}
+
+.ir-arriba:hover {
+    box-shadow: 0 0 1.25rem #feb412, 0 0 1.25rem #feb412;
+}
+
+span img {
+    border-radius: 100%;
+    border: 0.1px solid rgb(28, 98, 91);
+    outline: none;
+}
+
+
 /*MEDIA QUERIES*/
 
+@media (min-width: 1366px) {
+    .text1 p {
+        font-size: 2rem;
+    }
+}
+
 @media (min-width: 1024px) and (max-width: 1280px) {
+    .playButton {
+        margin-top: -10px;
+    }
     #logoLOL {
         height: auto;
         width: 50vmin;
@@ -920,6 +1019,9 @@ body {
         width: 55px;
         height: 55px;
     }
+    .greeting {
+        font-size: 55px;
+    }
 }
 
 @media (max-height: 700px) and (min-width: 768px) {
@@ -930,6 +1032,9 @@ body {
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
+    .playButton {
+        margin-top: -130px;
+    }
     .header-video video {
         height: 120%;
         width: 120%;
@@ -947,6 +1052,10 @@ body {
     #mainElements1 p {
         font-size: 18px;
     }
+    .modal-stats_left p,
+    .modal-stats_right p {
+        padding: 0.4rem 0;
+    }
     #left a:link,
     #left a img {
         width: 55px;
@@ -954,6 +1063,13 @@ body {
     }
     .footer p {
         margin-top: 1%;
+    }
+    .text1 p {
+        font-size: 1.5rem;
+        padding: 0 0.3125rem 0.0625rem 0.3125rem;
+    }
+    .greeting {
+        font-size: 30px;
     }
 }
 
@@ -1005,6 +1121,10 @@ body {
     }
     .modal-stats_left p,
     .modal-stats_right p {
+        padding: 0.3rem 0;
+    }
+    .modal-stats_left p,
+    .modal-stats_right p {
         font-size: 11px;
     }
     .secondScreenBox {
@@ -1017,17 +1137,11 @@ body {
         margin-left: 20px;
         padding: 0;
     }
-    #divider2 {
-        margin-left: 18%;
-    }
-    #divider2 img {
-        width: 50px;
-    }
     #champion {
         font-size: 30px;
     }
-    .text1 h3 {
-        font-size: 12px;
+    .text1 p {
+        font-size: 0.7rem;
         padding: 0 0.3125rem 0.0625rem 0.3125rem;
     }
     #list {
@@ -1056,6 +1170,16 @@ body {
         font-size: 10px;
         padding: 5px;
     }
+    .welcomingBox {
+        height: 75%;
+        width: 100%;
+        font-size: 20px;
+    }
+    .ir-arriba {
+        height: 40px;
+        bottom: 26px;
+        right: -12px;
+    }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -1068,8 +1192,8 @@ body {
         filter: blur(18px);
     }
     .corner {
-        width: 95%;
-        margin: 2rem 0.2rem;
+        width: 99%;
+        margin: 1rem 0.2rem;
     }
     .nameSearch img {
         width: 20px;
@@ -1086,16 +1210,13 @@ body {
         margin-left: 20px;
         padding: 0;
     }
-    #divider2 {
-        margin-left: 18%;
-    }
     #divider2 img {
         width: 50px;
     }
     #champion {
         font-size: 30px;
     }
-    .text1 h3 {
+    .text1 p {
         font-size: 12px;
         padding: 0 0.3125rem 0.0625rem 0.3125rem;
     }
@@ -1123,10 +1244,15 @@ body {
     }
     .modal-stats_left p,
     .modal-stats_right p {
-        font-size: 10px;
+        padding: 0.3rem 0;
+    }
+    .modal-stats_left p,
+    .modal-stats_right p {
+        font-size: 11px;
     }
     #list {
         padding: 1px;
+        margin-bottom: 30px;
         grid-gap: 1rem;
         grid-template-columns: 47% 47%;
         justify-content: center;
@@ -1157,11 +1283,31 @@ body {
         width: 32px;
         height: 33px;
     }
+    .ir-arriba {
+        height: 40px;
+        bottom: 26px;
+        right: -12px;
+    }
+    span img {
+        overflow: hidden;
+        width: 35px;
+        height: 35px;
+    }
+    .greeting {
+        font-size: 13px;
+    }
 }
 
 @media (max-width: 320px) {
+    #boxLine {
+        height: 90%;
+        width: 75%;
+    }
     .modal {
         margin-top: 0;
+    }
+    .playButton {
+        margin-top: -30px;
     }
     .close-button {
         top: -1.5rem;
@@ -1186,7 +1332,7 @@ body {
     }
     .builds a,
     .builds p {
-        font-size: 9px;
+        font-size: 10.5px;
     }
     .right p {
         font-size: 0.3rem;
@@ -1199,28 +1345,7 @@ body {
         grid-gap: 1rem;
         grid-template-columns: 45% 45%;
     }
-}
-
-.ir-arriba {
-    border-radius: 100%;
-    border: 3px solid rgb(28, 98, 91);
-    height: 69px;
-    filter: blur(50%);
-    background: rgb(8, 215, 247);
-    cursor: pointer;
-    position: fixed;
-    bottom: -28px;
-    right: -20px;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    animation: "fade";
-}
-
-.ir-arriba:hover {
-    box-shadow: 0 0 1.25rem #feb412, 0 0 1.25rem #feb412;
-}
-
-span img {
-    border-radius: 100%;
-    border: 0.1px solid rgb(28, 98, 91);
+    .greeting {
+        font-size: 13px;
+    }
 }

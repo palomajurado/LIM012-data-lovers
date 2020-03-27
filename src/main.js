@@ -21,7 +21,7 @@ const setName = () => {
     });
     setTimeout(() => {
         welcome.style.display = 'none';
-    }, 3000);
+    }, 5000);
 };
 
 document.getElementById('buttonEnter').addEventListener('click', setName);
@@ -89,14 +89,9 @@ const functionCardsStructure = (listData) => {
         championName.appendChild(championNameImage);
         backCardInfo.appendChild(championName);
 
-        const backCardInfoTitle = document.createElement('h3');
+        const backCardInfoTitle = document.createElement('h1');
         backCardInfoTitle.innerHTML = `' ${champion.title} '`;
         backCardInfo.appendChild(backCardInfoTitle);
-
-        // const championBox = document.createElement('div');
-        // championBox.className = 'champion-box';
-        // const championClass = document.createElement('div');
-        // championClass.className = 'champion-class';
 
         const championStats = document.createElement('div');
         championStats.className = 'champion-stats';
@@ -107,6 +102,23 @@ const functionCardsStructure = (listData) => {
             championStats.appendChild(championStatsText);
             return false;
         });
+
+        const divClassWord = document.createElement('div');
+        divClassWord.className = 'divClassWord';
+        const classWord = document.createElement('p');
+        classWord.innerHTML = 'Class: ';
+        divClassWord.appendChild(classWord);
+
+        champion.tags.map((tag, index) => {
+            const modalRolesP = document.createElement('p');
+            modalRolesP.className = 'pTags';
+            modalRolesP.innerHTML = champion.tags.length - 1 !== index ? `\xa0${tag},` : `\xa0${tag}`;
+            divClassWord.appendChild(modalRolesP);
+            backCard.appendChild(divClassWord);
+            return false;
+        });
+
+
         backCardInfo.appendChild(championStats);
 
 

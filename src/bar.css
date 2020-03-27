@@ -17,6 +17,12 @@
     font-size: 15px;
 }
 
+.order span img {
+    width: 13px;
+    height: 13px;
+    border: none;
+}
+
 .order span:hover {
     color: wheat;
     text-shadow: 0.0625rem 0.0625rem 0.5rem #ab8347, 0 0 1em #ab8347, 0 0 0.2em #ab8347;
@@ -56,7 +62,7 @@
     color: #a87e3e;
     font-size: 1.5rem;
     margin-top: -1rem;
-    margin-left: 0.125rem;
+    margin-left: 0.3rem;
     font-family: "Marcellus SC", serif;
     background-color: rgb(218, 213, 213);
 }
@@ -68,7 +74,8 @@
     height: 100%;
 }
 
-.dif:hover {
+.dif:hover,
+#roleLetter:hover {
     color: wheat;
     text-shadow: 0.0625rem 0.0625rem 0.5rem #ab8347, 0 0 1em #ab8347, 0 0 0.2em #ab8347;
 }
@@ -80,7 +87,7 @@
 
 .dif>span {
     align-self: center;
-    margin-right: 10px;
+    margin-right: 4px;
 }
 
 ul {
@@ -249,9 +256,13 @@ li.active a {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-    .builds a,
-    .builds p {
+    .builds a {
         font-size: 0.6875rem;
+        color: #dfc981;
+    }
+    .builds p {
+        font-size: 7px;
+        padding-left: 6px;
     }
     #searchInputs {
         width: 59px;
