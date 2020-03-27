@@ -1,30 +1,31 @@
-import data from "../src/data/lol/lol.js";
-let championList = data.data;
-//arreglo no ordenado (sort)
+import data from '../src/data/lol/lol';
+
+const championList = data.data;
+
 export const array = [
   championList.Ahri,
   championList.Aatrox,
-  championList.Xerath
-]
-//despues de pasarlo por sort
+  championList.Xerath,
+];
+
 export const sortedArray = [
   championList.Aatrox,
   championList.Ahri,
-  championList.Xerath
-]
-//lo que pasa con array despues de pasarlo por sort y reverse
+  championList.Xerath,
+];
+
 export const reversedArray = [
   championList.Xerath,
   championList.Ahri,
   championList.Aatrox,
 ];
-//se le saca el valor a un objeto y lo comparar con la lista ordenada
+
 export const dataAsObject = {
   Aatrox: championList.Aatrox,
   Ahri: championList.Ahri,
   Xerath: championList.Xerath,
-}
-//compara por dificultad
+};
+
 export const championsFilteredByEasy = [
   championList.Amumu,
   championList.Braum,
@@ -45,8 +46,8 @@ export const championsFilteredByEasy = [
   championList.Varus,
   championList.Volibear,
   championList.Warwick,
-  championList.XinZhao
-]
+  championList.XinZhao,
+];
 
 export const championsFilteredByMedium = [
   championList.Aatrox,
@@ -112,8 +113,8 @@ export const championsFilteredByMedium = [
   championList.Vi,
   championList.Yorick,
   championList.Ziggs,
-  championList.Zilean
-]
+  championList.Zilean,
+];
 
 export const championsFilteredByHard = [
   championList.Akali,
@@ -165,9 +166,9 @@ export const championsFilteredByHard = [
   championList.Yasuo,
   championList.Zac,
   championList.Zed,
-  championList.Zyra
-]
-//compara por clases
+  championList.Zyra,
+];
+
 export const championsFilteredAssasins = [
   championList.Ahri,
   championList.Akali,
@@ -201,9 +202,8 @@ export const championsFilteredAssasins = [
   championList.Xerath,
   championList.XinZhao,
   championList.Yasuo,
-  championList.Zed
-
-]
+  championList.Zed,
+];
 export const championsFilteredMages = [
   championList.Ahri,
   championList.Amumu,
@@ -256,8 +256,8 @@ export const championsFilteredMages = [
   championList.Xerath,
   championList.Ziggs,
   championList.Zilean,
-  championList.Zyra
-]
+  championList.Zyra,
+];
 
 export const championsFilteredFighters = [
   championList.Aatrox,
@@ -325,5 +325,103 @@ export const championsFilteredFighters = [
   championList.Yasuo,
   championList.Yorick,
   championList.Zac,
-  championList.Zed
-]
+  championList.Zed,
+];
+
+export const championsFilteredTank = [
+  championList.Aatrox,
+  championList.Alistar,
+  championList.Amumu,
+  championList.Blitzcrank,
+  championList.Braum,
+  championList.Camille,
+  championList.Chogath,
+  championList.Darius,
+  championList.DrMundo,
+  championList.Galio,
+  championList.Garen,
+  championList.Gnar,
+  championList.Hecarim,
+  championList.Illaoi,
+  championList.JarvanIV,
+  championList.Kled,
+  championList.Leona,
+  championList.Malphite,
+  championList.Maokai,
+  championList.MonkeyKing,
+  championList.Nasus,
+  championList.Nautilus,
+  championList.Olaf,
+  championList.Poppy,
+  championList.Rammus,
+  championList.Renekton,
+  championList.Sejuani,
+  championList.Shen,
+  championList.Shyvana,
+  championList.Singed,
+  championList.Sion,
+  championList.Skarner,
+  championList.TahmKench,
+  championList.Trundle,
+  championList.Udyr,
+  championList.Vladimir,
+  championList.Volibear,
+  championList.Warwick,
+  championList.Yorick,
+  championList.Zac,
+];
+export const championsFilteredSupport = [
+  championList.Alistar,
+  championList.Anivia,
+  championList.Ashe,
+  championList.Bard,
+  championList.Braum,
+  championList.FiddleSticks,
+  championList.Heimerdinger,
+  championList.Ivern,
+  championList.Janna,
+  championList.Karma,
+  championList.Kayle,
+  championList.Leona,
+  championList.Lulu,
+  championList.Lux,
+  championList.Morgana,
+  championList.Nami,
+  championList.Nunu,
+  championList.Orianna,
+  championList.Sona,
+  championList.Soraka,
+  championList.Syndra,
+  championList.TahmKench,
+  championList.Taliyah,
+  championList.Taric,
+  championList.Thresh,
+  championList.Zilean,
+  championList.Zyra,
+];
+
+export const championsFilteredMarskman = [
+  championList.Ashe,
+  championList.Azir,
+  championList.Caitlyn,
+  championList.Corki,
+  championList.Draven,
+  championList.Ezreal,
+  championList.Graves,
+  championList.Jayce,
+  championList.Jhin,
+  championList.Kalista,
+  championList.Kennen,
+  championList.Kindred,
+  championList.KogMaw,
+  championList.Lucian,
+  championList.MissFortune,
+  championList.Quinn,
+  championList.Sivir,
+  championList.Teemo,
+  championList.Tristana,
+  championList.Twitch,
+  championList.Urgot,
+  championList.Varus,
+  championList.Vayne,
+];
