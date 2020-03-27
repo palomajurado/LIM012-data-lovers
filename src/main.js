@@ -4,7 +4,7 @@ import { filterByName, filteredbyClass, filteredByDifficulty, orderList } from '
 /* FUNCION: BUTTONENTER INTERFAZ WELCOME SCROLSS*/
 const keyPressEnter = document.getElementById('inputName');
 const firstScreen = document.getElementById('firstScreen');
-const secondScreenUno = document.getElementById('secondScreenUno');
+const secondScreenOne = document.getElementById('secondScreenOne');
 const footerYear = document.getElementById('year');
 footerYear.innerHTML = new Date().getFullYear();
 
@@ -14,7 +14,7 @@ const setName = () => {
     const parrafo = document.getElementById('inputName_put');
     const welcome = document.querySelector('.welcomingBox');
     parrafo.innerHTML = `!\n Welcome ${newStr}\n !`;
-    secondScreenUno.style.display = 'block';
+    secondScreenOne.style.display = 'block';
     firstScreen.style.display = 'none';
     window.scroll({
         top: 0
