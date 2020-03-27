@@ -1,68 +1,101 @@
-export const filterByName = (championList, term) => {
-    const filteredChampions = Object.values(championList).filter((champion) => {
-        // indexof da -1 si no encuentra resultados
-        if (champion.name.toLowerCase().indexOf(term) !== -1) {
-            return champion;
-        }
-        return false;
-    });
-
-    return filteredChampions;
+// eslint-disable-next-line arrow-body-style
+export const getArray = (championList) => {
+  return Array.isArray(championList) ? championList : Object.values(championList);
 };
 
-// evalua si el term es igual a 'ALL' si lo es return la data, sino retornar la data filtrada
-// return condition ? championList : filtrdbyClass
+// evalua si el term es igual a 'ALL' si lo es retorna la data,
+// sino retornar la data filtrada ok entiendo
+// return condition ? championList : filteredbyClass
+
 export const filteredbyClass = (championList, term) => {
-    const filteredbyClass1 = Object.values(championList).filter((champion) => {
-        if (champion.tags.indexOf(term) !== -1) {
-            return champion;
-        }
-        return false;
-    });
-    return term === 'ALL' ? championList : filteredbyClass1;
+  // eslint-disable-next-line
+  const filteredbyClassArray = getArray(championList).filter((champion) => {
+    if (champion.tags.indexOf(term) !== -1) {
+      return champion;
+    }
+  });
+  return term === 'ALL' ? championList : filteredbyClassArray;
 };
+
+
+export const filterByName = (championList, term) => {
+  // eslint-disable-next-line
+  let filteredChampions = getArray(championList).filter(champion => {
+    // indexof da -1 si no encuentra resultados
+    if (champion.name.toLowerCase().indexOf(term) !== -1) {
+      return champion;
+    }
+  });
+
+  return filteredChampions;
+};
+
+// evalua si el term es igual a 'ALL' si lo es retorna la data,
+// sino retornar la data filtrada ok entiendo
+// return condition ? championList : filteredbyClass
+
 
 export const filteredByDifficulty = (championList, term) => {
-    let filteredByDifficult = Object.values(championList);
+  let filteredByDifficult;
+  const list = getArray(championList);
 
-    if (term === '1') {
-        filteredByDifficult = Object.values(championList).filter((champion) => {
-            if (champion.info.difficulty < 4) {
-                return champion;
-            }
-            return false;
-        });
-    }
+  if (term === '1') {
+    // eslint-disable-next-line
+    filteredByDifficult = list.filter(champion => {
+      if (champion.info.difficulty < 4) {
+        return champion;
+      }
+    });
+  }
 
-    if (term === '2') {
-        filteredByDifficult = Object.values(championList).filter((champion) => {
-            if (champion.info.difficulty > 3 && champion.info.difficulty < 7) {
-                return champion;
-            }
-            return false;
-        });
-    }
+  if (term === '2') {
+    // eslint-disable-next-line
+    filteredByDifficult = list.filter(champion => {
+      if (champion.info.difficulty > 3 && champion.info.difficulty < 7) {
+        return champion;
+      }
+    });
+  }
 
-    if (term === '3') {
-        filteredByDifficult = Object.values(championList).filter((champion) => {
-            if (champion.info.difficulty > 6) {
-                return champion;
-            }
-            return false;
-        });
-    }
+  if (term === '3') {
+    // eslint-disable-next-line
+    filteredByDifficult = list.filter(champion => {
+      if (champion.info.difficulty > 6) {
+        return champion;
+      }
+    });
+  }
 
-    return filteredByDifficult;
+  return filteredByDifficult;
 };
 
 export const orderList = (championList, term) => {
-    let orderedList;
+  let orderedList;
+  const list = getArray(championList);
 
-    if (term === 'az') {
-        orderedList = Object.values(championList).sort();
-    }
-    if (term === 'za') {
-        orderedList = Object.values(championList).sort().reverse();
-    }
-    return orderedList;
+  if (term === 'az') {
+    orderedList = list.sort((a, b) => {
+      if (a.name < b.name) {
+        return -1;
+      }
+      if (a.name > b.name) {
+        return 1;
+      }
+      return 0;
+    });
+  }
+  if (term === 'za') {
+    orderedList = list
+      .sort((a, b) => {
+        if (a.name < b.name) {
+          return -1;
+        }
+        if (a.name > b.name) {
+          return 1;
+        }
+        return 0;
+      })
+      .reverse();
+  }
+  return orderedList;
 };

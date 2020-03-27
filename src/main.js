@@ -1,7 +1,12 @@
 import data from './data/lol/lol.js';
-import { filterByName, filteredbyClass, filteredByDifficulty, orderList } from './data.js';
+import {
+    filterByName,
+    filteredbyClass,
+    filteredByDifficulty,
+    orderList,
+} from './data.js';
 
-/* FUNCION: BUTTONENTER INTERFAZ WELCOME SCROLSS*/
+
 const keyPressEnter = document.getElementById('inputName');
 const firstScreen = document.getElementById('firstScreen');
 const secondScreenOne = document.getElementById('secondScreenOne');
@@ -25,19 +30,24 @@ const setName = () => {
 };
 
 document.getElementById('buttonEnter').addEventListener('click', setName);
-keyPressEnter.addEventListener('keypress', ({ keyCode }) => {
+keyPressEnter.addEventListener('keypress', ({
+    keyCode,
+}) => {
     if (keyCode === 13) setName();
 });
 
 const buttonDown = document.getElementById('button-down');
 buttonDown.addEventListener('click', () => {
-    window.scroll({ top: 0, behavior: 'smooth' });
+    window.scroll({
+        top: 0,
+        behavior: 'smooth',
+    });
 });
 window.onscroll = () => {
     if (window.pageYOffset > 400) {
-        buttonDown.style.display = "block";
+        buttonDown.style.display = 'block';
     } else {
-        buttonDown.style.display = "none";
+        buttonDown.style.display = 'none';
     }
 };
 /*-------------------------------------------*/
@@ -65,8 +75,6 @@ const functionCardsStructure = (listData) => {
     const checkData = Array.isArray(listData) ? listData : Object.values(listData);
 
     checkData.map((champion) => {
-
-        /* FRONT CARDS */
         const div = document.createElement('div');
         div.className = 'card';
         div.style.backgroundImage = `url("${champion.splash}")`;
@@ -89,9 +97,14 @@ const functionCardsStructure = (listData) => {
         championName.appendChild(championNameImage);
         backCardInfo.appendChild(championName);
 
-        const backCardInfoTitle = document.createElement('h1');
+        const backCardInfoTitle = document.createElement('h3');
         backCardInfoTitle.innerHTML = `' ${champion.title} '`;
         backCardInfo.appendChild(backCardInfoTitle);
+
+        // const championBox = document.createElement('div');
+        // championBox.className = 'champion-box';
+        // const championClass = document.createElement('div');
+        // championClass.className = 'champion-class';
 
         const championStats = document.createElement('div');
         championStats.className = 'champion-stats';
@@ -117,8 +130,6 @@ const functionCardsStructure = (listData) => {
             backCard.appendChild(divClassWord);
             return false;
         });
-
-
         backCardInfo.appendChild(championStats);
 
 
@@ -170,13 +181,14 @@ const functionCardsStructure = (listData) => {
                 modalRoles.appendChild(modalRolesP);
                 return false;
             });
+
         };
         modalCloseButton.addEventListener('click', closeModal);
-        window.addEventListener('keypress', ({ keyCode }) => {
+        window.addEventListener('keypress', ({
+            keyCode,
+        }) => {
             if (keyCode === 13) closeModal();
         });
-
-        /*-------------------------------------------*/
 
         const moreStatsButton = document.createElement('div');
         moreStatsButton.className = 'more-stats';
@@ -217,7 +229,6 @@ if (typeof input.addEventListener !== 'undefined') {
             const term = evt.target.value.toLowerCase();
             const filteredChampions = filterByName(championList, term);
 
-            // CHAMPION NOT FOUND
             const errorMessage = document.querySelector('#error');
             if (filteredChampions.length === 0) {
                 errorMessage.classList.remove('hidden');
@@ -228,8 +239,7 @@ if (typeof input.addEventListener !== 'undefined') {
 
             functionCardsStructure(filteredChampions);
         },
-        false
-    );
+        false);
 }
 /*---------------------------------------------*/
 
@@ -264,13 +274,12 @@ const filterClasses = (element) => {
         list.innerHTML = '';
 
         const filteredChampions = filteredbyClass(championList, term);
-
         functionCardsStructure(filteredChampions);
     });
 };
 
-li.forEach((button) => filterClasses(button));
-li2.forEach((button) => filterClasses(button));
+li.forEach(button => filterClasses(button));
+li2.forEach(button => filterClasses(button));
 
 /*---------------------------------------------*/
 
@@ -309,5 +318,3 @@ order1.forEach((option) => {
         functionCardsStructure(filteredChampions);
     });
 });
-
-/*---------------------------------------------*/

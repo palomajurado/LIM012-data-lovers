@@ -863,6 +863,11 @@ body {
     flex-direction: column;
 }
 
+#myDropdown2:hover {
+    display: flex;
+    flex-direction: column;
+}
+
 .levelFull {
     width: 30px;
     height: 15px;
