@@ -59,6 +59,10 @@ body {
     display: none;
 }
 
+#secondScreenOne.shown {
+    display: block;
+}
+
 
 /* HEADER */
 
@@ -647,6 +651,26 @@ body {
     flex-flow: column nowrap;
     justify-content: space-evenly;
     font-family: "Cuprum", sans-serif;
+}
+
+.hide {
+    display: none;
+}
+
+.shown {
+    display: block;
+}
+
+.showFlex {
+    display: flex;
+}
+
+.visible {
+    overflow: visible;
+}
+
+.overflowHidden {
+    overflow: hidden;
 }
 
 .divClassWord {
@@ -1353,4 +1377,10 @@ span img {
     .greeting {
         font-size: 13px;
     }
+}
+
+font-size: 13px;
+
+}
+
 }
