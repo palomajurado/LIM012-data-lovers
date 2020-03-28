@@ -1187,17 +1187,20 @@ span img {
         font-size: 30px;
     }
     .text1 p {
-        font-size: 0.7rem;
+        font-size: 1rem;
         padding: 0 0.3125rem 0.0625rem 0.3125rem;
     }
-    /* #list {
-        padding: 5px;
-        grid-gap: 2rem;
-        grid-template-columns: 45% 45%;
-        justify-content: center;
-    } */
+    #list {
+        display: grid;
+        padding: 1rem;
+        grid-gap: 3rem;
+        color: #dfc981;
+        padding-bottom: 50px;
+        transition: 0.4s ease-in-out;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
     .card {
-        width: 220px;
+        width: 210px;
         background-position: -130px center;
     }
     .corner {
