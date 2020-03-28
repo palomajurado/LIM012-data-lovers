@@ -68,7 +68,6 @@
 }
 
 .dif {
-    margin-left: 10px;
     cursor: pointer;
     display: flex;
     height: 100%;
@@ -254,9 +253,6 @@ li.active a {
     }
     .dropdownMenu {
         display: block;
-    }
-    .dif {
-        margin-right: 4px;
     }
 }
 

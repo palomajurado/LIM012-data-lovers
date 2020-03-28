@@ -1194,14 +1194,14 @@ span img {
     #list {
         display: grid;
         padding: 1rem;
-        grid-gap: 3rem;
+        grid-gap: 1rem;
         color: #dfc981;
         padding-bottom: 50px;
         transition: 0.4s ease-in-out;
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
     .card {
-        width: 210px;
+        width: 200px;
         background-position: -130px center;
     }
     .corner {
@@ -1385,7 +1385,7 @@ span img {
         margin-top: 2rem;
     }
     .right p {
-        font-size: 0.6rem;
+        font-size: 0.5rem;
     }
     #buttonContainer {
         position: absolute;
@@ -1412,7 +1412,7 @@ span img {
         justify-content: center;
     }
     .card {
-        width: 190px;
+        width: 170px;
         background-position: -190px center;
         margin-bottom: 15px;
     }
