@@ -264,9 +264,6 @@ li.active a {
     .dif {
         margin-right: 20px;
     }
-    .text1 p {
-        font-size: 1.5rem;
-    }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {

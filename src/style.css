@@ -1190,12 +1190,12 @@ span img {
         font-size: 0.7rem;
         padding: 0 0.3125rem 0.0625rem 0.3125rem;
     }
-    #list {
+    /* #list {
         padding: 5px;
         grid-gap: 2rem;
         grid-template-columns: 45% 45%;
         justify-content: center;
-    }
+    } */
     .card {
         width: 220px;
         background-position: -130px center;
