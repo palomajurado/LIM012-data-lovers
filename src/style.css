@@ -1120,7 +1120,7 @@ span img {
 
 @media (min-width: 481px) and (max-width: 767px) {
     .footer {
-        padding-top: 15%;
+        padding-top: 8%;
     }
     .header-video video {
         height: 120%;
@@ -1149,6 +1149,7 @@ span img {
         margin: 0 0 1rem 0;
     }
     #mainElements1 p {
+        margin-top: 5px;
         font-size: 13px;
     }
     .welcomingBox {
@@ -1205,7 +1206,7 @@ span img {
     }
     .corner {
         padding: 0.3125rem;
-        margin-left: 13px;
+        margin-left: 23px;
     }
     .championName {
         font-size: 13px;
@@ -1226,15 +1227,21 @@ span img {
         font-size: 20px;
     }
     .ir-arriba {
-        height: 70px;
+        height: 40px;
         bottom: 26px;
         right: -12px;
+    }
+    span img {
+        overflow: hidden;
+        width: 35px;
+        height: 35px;
     }
     .builds p {
         font-size: 9px;
     }
     .dropdownMenu {
         width: 80%;
+        display: block;
     }
     #lupa {
         margin-left: 0px;
@@ -1330,7 +1337,7 @@ span img {
 
 @media (min-width: 320px) and (max-width: 480px) {
     .footer {
-        padding-top: 12.5%;
+        padding-top: 5.5%;
     }
     .header-video video {
         height: 120%;
@@ -1364,8 +1371,8 @@ span img {
         font-size: 30px;
     }
     .text1 p {
-        font-size: 12px;
-        padding: 0 0.3125rem 0.0625rem 0.3125rem;
+        font-size: 11px;
+        padding: 0.3rem 0.3125rem 0.0625rem 0;
     }
     .header {
         height: 250px;
@@ -1378,7 +1385,7 @@ span img {
         margin-top: 2rem;
     }
     .right p {
-        font-size: 0.5rem;
+        font-size: 0.6rem;
     }
     #buttonContainer {
         position: absolute;
@@ -1405,7 +1412,7 @@ span img {
         justify-content: center;
     }
     .card {
-        width: 170px;
+        width: 190px;
         background-position: -190px center;
         margin-bottom: 15px;
     }
@@ -1441,7 +1448,7 @@ span img {
         height: 35px;
     }
     .greeting {
-        font-size: 13px;
+        font-size: 16px;
     }
 }
 
