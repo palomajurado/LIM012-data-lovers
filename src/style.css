@@ -1070,7 +1070,14 @@ span img {
         filter: blur(18px);
     }
     #list {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 3fr));
+        grid-template-columns: repeat(auto-fill, minmax(180px, 3fr));
+        padding: 1.8rem;
+    }
+    .corner {
+        margin: 2rem 0 2rem 1rem;
+    }
+    #divider2 {
+        margin-top: -20px;
     }
     #logoLol {
         height: 150px;
@@ -1101,9 +1108,13 @@ span img {
         font-size: 30px;
     }
     .ir-arriba {
-        height: 40px;
+        height: 55px;
         bottom: 26px;
         right: -12px;
+    }
+    span img {
+        height: 50px;
+        width: 50px;
     }
 }
 
@@ -1230,7 +1241,7 @@ span img {
     }
 }
 
-@media screen and (orientation: landscape) and (min-device-width: 319px) and (max-device-width: 480px) {
+@media screen and (orientation: landscape) and (min-device-width: 320px) and (max-device-width: 640px) and (-webkit-device-pixel-ratio: 2) {
     .modal {
         height: 330px;
         width: 310px;
