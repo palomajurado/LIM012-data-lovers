@@ -12,8 +12,6 @@
 - font-family: 'Marcellus SC', serif;
 - font-family: 'Roboto', sans-serif;
 -font-family: 'Ruda', sans-serif;
-
-
 Colores establecidos:
 - celeste #07CBE9
 - morado 9B51E0
@@ -530,7 +528,7 @@ color: rgb(250, 211, 137);
 }
 
 #lupa {
-    margin-left: 2px;
+    margin-left: 7px;
     animation-delay: 0s;
     animation-duration: 4s;
     animation-iteration-count: infinite;
@@ -688,7 +686,7 @@ color: rgb(250, 211, 137);
     text-shadow: 0.0625rem 0.0625rem 0.5rem #ac7e39, 0 0 1em #b68234, 0 0 0.2em #bb8535;
 }
 
-.back-card__info h1 {
+.back-card__info p {
     font-size: 0.8125rem;
     color: #f5e2a6;
     font-family: "Marcellus SC", serif;
@@ -990,7 +988,7 @@ color: rgb(250, 211, 137);
 .ir-arriba {
     border-radius: 100%;
     border: 3px solid rgb(28, 98, 91);
-    height: 69px;
+    height: 40px;
     filter: blur(50%);
     background: rgb(8, 215, 247);
     cursor: pointer;
@@ -1011,7 +1009,10 @@ color: rgb(250, 211, 137);
     border-radius: 100%;
     border: 0.1px solid rgb(28, 98, 91);
     outline: none;
+ width: 35px;
+        height: 35px;
 }
+.ir-arriba, .ir-arriba img { -webkit-tap-highlight-color: rgba(0,0,0,0); }
 
 .almostFinalBTN {
 	bottom: 5rem;
@@ -1219,7 +1220,7 @@ color: rgb(250, 211, 137);
         margin-left: 78px;
         margin-top: 5px;
     }
-    .back-card__info h3 {
+    .back-card__info p {
         font-size: 13px;
     }
     .more-stats,
@@ -1325,13 +1326,7 @@ color: rgb(250, 211, 137);
     .footer {
         padding-top: 3%;
     }
-    .ir-arriba {
-        height: 40px;
-    }
-    .ir-arriba img {
-        width: 35px;
-        height: 35px;
-    }
+  
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -1348,9 +1343,11 @@ color: rgb(250, 211, 137);
         margin: 1rem 0.2rem;
     }
     .nameSearch img {
-        width: 20px;
-        height: 20px;
-        margin-left: 7px;
+     width: 20px;
+    height: 20px;
+   
+    padding: 0.1rem 0.2125rem 0.3rem 0.3125rem;
+
     }
     .welcomingBox {
         height: 65%;

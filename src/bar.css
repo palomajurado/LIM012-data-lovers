@@ -135,6 +135,7 @@ li.active a {
 .orderArray:hover .SortContent {
     display: block;
 }
+.order, .orderArray, .order span, .dif, .dif>img, .dif>span { -webkit-tap-highlight-color: rgba(0,0,0,0); }
 
 .SortContent {
     z-index: 1;
@@ -279,14 +280,10 @@ li.active a {
     }
     .nameSearch {
         display: grid;
-        grid-gap: 17px;
-        grid-template-columns: 10% 70%;
+           grid-gap: 4px;
+    grid-template-columns: 20% 80%;
     }
-    .nameSearch img {
-        width: 20px;
-        height: 20px;
-        margin-left: 0.3125rem;
-    }
+    
     #role {
         width: 25px;
         height: 20px;
@@ -297,12 +294,12 @@ li.active a {
     }
     .dropdownStyle {
         display: flex;
-        width: 100%;
+        width: 90%;
         align-items: center;
     }
     .dropdownMenu {
         display: block;
-        width: 100%;
+      width: 80%;
     }
     .line {
         border-left: 0.06rem solid #07cbe9;
