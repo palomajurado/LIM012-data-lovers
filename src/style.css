@@ -336,12 +336,21 @@ body {
     top: -3rem;
     right: -2rem;
     cursor: pointer;
+		box-shadow: inset 0 0 1.25rem #DEC880, 0 0 1.25rem #DEC880;
 }
 
 .close-button svg {
     height: 1.5rem;
     width: 1.5rem;
-    color: #fff;
+    color: rgb(226, 219, 219); 
+		border: none;   
+}
+
+.close-button svg:hover{
+box-shadow: inset 0 0 1.25rem #07cbe9, 0 0 1.25rem #07cbe9;
+text-shadow: 1px 1px 8px #feb412, 0 0 1em #07cbe9, 0 0 0.2em #07cbe9;
+color: rgb(250, 211, 137);
+
 }
 
 .modal {
@@ -521,7 +530,7 @@ body {
 }
 
 #lupa {
-    margin-left: 10px;
+    margin-left: 2px;
     animation-delay: 0s;
     animation-duration: 4s;
     animation-iteration-count: infinite;
@@ -558,19 +567,11 @@ body {
 
 #list {
     display: grid;
-    padding: 3rem;
-    grid-gap: 4rem;
+    padding: 2rem;
+    grid-gap: 2rem;
     color: #dfc981;
     padding-bottom: 50px;
     transition: 0.4s ease-in-out;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-}
-
-#filteredList {
-    display: grid;
-    padding: 3rem;
-    grid-gap: 3rem;
-    color: #dfc981;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
 
@@ -578,14 +579,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: -2px;
 }
 
 
 /* CARD */
 
 .card {
-    width: 220px;
-    height: 250px;
+    width: 100%;
+    height: 300px;
     display: flex;
     position: relative;
     background-size: cover;
@@ -674,13 +676,9 @@ body {
 }
 
 .divClassWord {
-    width: 100%;
     color: #f8f6ed;
     font-size: 14px;
-    top: 178px;
-    position: absolute;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     font-family: "Cuprum", sans-serif;
 }
@@ -847,12 +845,12 @@ body {
 }
 
 .text1 p {
-    font-size: 2rem;
+       font-size: 1.5rem;
     color: #dfc981;
     text-align: center;
-    padding: 0 6rem 0 6rem;
+
     font-family: "Marcellus SC", serif;
-    padding: 0 0.3125rem 0.0625rem 0.3125rem;
+    padding: 0.6rem 1rem 0.0625rem 1rem;
 }
 
 
@@ -953,7 +951,7 @@ body {
 /*BUILDS segunda interfaz*/
 
 .corner {
-    width: 95%;
+    width: 96%;
     padding: 0.3125rem;
     margin: 2rem 0 2rem 2rem;
     border: #07cbe9 0.0625rem solid;
@@ -997,10 +995,10 @@ body {
     background: rgb(8, 215, 247);
     cursor: pointer;
     position: fixed;
-    bottom: 39px;
-    right: -27px;
+    bottom: 1rem;
+    right: 1rem;
     outline: none;
-    transform: translate(-50%, -50%);
+		overflow: hidden;
     z-index: 1;
     animation: "fade";
 }
@@ -1009,10 +1007,14 @@ body {
     box-shadow: 0 0 1.25rem #feb412, 0 0 1.25rem #feb412;
 }
 
-span img {
+.ir-arriba img {
     border-radius: 100%;
     border: 0.1px solid rgb(28, 98, 91);
     outline: none;
+}
+
+.almostFinalBTN {
+	bottom: 5rem;
 }
 
 
@@ -1036,10 +1038,12 @@ span img {
         height: 600px;
     }
     .card {
+				height: 250px;
         background-position: -190px center;
     }
     #list {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+				grid-gap: 2rem 1rem;
         margin-right: 12px;
         padding-top: 0;
     }
@@ -1070,9 +1074,12 @@ span img {
         filter: blur(18px);
     }
     #list {
-        grid-template-columns: repeat(auto-fill, minmax(180px, 3fr));
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
         padding: 1.8rem;
     }
+		.card {
+				height: 250px;
+		}
     .corner {
         margin: 2rem 0 2rem 1rem;
     }
@@ -1109,10 +1116,8 @@ span img {
     }
     .ir-arriba {
         height: 55px;
-        bottom: 26px;
-        right: -12px;
     }
-    span img {
+    .ir-arriba img {
         height: 50px;
         width: 50px;
     }
@@ -1201,7 +1206,8 @@ span img {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
     .card {
-        width: 200px;
+				height: 250px;
+        margin-bottom: 10px;
         background-position: -130px center;
     }
     .corner {
@@ -1228,11 +1234,8 @@ span img {
     }
     .ir-arriba {
         height: 40px;
-        bottom: 26px;
-        right: -12px;
     }
-    span img {
-        overflow: hidden;
+    .ir-arriba img {
         width: 35px;
         height: 35px;
     }
@@ -1302,12 +1305,11 @@ span img {
     }
     #list {
         margin-top: -20px;
-        grid-gap: 0rem;
-        grid-template-columns: 33% 33% 33%;
-        justify-content: center;
+        grid-gap: 6vmin 3vmin;
+    		grid-template-columns: repeat(3, 1fr);
     }
     .card {
-        width: 200px;
+				height: 250px;
         margin-bottom: 7px;
         /* margin-bottom: 4px; */
         background-position: -130px center;
@@ -1325,11 +1327,8 @@ span img {
     }
     .ir-arriba {
         height: 40px;
-        bottom: 26px;
-        right: -12px;
     }
-    span img {
-        overflow: hidden;
+    .ir-arriba img {
         width: 35px;
         height: 35px;
     }
@@ -1405,14 +1404,13 @@ span img {
         font-size: 11px;
     }
     #list {
-        padding: 1px;
+        padding: 0.75rem;
         margin-bottom: 30px;
         grid-gap: 1rem;
-        grid-template-columns: 47% 47%;
-        justify-content: center;
+        grid-template-columns: repeat(2, 1fr);
     }
     .card {
-        width: 170px;
+				height: 250px;
         background-position: -190px center;
         margin-bottom: 15px;
     }
@@ -1439,11 +1437,8 @@ span img {
     }
     .ir-arriba {
         height: 40px;
-        bottom: 26px;
-        right: -12px;
     }
-    span img {
-        overflow: hidden;
+    .ir-arriba img {
         width: 35px;
         height: 35px;
     }
@@ -1490,15 +1485,6 @@ span img {
     }
     .right p {
         font-size: 0.3rem;
-    }
-    .card {
-        background-position: -190px center;
-        width: 152px;
-    }
-    #list {
-        padding: 1px;
-        grid-gap: 1rem;
-        grid-template-columns: 45% 45%;
     }
     .greeting {
         font-size: 13px;
