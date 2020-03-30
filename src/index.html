@@ -88,7 +88,7 @@
               <p id="chooseYour">CHOOSE YOUR</p>
               <div id="divider2">
                 <img src="assets/casco1.png" alt="helmet" />
-                <h1 id="champion">CHAMPION</h1>
+                <p id="champion">CHAMPION</p>
               </div>
             </div>
             <div class="text1">
@@ -197,59 +197,196 @@
         <img src="./assets/goldSword.png" /> Champion not found
         <img src="./assets/shield1.png" />
       </h3>
+      
+      
+      <div class="container"> <!-- 20 80-->
+        <div class="icons"> 
+          <h1 class="roles">THE ROLES</h1>
+          <img class="role" id="assassin" data-value="classAssasin" src="assets/slayer.png" alt="Assassin" /></li>
 
-      <div class="endPage">
-        <div class="corner">
-          <div class="builds">
-            <p>CHAMPION'S GUIDE&nbsp; &nbsp;⋙</p>
-            <a href="https://na.op.gg/champion/statistics" target="_blank"
-              >OP.GG</a
-            >
-            <a href="https://www.probuilds.net/champions" target="_blank"
-              >PROBUILDS</a
-            >
-            <a href="https://morelegends.com/es/champions" target="_blank"
-              >MORELEGENDS</a
-            >
+          <img class="role" id="mage" data-value="classMage" src="assets/Mage_icon.png" alt="mage" />></li>
+
+          <img  class="role" id="tank" data-value="classTank" src="assets/Tank_icon.png" alt="tank" />></li>
+
+          <img class="role" id="support" data-value="classSupp" src="assets/support.png" alt="Support" /></li>
+
+          <img class="role" id="fighter" data-value="classFighter" src="assets/Fighter_icon.png" alt="Fighter" /></li>
+
+          <img class="role" id="adc" data-value="classAdc" src="assets/adc.png" alt="Marksman" /></li>        
+
+        </div>
+        <div class="info">
+          <div class="descriptionClass" id="classAssasin">
+            <div class="alignInfo">
+                <div class="slider">
+                  <ul>
+                    <li><img src="assets/assasins/Ahrii.ico" alt="" /></li>
+                    <li><img src="assets/assasins/Diana.ico" alt="" /></li>
+                    <li><img src="assets/assasins/Fizz.ico" alt="" /></li>
+                    <li><img src="assets/assasins/Ekko.ico" alt="" /></li>
+                   </ul>
+                  </div>
+                <div class="info">
+                  <p>
+                    ​Assassins specialize in infiltrating enemy lines with their
+                    unrivaled mobility to quickly dispatch high-priority targets.
+                    Due to their mostly melee nature, Assassins must put them
+                    themselves into dangerous positions in order to execute their
+                    targets. Luckily, they often have defensive tricks up their
+                    sleeves that, if used cleverly, allow them to effectively avoid
+                    incoming damage.
+                  </p>
+                  <p>Strengths: Damage, Mobility, Stealth</p>
+                  <p>Weaknesses: Crowd control, Disengage, Shields, Tanks</p>
+              </div>
+            </div>
+          </div>
+          <div class="descriptionClass hidden" id="classMage">
+            <div class="alignInfo">
+                <div class="slider">
+                  <ul>
+                    <li><img src="assets/mages/Brand.ico" alt="brand" /></li>
+                    <li><img src="assets/mages/Lux Star Guardian.ico" alt="lux" /></li>
+                    <li><img src="assets/mages/Morgana Vict.ico" alt="morgana" /></li>
+                    <li><img src="assets/mages/Veigar.ico" alt="Veigar" /></li>
+                  </ul>
+                </div>
+                <div class="info">
+                  <p>
+                    Mages are champions who typically possess great reach, ability-based area of effect damage and crowd control, and who use all of these strengths in tandem with each other to trap and destroy enemies from a distance. Specializing in magic damage, often burst damage, and therefore investing heavily in items that allow them to cast stronger and faster spells, mages excel at chaining their abilities together in powerful combos in order to win fights, though their abilities also tend to be difficult to land and can be mitigated, if not avoided completely, by their targets if they react in time.
+                  </p>
+                  <p>Strengths: Range, Damage</p>
+                  <p>Weaknesses: Enemy divers, Tanks, Sustain</p>
+                </div>
+              </div>
+          </div>
+          <div class="descriptionClass hidden" id="classTank">
+            <div class="alignInfo">
+                <div class="slider">
+                  <ul>
+                    <li><img src="assets/tank/Singed.ico" alt="" /></li>
+                    <li><img src="assets/tank/Sion.ico" alt="" /></li>
+                    <li><img src="assets/tank/Thresh.ico" alt="" /></li>
+                    <li><img src="assets/tank/Volibear.ico" alt="" /></li>
+                  </ul>
+                </div>
+                <div class="info">
+                  <p>Tanks are tough melee champions who sacrifice damage in exchange for powerful crowd control. While able to engage enemies in combat, a tank's purpose isn't usually to kill opponents; rather, tanks excel at disrupting enemies and diverting focus to themselves, allowing them to lock down specific targets (or several targets at once), as well as remove (or peel) threats from their allies.                </p>
+                  <p>Strengths: Durability, Engage, Lock down</p>
+                  <p>Weaknesses: Mobility, Disengage, Range </p>
+                </div>
+              </div>
+            </div>
+            <div class="descriptionClass hidden" id="classSupp">
+              <div class="alignInfo">
+                  <div class="slider">
+                    <ul>
+                      <li><img src="assets/support/Karma.ico" alt="Karma" /></li>
+                      <li><img src="assets/support/Nami la Iara.ico" alt="Nami" /></li>
+                      <li><img src="assets/support/Sona.ico" alt="Sona" /></li>
+                      <li><img src="assets/support/Zilean.ico" alt="Zilean" /></li>
+                    </ul>
+                  </div>
+                </div>
+                  <div class="info">
+                    <p>Controllers assist their allies with potent utility and keep enemies at bay with crowd control. Weak when alone, supports are capable of massively amplifying their teammates' power to become the strongest class in group combat (or teamfights), supplying crucial utility or crowd control at clutch moments to save allies from death and enable takedowns on the enemy team.</p>
+                    <p>Strengths: Ranged crowd control, Disengage, Lock down</p>
+                    <p>Weaknesses: Damage, Durability, Mobility</p>
+                  </div>
+              </div>
+              <div class="descriptionClass hidden" id="classFighter">
+                <div class="alignInfo">
+                  <div class="slider">
+                    <ul>
+                      <li><img src="assets/fighthers/Diana.ico" alt="Diana" /></li>
+                      <li><img src="assets/fighthers/Rengar.ico" alt="Rengar" /></li>
+                      <li><img src="assets/fighthers/Vi Neon.ico" alt="vi" /></li>
+                      <li><img src="assets/fighthers/Xin Zhao.ico" alt="xinzhao" /></li>
+                    </ul>
+                  </div>
+                  <div class="info">
+                    <p>Fighters are a diverse group of short-ranged combatants who excel at both dealing and surviving damage. With easy access to heavy, continuous damage (or DPS) and a host of innate defenses, fighters thrive in extended fights as they seek out enemies to take down, but their limited range puts them at constant risk of being kept at bay (or kited) by their opponents via crowd control, range and mobility.</p>
+                    <p>Strengths: Damage, Mobility, Engage</p>
+                    <p>Weaknesses: Range, Durability, Disengage</p>
+                  </div>
+                  <div class="percentage"></div>
+                </div>
+              </div>
+                <div class="descriptionClass hidden" id="classAdc">
+                  <div class="alignInfo">
+                      <div class="slider">
+                        <ul>
+                          <li><img src="assets/adc/Draven PrimeTime.ico" alt="Draven" /></li>
+                          <li><img src="assets/adc/CaitlynHeadhunter.ico" alt="caitlyn" /></li>
+                          <li><img src="assets/adc/JinxFirecracker.ico" alt="JinxFirecracker" /></li>
+                          <li><img src="assets/adc/Miss Fortune Arcade.ico" alt="Fortune" /></li>
+                        </ul>
+                      </div>
+                      <div class="info">
+                        <p>Marksmen are ranged champions whose power almost exclusively revolves around their basic attacks: using their reach to land massive continuous damage from a distance, marksmen are capable of taking down even the toughest of opponents when positioned behind the safety of their team, and excel at securing map objectives such as DragonSquare Dragon, Baron NashorSquare Baron Nashor and turrets.</p>
+                        <p>Strengths: Sustained Damage, Range</p>
+                        <p>Weaknesses: Crowd control, Burst, Mobility</p>
+                      </div>
+                </div>
+                </div>
+              </div>
+            </div>
+            <div class="corner">
+              <div class="builds">
+                <p>CHAMPION'S GUIDE&nbsp; &nbsp;⋙</p>
+                <a href="https://na.op.gg/champion/statistics" target="_blank"
+                  >OP.GG</a
+                >
+                <a href="https://www.probuilds.net/champions" target="_blank"
+                  >PROBUILDS</a
+                >
+                <a href="https://morelegends.com/es/champions" target="_blank"
+                  >MORELEGENDS</a
+                >
+              </div>
+            </div>
           </div>
         </div>
+         
       </div>
-
-      <div id="buttonEnterSecondPage"></div>
-
-      <div id="overlay" class="overlay">
-        <div class="modal">
-          <div id="closeButton" class="close-button">
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              data-prefix="fas"
-              data-icon="times"
-              role="img"
-              xmlns="http://www.w3.org/2000/svg"
-              viewbox="0 0 352 512"
-              class="svg-inline--fa fa-times fa-w-11 fa-2x"
-            >
-              <path
-                fill="currentColor"
-                d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
-                class=""
-              ></path>
-            </svg>
+      </div>
+       
+        <div id="buttonEnterSecondPage"></div>
+        <div id="overlay" class="overlay">
+          <div class="modal">
+            <div id="closeButton" class="close-button">
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fas"
+                data-icon="times"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewbox="0 0 352 512"
+                class="svg-inline--fa fa-times fa-w-11 fa-2x"
+              >
+                <path
+                  fill="currentColor"
+                  d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+                  class=""
+                ></path>
+              </svg>
+            </div>
+            <div class="modal-header">
+              <p>Other estadistics:</p>
+              <img src="assets/goldSword.png" alt="" />
+            </div>
+            <div class="modal-stats">
+              <div id="modal-stats-left" class="modal-stats_left"></div>
+              <div id="modal-stats-right" class="modal-stats_right"></div>
+            </div>
+            <div id="modal-roles" class="modal-roles"></div>
           </div>
-          <div class="modal-header">
-            <p>Other estadistics:</p>
-            <img src="assets/goldSword.png" alt="" />
-          </div>
-          <div class="modal-stats">
-            <div id="modal-stats-left" class="modal-stats_left"></div>
-            <div id="modal-stats-right" class="modal-stats_right"></div>
-          </div>
-          <div id="modal-roles" class="modal-roles"></div>
+          <div id="buttonContainer"></div>
         </div>
-        <div id="buttonContainer"></div>
       </div>
-    </div>
+      </div>
+
 
     <footer class="footer">
       <div class="right">
