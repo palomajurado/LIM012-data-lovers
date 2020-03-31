@@ -69,24 +69,17 @@ export const orderList = (championList, term) => {
       if (a.name < b.name) {
         return -1;
       }
-      if (a.name > b.name) {
-        return 1;
-      }
-      return 0;
+      return 1;
     });
   }
   list.innerHTML = '';
   if (term === 'za') {
-    orderedList = list
-      .sort((a, b) => {
-        if (a.name < b.name) {
-          return -1;
-        }
-        if (a.name > b.name) {
-          return 1;
-        }
-        return 0;
-      })
+    orderedList = list.sort((a, b) => {
+      if (a.name < b.name) {
+        return -1;
+      }
+      return 1;
+    })
       .reverse();
   }
   return orderedList;

@@ -19,8 +19,9 @@ body {
   display: none !important;
 }
 .container {
-    display: grid;
-    grid-template-columns: 20% 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
   }
   
   span img {
@@ -34,6 +35,7 @@ body {
     font-size: 20px;
     color: #dfc981;
     font-family: 'Marcellus SC', serif;
+    padding-right: 2rem;
   }
   
   .roles {
@@ -43,7 +45,7 @@ body {
   
   .alignInfo {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 40% 60%;
     grid-gap: 20px;
   }
   
@@ -53,10 +55,6 @@ body {
     margin-left: 30px;
   
   }
-  
-  /*.percentagePage img {
-    
-  }*/
   
   .slider {
     width: 100%;
@@ -88,16 +86,22 @@ body {
     max-width: 100%;
   }
 
+p {
+  text-align: justify;
+}
+
   .icons {
     display: flex;
     flex-direction: row;
     align-items: center;
-  
+    justify-content: space-evenly;
+    padding: 1rem;
+    margin-bottom: 3rem;
   }
   
   .role {
     cursor: pointer;
-    max-width: 120px;
+    max-width: 130px;
   }
   
   @keyframes cambio {
@@ -131,4 +135,11 @@ body {
     100% {
       margin-left: -300%;
     }
+  }
+
+  #tittle {
+    font-size: 50px;
+    justify-self: center;
+    align-self: center;
+    margin: 1rem;
   }

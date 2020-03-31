@@ -1,5 +1,5 @@
 
-const roles = document.querySelectorAll('.role');
+export const roles = document.querySelectorAll('.role');
 const rolesInfo = document.querySelectorAll('.descriptionClass');
 roles.forEach((role) => {
   role.addEventListener('click', () => {

@@ -1048,66 +1048,7 @@ body {
   box-shadow: 0 0 1.25rem #feb412, 0 0 1.25rem #feb412;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: 20% 80%;
-}
 
-span img {
-  border-radius: 100%;
-  border: 0.1px solid rgb(28, 98, 91);
-  outline: none;
-}
-
-.info {
-  text-align: center;
-  font-size: 20px;
-  color: #dfc981;
-  font-family: 'Marcellus SC', serif;
-}
-
-.roles {
-  font-family: 'Marcellus SC', serif;
-  color: #dfc981;
-}
-
-.alignInfo {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-gap: 20px;
-}
-
-.percentagePage {
-  display: flex;
-  flex-direction: column;
-  margin-left: 30px;
-
-}
-
-/*.percentagePage img {
-  
-}*/
-
-.slider {
-  width: 100%;
-  max-width: 1000px;
-  margin: auto;
-  overflow: hidden;
-  position: relative;
-  border-radius: 6px;
-}
-
-.slider ul {
-  display: flex;
-  padding: 0;
-  width: 400%;
-  animation: cambio 20s infinite alternate linear;
-
-}
-
-.slider:nth-child(2) ul {
-  animation-timing-function: steps(4);
-}
 
 .ir-arriba img {
   border-radius: 100%;
@@ -1126,64 +1067,12 @@ span img {
   bottom: 5rem;
 }
 
-.slider li {
-  width: 100%;
-  list-style: none;
-}
-
-.slider img {
-  max-width: 100%;
-}
 
 .descriptionClass {
   width: 100%;
 }
 
-.icons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
-}
-
-.role {
-  cursor: pointer;
-  max-width: 120px;
-}
-
-@keyframes cambio {
-  0% {
-    margin-left: 0;
-  }
-
-  20% {
-    margin-left: 0;
-  }
-
-  25% {
-    margin-left: -100%;
-  }
-
-  45% {
-    margin-left: -100%;
-  }
-
-  50% {
-    margin-left: -200%;
-  }
-
-  70% {
-    margin-left: -200%;
-  }
-
-  75% {
-    margin-left: -300%;
-  }
-
-  100% {
-    margin-left: -300%;
-  }
-}
 
 /*MEDIA QUERIES*/
 

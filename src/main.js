@@ -5,7 +5,10 @@ import {
   filteredByDifficulty,
   orderList,
 } from './data.js';
-
+import {
+  // eslint-disable-next-line no-unused-vars
+  roles,
+} from './roles.js';
 
 const keyPressEnter = document.getElementById('inputName');
 const footerYear = document.getElementById('year');

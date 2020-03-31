@@ -17,11 +17,12 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="roles.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="container a"> <!-- 20 80-->
+    <div class="container"> <!-- 20 80-->
+        <h1 class="roles" id="tittle">THE ROLES</h1>
         <div class="icons"> 
-          <h1 class="roles">THE ROLES</h1>
           <img class="role" id="assassin" data-value="classAssasin" src="assets/slayer.png" alt="Assassin" />
 
           <img class="role" id="mage" data-value="classMage" src="assets/Mage_icon.png" alt="mage" />
@@ -40,22 +41,15 @@
             <div class="alignInfo">
                 <div class="slider">
                   <ul>
-                    <li><img src="assets/assasins/Ahrii.ico" alt="" /></li>
-                    <li><img src="assets/assasins/Katarina Slay Bele.ico" alt="" /></li>
-                    <li><img src="assets/assasins/Fizz.ico" alt="" /></li>
-                    <li><img src="assets/assasins/Ekko.ico" alt="" /></li>
+                    <li><img src="assets/assasins/Ahrii.ico" alt="Ahrii" /></li>
+                    <li><img src="assets/assasins/Katarina Slay Bele.ico" alt="Katarina" /></li>
+                    <li><img src="assets/assasins/Fizz.ico" alt="fizz" /></li>
+                    <li><img src="assets/assasins/Ekko.ico" alt="Ekko" /></li>
                    </ul>
                   </div>
                 <div class="info">
-                  <p>
-                    ​Assassins specialize in infiltrating enemy lines with their
-                    unrivaled mobility to quickly dispatch high-priority targets.
-                    Due to their mostly melee nature, Assassins must put them
-                    themselves into dangerous positions in order to execute their
-                    targets. Luckily, they often have defensive tricks up their
-                    sleeves that, if used cleverly, allow them to effectively avoid
-                    incoming damage.
-                  </p>
+                    <h2>Assasins</h2>
+                  <p>Assassins specialize in infiltrating enemy lines with their unrivaled mobility to quickly dispatch high-priority targets. Due to their mostly melee nature, Assassins must put them themselves into dangerous positions in order to execute their targets. Luckily, they often have defensive tricks up their sleeves that, if used cleverly, allow them to effectively avoid incoming damage. </p> <br>
                   <p>Strengths: Damage, Mobility, Stealth</p>
                   <p>Weaknesses: Crowd control, Disengage, Shields, Tanks</p>
               </div>
@@ -72,13 +66,12 @@
                   </ul>
                 </div>
                 <div class="info">
-                  <p>
-                    Mages are champions who typically possess great reach, ability-based area of effect damage and crowd control, and who use all of these strengths in tandem with each other to trap and destroy enemies from a distance. Specializing in magic damage, often burst damage, and therefore investing heavily in items that allow them to cast stronger and faster spells, mages excel at chaining their abilities together in powerful combos in order to win fights, though their abilities also tend to be difficult to land and can be mitigated, if not avoided completely, by their targets if they react in time.
-                  </p>
+                  <h2>Mages</h2>
+                  <p>Mages are champions who typically possess great reach, ability-based area of effect damage and crowd control, and who use all of these strengths in tandem with each other to trap and destroy enemies from a distance. Specializing in magic damage, often burst damage, and therefore investing heavily in items that allow them to cast stronger and faster spells, mages excel at chaining their abilities together in powerful combos in order to win fights.</p> <br>
                   <p>Strengths: Range, Damage</p>
                   <p>Weaknesses: Enemy divers, Tanks, Sustain</p>
                 </div>
-              </div>
+            </div>
           </div>
           <div class="descriptionClass hidden" id="classTank">
             <div class="alignInfo">
@@ -91,7 +84,8 @@
                   </ul>
                 </div>
                 <div class="info">
-                  <p>Tanks are tough melee champions who sacrifice damage in exchange for powerful crowd control. While able to engage enemies in combat, a tank"s purpose isn"t usually to kill opponents; rather, tanks excel at disrupting enemies and diverting focus to themselves, allowing them to lock down specific targets (or several targets at once), as well as remove (or peel) threats from their allies.                </p>
+                  <h2>Tanks</h2>
+                  <p>Tanks are tough melee champions who sacrifice damage in exchange for powerful crowd control. While able to engage enemies in combat, a tank"s purpose isn"t usually to kill opponents; rather, tanks excel at disrupting enemies and diverting focus to themselves, allowing them to lock down specific targets (or several targets at once), as well as remove (or peel) threats from their allies.</p> <br>
                   <p>Strengths: Durability, Engage, Lock down</p>
                   <p>Weaknesses: Mobility, Disengage, Range </p>
                 </div>
@@ -107,13 +101,14 @@
                       <li><img src="assets/support/Zilean.ico" alt="Zilean" /></li>
                     </ul>
                   </div>
-                </div>
                   <div class="info">
-                    <p>Controllers assist their allies with potent utility and keep enemies at bay with crowd control. Weak when alone, supports are capable of massively amplifying their teammates" power to become the strongest class in group combat (or teamfights), supplying crucial utility or crowd control at clutch moments to save allies from death and enable takedowns on the enemy team.</p>
+                      <h2>Supports</h2>
+                    <p>Supports assist their allies with potent utility and keep enemies at bay with crowd control. Weak when alone, supports are capable of massively amplifying their teammates" power to become the strongest class in group combat (or teamfights), supplying crucial utility or crowd control at clutch moments to save allies from death and enable takedowns on the enemy team.</p> <br>
                     <p>Strengths: Ranged crowd control, Disengage, Lock down</p>
                     <p>Weaknesses: Damage, Durability, Mobility</p>
                   </div>
-              </div>
+                </div>
+            </div>
               <div class="descriptionClass hidden" id="classFighter">
                 <div class="alignInfo">
                   <div class="slider">
@@ -125,13 +120,14 @@
                     </ul>
                   </div>
                   <div class="info">
-                    <p>Fighters are a diverse group of short-ranged combatants who excel at both dealing and surviving damage. With easy access to heavy, continuous damage (or DPS) and a host of innate defenses, fighters thrive in extended fights as they seek out enemies to take down, but their limited range puts them at constant risk of being kept at bay (or kited) by their opponents via crowd control, range and mobility.</p>
+                    <h2>Fighters</h2>
+                    <p>Fighters are a diverse group of short-ranged combatants who excel at both dealing and surviving damage. With easy access to heavy, continuous damage (or DPS) and a host of innate defenses, fighters thrive in extended fights as they seek out enemies to take down, but their limited range puts them at constant risk of being kept at bay (or kited) by their opponents via crowd control, range and mobility.</p> <br>
                     <p>Strengths: Damage, Mobility, Engage</p>
                     <p>Weaknesses: Range, Durability, Disengage</p>
                   </div>
-                  <div class="percentage"></div>
                 </div>
               </div>
+                  <div class="percentage"></div>
                 <div class="descriptionClass hidden" id="classAdc">
                   <div class="alignInfo">
                       <div class="slider">
@@ -143,13 +139,47 @@
                         </ul>
                       </div>
                       <div class="info">
-                        <p>Marksmen are ranged champions whose power almost exclusively revolves around their basic attacks: using their reach to land massive continuous damage from a distance, marksmen are capable of taking down even the toughest of opponents when positioned behind the safety of their team, and excel at securing map objectives such as DragonSquare Dragon, Baron NashorSquare Baron Nashor and turrets.</p>
+                          <h2>AD Carrys</h2>
+                        <p>Marksmen are ranged champions whose power almost exclusively revolves around their basic attacks: using their reach to land massive continuous damage from a distance, marksmen are capable of taking down even the toughest of opponents when positioned behind the safety of their team, and excel at securing map objectives such as DragonSquare Dragon, Baron NashorSquare Baron Nashor and turrets.</p> <br>
                         <p>Strengths: Sustained Damage, Range</p>
                         <p>Weaknesses: Crowd control, Burst, Mobility</p>
                       </div>
-                  </div>
+                    </div>
                 </div>
               </div>
             </div>
-</body>
-</html>
+            <footer class="footer">
+                <div class="right">
+                  <p>
+                    &copy; <span id="year"></span> &nbsp;| &nbsp; Todos los Derechos
+                    Reservados
+                  </p>
+                </div>
+                <div id="left">
+                  <a href="# ">
+                    <img
+                      src="./assets/shareLOGO.png"
+                      id="compartir"
+                      class="animated wobble"
+                    />
+                  </a>
+                  <a href="https:/facebook.com" class="nav-link" target="_blank">
+                    <img src="./assets/fbLOGO.png" class="imgRedes" />
+                  </a>
+          
+                  <a href="https://twitter.com" class="nav-link" target="_blank">
+                    <img src="./assets/twittLOGO.png" class="imgRedes" />
+                  </a>
+          
+                  <a href="https://www.instagram.com/" class="nav-link" target="_blank">
+                    <img src="./assets/instaLOGO11.png" class="imgRedes" />
+                  </a>
+                </div>
+              </footer>
+              <script src="./data.js " type="module"></script>
+              <script src="./main.js" type="module"></script>
+              <script src="roles.js"></script>
+            </body>
+          </html>
+          
+          
