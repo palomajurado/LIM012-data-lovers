@@ -1,7 +1,5 @@
 .DS_Store
-*
-.swp
-.nyc_output /
-coverage /
-node_modules /
-node_modules
+*.swp
+.nyc_output/
+coverage/
+node_modules/
