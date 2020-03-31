@@ -44,11 +44,11 @@ describe('orderList', () => {
   });
 
   it('Debería devolver el arreglo ordenado de la A a la Z', () => {
-    expect(orderList(array, 'az')).toStrictEqual(sortedArray);
+    expect([...orderList(array, 'az')]).toEqual(sortedArray);
   });
 
   it('Debería devolver el arreglo ordenado de la Z a la A', () => {
-    expect(orderList(array, 'za')).toStrictEqual(reversedArray);
+    expect([...orderList(array, 'za')]).toEqual(reversedArray);
   });
 });
 

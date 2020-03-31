@@ -12,14 +12,12 @@
 - font-family: 'Marcellus SC', serif;
 - font-family: 'Roboto', sans-serif;
 -font-family: 'Ruda', sans-serif;
-
-
 Colores establecidos:
 - celeste #07CBE9
 - morado 9B51E0
 - inputs casi blanco EEEAEA
 - dorado LOL #B48643
-<iframe width="560" height="315" src="https://www.youtube.com/embed/A-wez_wSWEA?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+<iframe width='560' height='315' src='https://www.youtube.com/embed/A-wez_wSWEA?controls=0' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe> 
 https://www.youtube.com/watch?v=A-wez_wSWEA&feature=youtu.be -->
 Invision https://mararodriguez597039.invisionapp.com/freehand/datalovers-lol-AYIeTKBpY?v=X6JP0IPtqctW100IADvc3w%3D%3D&linkshare=urlcopied
 Links FIGMA https://www.figma.com/file/lr2q13Jdqztgdy6ag3oV7a/Untitled?node-id=77%3A177
@@ -57,6 +55,10 @@ body {
 
 #secondScreenOne {
   display: none;
+}
+
+#secondScreenOne.shown {
+  display: block;
 }
 
 
@@ -159,14 +161,14 @@ body {
 
 .right p {
   color: rgb(247, 221, 165);
-  font-family: "Marcellus SC", serif;
+  font-family: 'Marcellus SC', serif;
   font-size: 1.25rem;
 }
 
 #mainElements1 p {
   color: rgb(252, 241, 183);
   font-size: 1.875rem;
-  font-family: "Marcellus SC", serif;
+  font-family: 'Marcellus SC', serif;
   text-align: center;
   text-shadow: 0.0625rem 0.0625rem 0.375rem #07cbe9;
 }
@@ -194,7 +196,7 @@ body {
   text-align: center;
   font-size: 1.25rem;
   background-color: transparent;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   border: transparent;
   letter-spacing: 10px;
   text-shadow: 0.0625rem 0.0625rem 0.5rem #feb412, 0 0 1em #07cbe9, 0 0 0.2em #07cbe9;
@@ -213,7 +215,7 @@ body {
 }
 
 .form label::after {
-  content: "";
+  content: '';
   height: 100%;
   width: 100%;
   position: absolute;
@@ -239,7 +241,7 @@ body {
   position: relative;
   bottom: 0.3125rem;
   transition: all 0.3s ease;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.125rem;
   color: #dfc981;
 }
@@ -261,7 +263,7 @@ body {
   outline: none;
   color: wheat;
   font-size: 1.5625rem;
-  font-family: "Marcellus SC", serif;
+  font-family: 'Marcellus SC', serif;
   transition: all 0.3s ease;
   cursor: pointer;
 }
@@ -335,9 +337,33 @@ body {
 }
 
 .close-button svg {
+  height: 2rem;
+  width: 2rem;
+  background-color: #08d7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: absolute;
+  top: -3rem;
+  right: -2rem;
+  cursor: pointer;
+  box-shadow: inset 0 0 1.25rem #DEC880, 0 0 1.25rem #DEC880;
+}
+
+.close-button svg {
   height: 1.5rem;
   width: 1.5rem;
-  color: #fff;
+  color: rgb(226, 219, 219);
+  border: none;
+}
+
+.close-button svg:hover {
+  box-shadow: inset 0 0 1.25rem #07cbe9, 0 0 1.25rem #07cbe9;
+  text-shadow: 1px 1px 8px #feb412, 0 0 1em #07cbe9, 0 0 0.2em #07cbe9;
+  color: rgb(250, 211, 137);
+
+
 }
 
 .modal {
@@ -357,7 +383,7 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  font-family: "Marcellus SC", serif;
+  font-family: 'Marcellus SC', serif;
 }
 
 .modal-header p,
@@ -399,7 +425,7 @@ body {
   padding: 0.3rem 0;
   color: #fff;
   line-height: 1rem;
-  font-family: "Cuprum", sans-serif;
+  font-family: 'Cuprum', sans-serif;
 }
 
 .modal-roles {
@@ -407,7 +433,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Ruda", sans-serif;
+  font-family: 'Ruda', sans-serif;
 }
 
 .modal-roles img {
@@ -481,7 +507,7 @@ body {
 .welcomingBox {
   text-align: center;
   color: rgb(252, 241, 183);
-  font-family: "Marcellus SC", serif;
+  font-family: 'Marcellus SC', serif;
   font-size: 5rem;
   background: url(./assets/backgroundNero.jpeg);
   height: 100%;
@@ -517,10 +543,11 @@ body {
 }
 
 #lupa {
-  margin-left: 10px;
+  margin-left: 7px;
   animation-delay: 0s;
   animation-duration: 4s;
   animation-iteration-count: infinite;
+
 }
 
 
@@ -541,7 +568,7 @@ body {
   color: #dfc981;
   font-size: 2.1875rem;
   padding: 0 0.3125rem 0 0.3125rem;
-  font-family: "Marcellus SC", serif;
+  font-family: 'Marcellus SC', serif;
 }
 
 #champion {
@@ -549,7 +576,7 @@ body {
   padding-left: 5px;
   font-size: 3.125rem;
   padding: 0.1rem 0rem 0.1rem 0rem;
-  font-family: "Marcellus SC", serif;
+  font-family: 'Marcellus SC', serif;
 }
 
 #list {
@@ -572,17 +599,28 @@ body {
 }
 
 #divider2 {
+  display: grid;
+  padding: 2rem;
+  grid-gap: 2rem;
+  color: #dfc981;
+  padding-bottom: 50px;
+  transition: 0.4s ease-in-out;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+#divider2 {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: -2px;
 }
 
 
 /* CARD */
 
 .card {
-  width: 220px;
-  height: 250px;
+  width: 100%;
+  height: 300px;
   display: flex;
   position: relative;
   background-size: cover;
@@ -632,7 +670,7 @@ body {
   transition: all ease 0.5s;
   backface-visibility: hidden;
   border: 0.0625rem solid #07cbe9;
-  font-family: "Marcellus SC", serif;
+  font-family: 'Marcellus SC', serif;
   transform: perspective(600px) rotateY(180deg);
   box-shadow: inset 0 0 1.25rem #07cbe9, 0 0 1.25rem #07cbe9;
 }
@@ -647,7 +685,27 @@ body {
   font-size: 0.75rem;
   flex-flow: column nowrap;
   justify-content: space-evenly;
-  font-family: "Cuprum", sans-serif;
+  font-family: 'Cuprum', sans-serif;
+}
+
+.hide {
+  display: none;
+}
+
+.shown {
+  display: block;
+}
+
+.showFlex {
+  display: flex;
+}
+
+.visible {
+  overflow: visible;
+}
+
+.overflowHidden {
+  overflow: hidden;
 }
 
 .divClassWord {
@@ -659,7 +717,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  font-family: "Cuprum", sans-serif;
+  font-family: 'Cuprum', sans-serif;
 }
 
 .pTags {
@@ -667,16 +725,17 @@ body {
   text-shadow: 0.0625rem 0.0625rem 0.5rem #ac7e39, 0 0 1em #b68234, 0 0 0.2em #bb8535;
 }
 
-.back-card__info h1 {
+.back-card__info p {
   font-size: 0.8125rem;
   color: #f5e2a6;
-  font-family: "Marcellus SC", serif;
+  font-family: 'Marcellus SC', serif;
+
 }
 
 .champion-name p {
   color: #dfc981;
   font-size: 1.375rem;
-  font-family: "Trade Winds", cursive;
+  font-family: 'Trade Winds', cursive;
 }
 
 .champion-name img {
@@ -727,7 +786,7 @@ body {
   font-size: 10px;
   padding: 0.25rem 0.5rem;
   margin: 0px;
-  font-family: "Marcellus SC", serif;
+  font-family: 'Marcellus SC', serif;
   border: rgb(80, 234, 245) 0.0625rem solid;
   color: rgb(249, 252, 252);
 }
@@ -755,7 +814,7 @@ body {
   outline: none;
   color: wheat;
   font-size: 1.5625rem;
-  font-family: "Marcellus SC", serif;
+  font-family: 'Marcellus SC', serif;
   transition: all 0.3s ease;
   cursor: pointer;
 }
@@ -769,7 +828,7 @@ body {
   outline: none;
   color: wheat;
   font-size: 1.5625rem;
-  font-family: "Marcellus SC", serif;
+  font-family: 'Marcellus SC', serif;
   transition: all 0.3s ease;
   cursor: pointer;
 }
@@ -790,7 +849,7 @@ body {
   font-size: 1.25rem;
   margin-left: 35%;
   transition: all ease 0.5s;
-  font-family: "Trade Winds", cursive;
+  font-family: 'Trade Winds', cursive;
 }
 
 .championName:hover {
@@ -824,12 +883,12 @@ body {
 }
 
 .text1 p {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #dfc981;
   text-align: center;
-  padding: 0 6rem 0 6rem;
-  font-family: "Marcellus SC", serif;
-  padding: 0 0.3125rem 0.0625rem 0.3125rem;
+
+  font-family: 'Marcellus SC', serif;
+  padding: 0.6rem 1rem 0.0625rem 1rem;
 }
 
 
@@ -846,7 +905,7 @@ body {
   font-size: 3.125rem;
   color: rgb(247, 221, 165);
   border: 0.0625rem solid turquoise;
-  font-family: "Trade Winds", cursive;
+  font-family: 'Trade Winds', cursive;
 }
 
 #error img {
@@ -930,7 +989,7 @@ body {
 /*BUILDS segunda interfaz*/
 
 .corner {
-  width: 95%;
+  width: 96%;
   padding: 0.3125rem;
   margin: 2rem 0 2rem 2rem;
   border: #07cbe9 0.0625rem solid;
@@ -938,14 +997,17 @@ body {
 }
 
 .builds {
+  width: 100%;
   height: 50px;
-  display: grid;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-evenly;
   color: #dfc981;
   text-align: center;
   align-items: center;
   text-decoration: none;
   background-color: #0ca6beb7;
-  font-family: "Marcellus SC", serif;
+  font-family: 'Marcellus SC', serif;
   grid-template-columns: repeat(4, 1fr);
   border-radius: 1.5625rem 0rem 1.5625rem 0rem;
 }
@@ -969,17 +1031,17 @@ body {
 .ir-arriba {
   border-radius: 100%;
   border: 3px solid rgb(28, 98, 91);
-  height: 69px;
+  height: 40px;
   filter: blur(50%);
   background: rgb(8, 215, 247);
   cursor: pointer;
   position: fixed;
-  bottom: 39px;
-  right: -27px;
+  bottom: 1rem;
+  right: 1rem;
   outline: none;
-  transform: translate(-50%, -50%);
+  overflow: hidden;
   z-index: 1;
-  animation: "fade";
+  animation: 'fade';
 }
 
 .ir-arriba:hover {
@@ -1001,11 +1063,11 @@ span img {
   text-align: center;
   font-size: 20px;
   color: #dfc981;
-  font-family: "Marcellus SC", serif;
+  font-family: 'Marcellus SC', serif;
 }
 
 .roles {
-  font-family: "Marcellus SC", serif;
+  font-family: 'Marcellus SC', serif;
   color: #dfc981;
 }
 
@@ -1045,6 +1107,23 @@ span img {
 
 .slider:nth-child(2) ul {
   animation-timing-function: steps(4);
+}
+
+.ir-arriba img {
+  border-radius: 100%;
+  border: 0.1px solid rgb(28, 98, 91);
+  outline: none;
+  width: 35px;
+  height: 35px;
+}
+
+.ir-arriba,
+.ir-arriba img {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.almostFinalBTN {
+  bottom: 5rem;
 }
 
 .slider li {
@@ -1129,11 +1208,13 @@ span img {
   }
 
   .card {
-    background-position: -90px center;
+    height: 250px;
+    background-position: -190px center;
   }
 
   #list {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 2rem 1rem;
     margin-right: 12px;
     padding-top: 0;
   }
@@ -1147,6 +1228,7 @@ span img {
   .greeting {
     font-size: 55px;
   }
+
 }
 
 @media (max-height: 700px) and (min-width: 768px) {
@@ -1541,6 +1623,521 @@ span img {
     padding: 1px;
     grid-gap: 1rem;
     grid-template-columns: 45% 45%;
+  }
+
+  .greeting {
+    font-size: 13px;
+  }
+}
+
+.playButton {
+  margin-top: -130px;
+}
+
+.header-video video {
+  height: 120%;
+  width: 120%;
+  filter: blur(18px);
+}
+
+#list {
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  padding: 1.8rem;
+}
+
+.card {
+  height: 250px;
+}
+
+.corner {
+  margin: 2rem 0 2rem 1rem;
+}
+
+#divider2 {
+  margin-top: -20px;
+}
+
+#logoLol {
+  height: 150px;
+}
+
+.header {
+  height: 500px;
+}
+
+#mainElements1 p {
+  font-size: 18px;
+}
+
+.modal-stats_left p,
+.modal-stats_right p {
+  padding: 0.4rem 0;
+}
+
+#left a:link,
+#left a img {
+  width: 55px;
+  height: 55px;
+}
+
+.footer p {
+  margin-top: 1%;
+}
+
+.text1 p {
+  font-size: 1.5rem;
+  padding: 0 0.3125rem 0.0625rem 0.3125rem;
+}
+
+.greeting {
+  font-size: 30px;
+}
+
+.ir-arriba {
+  height: 55px;
+}
+
+.ir-arriba img {
+  height: 50px;
+  width: 50px;
+}
+
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .footer {
+    padding-top: 8%;
+  }
+
+  .header-video video {
+    height: 120%;
+    width: 120%;
+    filter: blur(18px);
+  }
+
+  #buttonEnter {
+    margin: 2.5rem 0;
+  }
+
+  .header {
+    height: 350px;
+  }
+
+  #logoLol {
+    height: 150px;
+  }
+
+  #left a:link,
+  #left a img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .form {
+    width: 60%;
+    margin-top: 3rem;
+  }
+
+  #mainElements1 {
+    margin: 0 0 1rem 0;
+  }
+
+  #mainElements1 p {
+    margin-top: 5px;
+    font-size: 13px;
+  }
+
+  .welcomingBox {
+    height: 65%;
+    width: 100%;
+    font-size: 20px;
+  }
+
+  .right p {
+    font-size: 11px;
+  }
+
+  .modal {
+    height: 500px;
+    width: 310px;
+    padding: 1rem;
+  }
+
+  .modal-stats_left p,
+  .modal-stats_right p {
+    padding: 0.3rem 0;
+  }
+
+  .modal-stats_left p,
+  .modal-stats_right p {
+    font-size: 11px;
+  }
+
+  .secondScreenBox {
+    height: 38%;
+    width: 100%;
+    padding: 0.5rem 0 0 0;
+  }
+
+  #chooseYour {
+    font-size: 19px;
+    margin-bottom: -30px;
+    margin-left: 20px;
+    padding: 0;
+  }
+
+  #champion {
+    font-size: 30px;
+  }
+
+  .text1 p {
+    font-size: 1rem;
+    padding: 0 0.3125rem 0.0625rem 0.3125rem;
+  }
+
+  #list {
+    display: grid;
+    padding: 1rem;
+    grid-gap: 1rem;
+    color: #dfc981;
+    padding-bottom: 50px;
+    transition: 0.4s ease-in-out;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .card {
+    height: 250px;
+    margin-bottom: 10px;
+    background-position: -130px center;
+  }
+
+  .corner {
+    padding: 0.3125rem;
+    margin-left: 23px;
+  }
+
+  .championName {
+    font-size: 13px;
+    margin-left: 78px;
+    margin-top: 5px;
+  }
+
+  .back-card__info p {
+    font-size: 13px;
+  }
+
+  .more-stats,
+  .playButton {
+    font-size: 10px;
+    padding: 5px;
+  }
+
+  .welcomingBox {
+    height: 75%;
+    width: 100%;
+    font-size: 20px;
+  }
+
+  .ir-arriba {
+    height: 40px;
+  }
+
+  .ir-arriba img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .builds p {
+    font-size: 9px;
+  }
+
+  .dropdownMenu {
+    width: 80%;
+    display: block;
+  }
+
+  #lupa {
+    margin-left: 0px;
+  }
+
+  #searchInputs {
+    width: 60px;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-device-width: 320px) and (max-device-width: 640px) and (-webkit-device-pixel-ratio: 2) {
+  .modal {
+    height: 330px;
+    width: 310px;
+    /* padding: 1rem; */
+  }
+
+  .modal-header p,
+  .modal-roles p {
+    font-size: 1rem;
+    margin-bottom: 2px;
+    /* margin-top: -10px; */
+    font-weight: bolder;
+    color: rgb(223, 201, 129);
+  }
+
+  .modal-header img {
+    height: 20px;
+    width: 20px;
+    margin-left: 5px;
+  }
+
+  .modal-stats_left,
+  .modal-stats_right {
+    height: 90%;
+    margin-top: 3px;
+    width: 50%;
+    display: flex;
+    text-align: initial;
+    flex-direction: column;
+    /* padding: 1rem 0; */
+  }
+
+  .modal-stats {
+    height: 90%;
+    width: 100%;
+    margin-top: -3px;
+    /* margin-top: -0px; */
+    display: flex;
+  }
+
+  .close-button {
+    top: -0.5rem;
+    right: -3rem;
+  }
+
+  .modal-stats_left p,
+  .modal-stats_right p {
+    font-size: 10px;
+    padding: 0.1rem 0;
+  }
+
+  .modal-roles img {
+    height: auto;
+    width: 40px;
+  }
+
+  #list {
+    margin-top: -20px;
+    grid-gap: 6vmin 3vmin;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card {
+    height: 250px;
+    margin-bottom: 7px;
+    /* margin-bottom: 4px; */
+    background-position: -130px center;
+  }
+
+  .text1 p {
+    font-size: 1rem;
+    padding: 0 0.3125rem 0rem 0.3125rem;
+  }
+
+  #mainElements1 p {
+    font-size: 13px;
+    margin-top: 12px;
+  }
+
+  .footer {
+    padding-top: 3%;
+  }
+
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .footer {
+    padding-top: 5.5%;
+  }
+
+  .header-video video {
+    height: 120%;
+    width: 120%;
+    filter: blur(18px);
+  }
+
+  .corner {
+    width: 99%;
+    margin: 1rem 0.2rem;
+  }
+
+  .nameSearch img {
+    width: 25px;
+    height: 20px;
+
+    padding: 0.1rem 0.2125rem 0.3rem 0.3125rem;
+
+  }
+
+  .welcomingBox {
+    height: 65%;
+    width: 100%;
+    font-size: 20px;
+  }
+
+  #chooseYour {
+    font-size: 15px;
+    margin-bottom: -10px;
+    margin-left: 42px;
+    padding: 0;
+  }
+
+  #divider2 img {
+    width: 50px;
+  }
+
+  #champion {
+    font-size: 30px;
+  }
+
+  .text1 p {
+    font-size: 11px;
+    padding: 0.3rem 0.3125rem 0.0625rem 0;
+  }
+
+  .header {
+    height: 250px;
+  }
+
+  #mainElements1 p {
+    font-size: 13px;
+  }
+
+  .form {
+    width: 60%;
+    margin-top: 2rem;
+  }
+
+  .right p {
+    font-size: 0.5rem;
+  }
+
+  #buttonContainer {
+    position: absolute;
+    margin-top: 280px;
+  }
+
+  .modal {
+    height: 450px;
+    width: 80%;
+    margin-top: -2rem;
+  }
+
+  .modal-stats_left p,
+  .modal-stats_right p {
+    padding: 0.3rem 0;
+  }
+
+  .modal-stats_left p,
+  .modal-stats_right p {
+    font-size: 11px;
+  }
+
+  #list {
+    padding: 0.75rem;
+    margin-bottom: 30px;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    height: 250px;
+    background-position: -190px center;
+    margin-bottom: 15px;
+  }
+
+  .championName {
+    font-size: 15px;
+  }
+
+  #left a:link,
+  #left a img {
+    width: 30px;
+    height: 30px;
+  }
+
+  #buttonEnter {
+    margin: 2.5rem 0;
+  }
+
+  #error {
+    width: 80%;
+    padding: 1.25rem;
+    margin-bottom: 10%;
+    font-size: 1rem;
+  }
+
+  #error img {
+    width: 32px;
+    height: 33px;
+  }
+
+  .ir-arriba {
+    height: 40px;
+  }
+
+  .ir-arriba img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .greeting {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 320px) {
+  #boxLine {
+    height: 90%;
+    width: 75%;
+  }
+
+  .modal {
+    margin-top: 0;
+  }
+
+  .playButton {
+    margin-top: -30px;
+  }
+
+  .close-button {
+    top: -1.5rem;
+    right: -2.2rem;
+  }
+
+  #buttonContainer {
+    position: initial;
+    margin-top: 0;
+  }
+
+  .searchbar {
+    padding-left: 0rem;
+    font-size: 10px;
+  }
+
+  #error {
+    width: 80%;
+    padding: 1.25rem;
+    font-size: 1rem;
+  }
+
+  #error img {
+    width: 22px;
+    height: 23px;
+  }
+
+  .builds a,
+  .builds p {
+    font-size: 10.5px;
+  }
+
+  .right p {
+    font-size: 0.3rem;
   }
 
   .greeting {
