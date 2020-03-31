@@ -5,7 +5,10 @@ import {
   filteredByDifficulty,
   orderList,
 } from './data.js';
-
+import {
+  // eslint-disable-next-line no-unused-vars
+  roles,
+} from './roles.js';
 
 const keyPressEnter = document.getElementById('inputName');
 const footerYear = document.getElementById('year');
@@ -61,12 +64,14 @@ window.onscroll = () => {
     buttonDown.classList.add('hide');
   }
 };
-/*-------------------------------------------*/
 
 // FUNCION:PLAY BUTTON
 const functionPlayButton = () => {
   const playButton = document.createElement('a');
-  playButton.setAttribute('href', 'https://signup.lan.leagueoflegends.com/es/signup/redownload?page_referrer=index');
+  playButton.setAttribute(
+    'href',
+    'https://signup.lan.leagueoflegends.com/es/signup/redownload?page_referrer=index',
+  );
   playButton.setAttribute('target', '_blank');
   playButton.className = 'playButton';
   playButton.innerHTML = 'Play Now';
@@ -83,12 +88,13 @@ const championList = data.data;
 const list = document.getElementById('list');
 
 const functionCardsStructure = (listData) => {
-  const checkData = Array.isArray(listData) ? listData : Object.values(listData);
+  const checkData = Array.isArray(listData)
+    ? listData : Object.values(listData);
 
   checkData.map((champion) => {
     const div = document.createElement('div');
     div.className = 'card';
-    div.style.backgroundImage = `url("${champion.splash}")`;
+    div.style.backgroundImage = `url('${champion.splash}')`;
     const p = document.createElement('p');
     p.className = 'championName';
     p.innerHTML = `${champion.name}`;
@@ -142,7 +148,6 @@ const functionCardsStructure = (listData) => {
       return false;
     });
     backCardInfo.appendChild(championStats);
-
 
     /* MODAL MORESTATS */
     const modalOverlay = document.getElementById('overlay');
@@ -300,7 +305,7 @@ li2.forEach((el) => {
 /*---------------------------------------------*/
 
 /* FILTRADO: POR CLASE */
-const filterClasses = (element) => {
+const filterClasses = ((element) => {
   element.addEventListener('click', () => {
     const term = element.getAttribute('data-value');
 
@@ -311,7 +316,7 @@ const filterClasses = (element) => {
     const filteredChampions = filteredbyClass(championList, term);
     functionCardsStructure(filteredChampions);
   });
-};
+});
 
 li.forEach(button => filterClasses(button));
 li2.forEach(button => filterClasses(button));
@@ -365,4 +370,9 @@ order1.forEach((option) => {
 
     functionCardsStructure(filteredChampions);
   });
+});
+
+const btnRole = document.querySelector('.btnRole');
+btnRole.addEventListener('click', () => {
+  document.location.href = './indexroles.html';
 });
