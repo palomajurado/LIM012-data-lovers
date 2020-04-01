@@ -24,13 +24,13 @@ Links FIGMA https://www.figma.com/file/lr2q13Jdqztgdy6ag3oV7a/Untitled?node-id=7
 TRELLO : https://trello.com/b/ZbxxiHvY/datalovers */
 
 body {
-    width: 100%;
     background: url(./assets/backgroundNero.jpeg);
-    background-size: cover;
     background-attachment: fixed;
+    background-size: cover;
     line-height: 1.5;
     font-size: 1rem;
     color: #333;
+    width: 100%;
 }
 
 
@@ -62,60 +62,88 @@ body {
 }
 
 
+/* FOOTER */
+
+
 /* HEADER */
 
 .header {
-    height: 700px;
     width: 100%;
+    height: 700px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
     color: #fff;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.logingName {
+    width: 12%;
+    height: 20%;
+    display: none;
+    position: absolute;
+    vertical-align: top;
+    align-items: center;
+    align-self: flex-end;
+}
+
+.logingName>img {
+    width: 50%;
+    margin-right: 5px;
+}
+
+.pTagsTop {
+    line-height: 0.8;
+    color: #f3e2c1;
+    font-size: 1.1rem;
+    border-bottom-width: thin;
+    font-family: "Cuprum", sans-serif;
+    border-bottom: 1px solid turquoise;
+    text-shadow: 0.0625rem 0.0625rem 0.5rem #ac7e39, 0 0 1em #b68234, 0 0 0.2em #bb8535;
 }
 
 .header-video {
-    position: absolute;
     top: 0;
     left: 0;
+    position: absolute;
 }
 
 .header-video video {
-    height: 150%;
     width: 150%;
+    height: 150%;
     filter: blur(23px);
 }
 
 .header-overlay {
-    width: 100%;
-    height: 100%;
-    position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
 }
 
 .header-content {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
     top: 0;
     left: 0;
     z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
 }
 
 .videoCentral {
-    height: 100%;
-    width: max-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
     z-index: -1;
+    height: 100%;
+    display: flex;
+    width: max-content;
+    position: relative;
+    align-items: center;
+    justify-content: center;
 }
 
 .videoCentral video {
@@ -124,11 +152,11 @@ body {
 }
 
 #boxLine {
-    height: 90%;
     width: 95%;
+    z-index: 4;
+    height: 90%;
     position: absolute;
     border: 0.0625rem solid rgb(153, 119, 69);
-    z-index: 4;
 }
 
 #logoLOL {
@@ -142,17 +170,17 @@ body {
 .mainContainer {
     width: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
 }
 
 #mainElements1 {
     width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 1rem;
     margin: 1rem 0;
+    padding: 0 1rem;
+    align-items: center;
+    flex-direction: column;
 }
 
 .modal-roles p {
@@ -160,16 +188,16 @@ body {
 }
 
 .right p {
+    font-size: 1.25rem;
     color: rgb(247, 221, 165);
     font-family: "Marcellus SC", serif;
-    font-size: 1.25rem;
 }
 
 #mainElements1 p {
-    color: rgb(252, 241, 183);
-    font-size: 1.875rem;
-    font-family: "Marcellus SC", serif;
     text-align: center;
+    font-size: 1.875rem;
+    color: rgb(252, 241, 183);
+    font-family: "Marcellus SC", serif;
     text-shadow: 0.0625rem 0.0625rem 0.375rem #07cbe9;
 }
 
@@ -179,51 +207,51 @@ body {
 }
 
 .form {
-    width: max-content;
-    display: flex;
-    justify-content: center;
     border: none;
+    display: flex;
     margin-top: 3rem;
+    width: max-content;
     position: relative;
     white-space: nowrap;
+    justify-content: center;
 }
 
 .form input {
-    padding: 0 3rem;
-    color: rgba(252, 250, 250, 0.932);
-    text-transform: capitalize;
     outline: none;
+    padding: 0 3rem;
     text-align: center;
     font-size: 1.25rem;
+    border: transparent;
+    letter-spacing: 0.625rem;
+    text-transform: capitalize;
     background-color: transparent;
     font-family: "Roboto", sans-serif;
-    border: transparent;
-    letter-spacing: 10px;
+    color: rgba(252, 250, 250, 0.932);
     text-shadow: 0.0625rem 0.0625rem 0.5rem #feb412, 0 0 1em #07cbe9, 0 0 0.2em #07cbe9;
 }
 
 .form label {
+    left: 0;
+    bottom: 0;
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
     position: absolute;
-    bottom: 0;
-    left: 0;
     pointer-events: none;
+    justify-content: center;
     border-bottom: 0.0625rem solid #b48643;
 }
 
 .form label::after {
-    content: "";
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
     left: 0;
+    bottom: 0;
     opacity: 0;
-    border-bottom: 0.125rem solid #07cbe9;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
     transition: transform 0.3s ease;
+    border-bottom: 0.125rem solid #07cbe9;
 }
 
 .form input:focus+label,
@@ -237,42 +265,44 @@ body {
 }
 
 .content-name {
+    color: #dfc981;
     margin-left: 1rem;
-    position: relative;
     bottom: 0.3125rem;
+    position: relative;
+    font-size: 1.125rem;
     transition: all 0.3s ease;
     font-family: "Roboto", sans-serif;
-    font-size: 1.125rem;
-    color: #dfc981;
 }
 
 .form input:focus+.label_name .content-name,
 .form input:valid+.label_name .content-name {
-    transform: translateY(-150%);
+    color: turquoise;
     font-size: 1.25rem;
     letter-spacing: 0.3125rem;
-    color: turquoise;
+    transform: translateY(-150%);
     text-shadow: 0.0625rem 0.0625rem 0.5rem #feb412, 0 0 1em #07cbe9, 0 0 0.2em #07cbe9;
 }
 
-#buttonEnter {
-    background-color: transparent;
-    border: 0.0625rem solid #07cbe9;
-    padding: 1.5rem 3rem;
-    margin: 3rem 0;
+#buttonEnter,
+.btnRole {
     outline: none;
     color: wheat;
-    font-size: 1.5625rem;
-    font-family: "Marcellus SC", serif;
-    transition: all 0.3s ease;
     cursor: pointer;
+    margin: 3rem 0;
+    font-size: 1.5625rem;
+    padding: 1.5rem 3rem;
+    transition: all 0.3s ease;
+    background-color: transparent;
+    border: 0.0625rem solid #07cbe9;
+    font-family: "Marcellus SC", serif;
 }
 
-#buttonEnter:hover {
-    box-shadow: 0 0 1.25rem #feb412, 0 0 1.25rem #feb412;
-    text-shadow: 1px 1px 8px #feb412, 0 0 1em #07cbe9, 0 0 0.2em #07cbe9;
-    letter-spacing: 6px;
+#buttonEnter:hover,
+.btnRole:hover {
+    letter-spacing: 0.375rem;
     border: 0.0625rem solid #b48643;
+    box-shadow: 0 0 1.25rem #feb412, 0 0 1.25rem #feb412;
+    text-shadow: 0.0625rem 0.0625rem 0.5rem #feb412, 0 0 1em #07cbe9, 0 0 0.2em #07cbe9;
 }
 
 #mainElements5,
@@ -310,58 +340,57 @@ body {
 /* MODAL */
 
 .overlay {
-    height: 100vh;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    display: none;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    position: absolute;
     left: 0;
     z-index: 10;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    position: absolute;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background: rgba(0, 0, 0, 0.8);
 }
 
 .close-button {
-    height: 2rem;
+    top: -3rem;
     width: 2rem;
-    background-color: #08d7f7;
+    height: 2rem;
+    right: -2rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    cursor: pointer;
     border-radius: 50%;
     position: absolute;
-    top: -3rem;
-    right: -2rem;
-    cursor: pointer;
-		box-shadow: inset 0 0 1.25rem #DEC880, 0 0 1.25rem #DEC880;
+    align-items: center;
+    justify-content: center;
+    background-color: #08d7f7;
+    box-shadow: inset 0 0 1.25rem #DEC880, 0 0 1.25rem #DEC880;
 }
 
 .close-button svg {
-    height: 1.5rem;
+    border: none;
     width: 1.5rem;
-    color: rgb(226, 219, 219); 
-		border: none;   
+    height: 1.5rem;
+    color: rgb(226, 219, 219);
 }
 
-.close-button svg:hover{
-box-shadow: inset 0 0 1.25rem #07cbe9, 0 0 1.25rem #07cbe9;
-text-shadow: 1px 1px 8px #feb412, 0 0 1em #07cbe9, 0 0 0.2em #07cbe9;
-color: rgb(250, 211, 137);
-
+.close-button svg:hover {
+    color: rgb(250, 211, 137);
+    box-shadow: inset 0 0 1.25rem #07cbe9, 0 0 1.25rem #07cbe9;
+    text-shadow: 0.0625rem 0.0625rem 0.5rem #feb412, 0 0 1em #07cbe9, 0 0 0.2em #07cbe9;
 }
 
 .modal {
     height: 80%;
-    max-height: 500px;
     width: 450px;
     display: flex;
     padding: 1.5rem;
-    flex-direction: column;
-    border: 0.0313rem solid #dfc981;
-    justify-content: space-between;
-    background: url(./assets/backgroundNero.jpeg);
+    max-height: 500px;
     position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 0.0313rem solid #dfc981;
+    background: url(./assets/backgroundNero.jpeg);
 }
 
 .modal-header {
@@ -379,8 +408,8 @@ color: rgb(250, 211, 137);
 }
 
 .modal-header img {
-    height: 20px;
     width: 20px;
+    height: 20px;
     margin-left: 1rem;
 }
 
@@ -392,23 +421,23 @@ color: rgb(250, 211, 137);
 
 .modal-stats_left,
 .modal-stats_right {
-    height: 100%;
     width: 50%;
+    height: 100%;
     display: flex;
+    padding: 1rem 0;
     text-align: initial;
     flex-direction: column;
-    padding: 1rem 0;
 }
 
 .modal-stats_right {
-    border-left: 0.5px solid #dfc981;
     padding-left: 0.6rem;
+    border-left: 0.0313rem solid #dfc981;
 }
 
 .modal-stats_left p,
 .modal-stats_right p {
-    padding: 0.3rem 0;
     color: #fff;
+    padding: 0.3rem 0;
     line-height: 1rem;
     font-family: "Cuprum", sans-serif;
 }
@@ -416,35 +445,35 @@ color: rgb(250, 211, 137);
 .modal-roles {
     width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     font-family: "Ruda", sans-serif;
 }
 
 .modal-roles img {
-    height: auto;
     width: 50px;
+    height: auto;
 }
 
 
 /* FOOTER */
 
-.footer {
+footer {
     width: 100%;
     display: flex;
-    justify-content: space-between;
     padding: 1rem;
     padding-top: 1%;
+    justify-content: space-between;
 }
 
 .right {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
 .right:hover {
-    text-shadow: 1px 1px 6px #07cbe9;
+    text-shadow: 0.0625rem 0.0625rem 0.375rem #07cbe9;
 }
 
 #left {
@@ -485,7 +514,6 @@ color: rgb(250, 211, 137);
     width: 100%;
     display: flex;
     flex-direction: column;
-    /* padding: 2rem 0 0 0; */
     position: relative;
 }
 
@@ -507,7 +535,7 @@ color: rgb(250, 211, 137);
     animation-delay: 0s;
     animation-duration: 3s;
     animation-iteration-count: infinite;
-    letter-spacing: 4px;
+    letter-spacing: 0.25rem;
 }
 
 #welcomingInside {
@@ -520,11 +548,10 @@ color: rgb(250, 211, 137);
     position: absolute;
     background: transparent;
     box-shadow: 0 0 1.25rem #feb412, 0 0 1.25rem #feb412;
-    text-shadow: 1px 1px 8px #ebddc0, 0 0 1em #07cbe9, 0 0 0.2em #07cbe9;
+    text-shadow: 0.0625rem 0.0625rem 0.5rem #ebddc0, 0 0 1em #07cbe9, 0 0 0.2em #07cbe9;
     animation-delay: 0s;
     animation-duration: 3s;
     animation-iteration-count: infinite;
-    /* border: 0.0625rem solid #b48643; */
 }
 
 #lupa {
@@ -533,11 +560,6 @@ color: rgb(250, 211, 137);
     animation-duration: 4s;
     animation-iteration-count: infinite;
 }
-
-
-/* .welcomingBox p {
-    text-shadow: 1px 1px 8px #feb412, 0 0 1em #07cbe9, 0 0 0.2em #07cbe9;
-} */
 
 .mainTittle {
     margin-top: 1rem;
@@ -549,6 +571,7 @@ color: rgb(250, 211, 137);
 }
 
 #chooseYour {
+    text-align: center;
     color: #dfc981;
     font-size: 2.1875rem;
     padding: 0 0.3125rem 0 0.3125rem;
@@ -577,7 +600,7 @@ color: rgb(250, 211, 137);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: -2px;
+    margin-top: -0.125rem;
 }
 
 
@@ -653,6 +676,10 @@ color: rgb(250, 211, 137);
     font-family: "Cuprum", sans-serif;
 }
 
+.showFlex {
+    display: flex;
+}
+
 .hide {
     display: none;
 }
@@ -675,21 +702,24 @@ color: rgb(250, 211, 137);
 
 .divClassWord {
     color: #f8f6ed;
-    font-size: 14px;
+    font-size: 0.875rem;
     display: flex;
     justify-content: center;
     font-family: "Cuprum", sans-serif;
 }
 
 .pTags {
-    color: #fcfbf9;
     text-shadow: 0.0625rem 0.0625rem 0.5rem #ac7e39, 0 0 1em #b68234, 0 0 0.2em #bb8535;
 }
 
 .back-card__info p {
     font-size: 0.8125rem;
-    color: #f5e2a6;
-    font-family: "Marcellus SC", serif;
+    color: whitesmoke;
+    font-family: "Cuprum", sans-serif;
+}
+
+.back-card__info h3 {
+    color: #f1dd9b;
 }
 
 .champion-name p {
@@ -714,7 +744,6 @@ color: rgb(250, 211, 137);
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-bottom: 18px;
 }
 
 .champion-stats__item {
@@ -740,12 +769,12 @@ color: rgb(250, 211, 137);
     display: flex;
     width: 70px;
     height: 30px;
-    font-size: 4px;
+    font-size: 0.25rem;
     align-items: center;
     cursor: pointer;
-    font-size: 10px;
+    font-size: 0.625rem;
     padding: 0.25rem 0.5rem;
-    margin: 0px;
+    margin: 0rem;
     font-family: "Marcellus SC", serif;
     border: rgb(80, 234, 245) 0.0625rem solid;
     color: rgb(249, 252, 252);
@@ -754,7 +783,7 @@ color: rgb(250, 211, 137);
 .playButton {
     background: none;
     text-decoration: none;
-    margin-top: -50px;
+    margin-top: -3.125rem;
     align-items: center;
     justify-content: center;
 }
@@ -795,8 +824,8 @@ color: rgb(250, 211, 137);
 
 #buttonEnterSecondPage a:hover {
     box-shadow: 0 0 1.25rem #feb412, 0 0 1.25rem #feb412;
-    text-shadow: 1px 1px 8px #feb412, 0 0 1em #07cbe9, 0 0 0.2em #07cbe9;
-    letter-spacing: 6px;
+    text-shadow: 0.0625rem 0.0625rem 0.5rem #feb412, 0 0 1em #07cbe9, 0 0 0.2em #07cbe9;
+    letter-spacing: 0.375rem;
     border: 0.0625rem solid #b48643;
 }
 
@@ -843,10 +872,9 @@ color: rgb(250, 211, 137);
 }
 
 .text1 p {
-       font-size: 1.5rem;
+    font-size: 1.5rem;
     color: #dfc981;
     text-align: center;
-
     font-family: "Marcellus SC", serif;
     padding: 0.6rem 1rem 0.0625rem 1rem;
 }
@@ -957,48 +985,51 @@ color: rgb(250, 211, 137);
 }
 
 .builds {
+    width: 100%;
     height: 50px;
-    display: grid;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     color: #dfc981;
     text-align: center;
     align-items: center;
     text-decoration: none;
     background-color: #0ca6beb7;
-    font-family: "Marcellus SC", serif;
+    font-family: 'Marcellus SC', serif;
     grid-template-columns: repeat(4, 1fr);
     border-radius: 1.5625rem 0rem 1.5625rem 0rem;
 }
 
 .builds a,
 .builds p {
+    color: #dfc981;
     font-weight: bold;
     text-decoration: none;
-    color: #dfc981;
 }
 
 .builds a:hover {
     color: #795de6;
     letter-spacing: 0.25rem;
-    text-shadow: 1px 1px 8px #feb412, 0 0 1em #07cbe9, 0 0 0.2em #07cbe9;
+    text-shadow: 0.0625rem 0.0625rem 0.5rem #feb412, 0 0 1em #07cbe9, 0 0 0.2em #07cbe9;
 }
 
 
 /*BUTTON:UP*/
 
 .ir-arriba {
-    border-radius: 100%;
-    border: 3px solid rgb(28, 98, 91);
-    height: 40px;
-    filter: blur(50%);
-    background: rgb(8, 215, 247);
-    cursor: pointer;
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-    outline: none;
-		overflow: hidden;
     z-index: 1;
+    right: 1rem;
+    height: 40px;
+    bottom: 1rem;
+    outline: none;
+    position: fixed;
+    cursor: pointer;
+    overflow: hidden;
     animation: "fade";
+    filter: blur(50%);
+    border-radius: 100%;
+    background: rgb(8, 215, 247);
+    border: 0.1875rem solid rgb(28, 98, 91);
 }
 
 .ir-arriba:hover {
@@ -1006,16 +1037,25 @@ color: rgb(250, 211, 137);
 }
 
 .ir-arriba img {
-    border-radius: 100%;
-    border: 0.1px solid rgb(28, 98, 91);
+    width: 35px;
+    height: 35px;
     outline: none;
- width: 35px;
-        height: 35px;
+    border-radius: 100%;
+    border: 0.0063rem solid rgb(28, 98, 91);
 }
-.ir-arriba, .ir-arriba img { -webkit-tap-highlight-color: rgba(0,0,0,0); }
+
+.ir-arriba,
+.ir-arriba img {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 
 .almostFinalBTN {
-	bottom: 5rem;
+    bottom: 5rem;
+}
+
+.btnDownSs {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 
@@ -1029,7 +1069,7 @@ color: rgb(250, 211, 137);
 
 @media (min-width: 1024px) and (max-width: 1280px) {
     .playButton {
-        margin-top: -10px;
+        margin-top: -0.625rem;
     }
     #logoLOL {
         height: auto;
@@ -1039,14 +1079,14 @@ color: rgb(250, 211, 137);
         height: 600px;
     }
     .card {
-				height: 250px;
+        height: 250px;
         background-position: -190px center;
     }
     #list {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-				grid-gap: 2rem 1rem;
-        margin-right: 12px;
         padding-top: 0;
+        grid-gap: 2rem 1rem;
+        margin-right: 0.75rem;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
     #left a:link,
     #left a img {
@@ -1054,8 +1094,15 @@ color: rgb(250, 211, 137);
         height: 55px;
     }
     .greeting {
-        font-size: 55px;
+        font-size: 3.4375rem;
     }
+    #divider2 {
+        margin-top: -1.25rem;
+    }
+}
+
+.pTagsTop {
+    margin-left: -1.1875rem;
 }
 
 @media (max-height: 700px) and (min-width: 768px) {
@@ -1067,7 +1114,7 @@ color: rgb(250, 211, 137);
 
 @media (min-width: 768px) and (max-width: 1023px) {
     .playButton {
-        margin-top: -130px;
+        margin-top: -6.25rem;
     }
     .header-video video {
         height: 120%;
@@ -1078,14 +1125,14 @@ color: rgb(250, 211, 137);
         grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
         padding: 1.8rem;
     }
-		.card {
-				height: 250px;
-		}
+    .card {
+        height: 250px;
+    }
     .corner {
         margin: 2rem 0 2rem 1rem;
     }
     #divider2 {
-        margin-top: -20px;
+        margin-top: -1.25rem;
     }
     #logoLol {
         height: 150px;
@@ -1094,7 +1141,7 @@ color: rgb(250, 211, 137);
         height: 500px;
     }
     #mainElements1 p {
-        font-size: 18px;
+        font-size: 1.125rem;
     }
     .modal-stats_left p,
     .modal-stats_right p {
@@ -1105,7 +1152,7 @@ color: rgb(250, 211, 137);
         width: 55px;
         height: 55px;
     }
-    .footer p {
+    footer p {
         margin-top: 1%;
     }
     .text1 p {
@@ -1113,24 +1160,32 @@ color: rgb(250, 211, 137);
         padding: 0 0.3125rem 0.0625rem 0.3125rem;
     }
     .greeting {
-        font-size: 30px;
+        font-size: 1.875rem;
     }
     .ir-arriba {
         height: 55px;
     }
     .ir-arriba img {
-        height: 50px;
         width: 50px;
+        height: 50px;
+    }
+    .pTagsTop {
+        font-size: 0.75rem;
+        margin-left: -1.75rem;
+    }
+    .logingName {
+        width: 20%;
+        margin-left: 6%;
     }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
-    .footer {
+    footer {
         padding-top: 8%;
     }
     .header-video video {
-        height: 120%;
         width: 120%;
+        height: 120%;
         filter: blur(18px);
     }
     #buttonEnter {
@@ -1155,16 +1210,16 @@ color: rgb(250, 211, 137);
         margin: 0 0 1rem 0;
     }
     #mainElements1 p {
-        margin-top: 5px;
-        font-size: 13px;
+        font-size: 0.8125rem;
+        margin-top: 0.3125rem;
     }
     .welcomingBox {
         height: 65%;
         width: 100%;
-        font-size: 20px;
+        font-size: 1.25rem;
     }
     .right p {
-        font-size: 11px;
+        font-size: 0.6875rem;
     }
     .modal {
         height: 500px;
@@ -1177,7 +1232,7 @@ color: rgb(250, 211, 137);
     }
     .modal-stats_left p,
     .modal-stats_right p {
-        font-size: 11px;
+        font-size: 0.6875rem;
     }
     .secondScreenBox {
         height: 38%;
@@ -1185,13 +1240,12 @@ color: rgb(250, 211, 137);
         padding: 0.5rem 0 0 0;
     }
     #chooseYour {
-        font-size: 19px;
-        margin-bottom: -30px;
-        margin-left: 20px;
+        font-size: 1.1875rem;
+        margin-bottom: 0 0 -1.875rem 1.25rem;
         padding: 0;
     }
     #champion {
-        font-size: 30px;
+        font-size: 1.875rem;
     }
     .text1 p {
         font-size: 1rem;
@@ -1202,36 +1256,35 @@ color: rgb(250, 211, 137);
         padding: 1rem;
         grid-gap: 1rem;
         color: #dfc981;
-        padding-bottom: 50px;
+        padding-bottom: 3.125rem;
         transition: 0.4s ease-in-out;
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
     .card {
-				height: 250px;
-        margin-bottom: 10px;
+        height: 250px;
+        margin-bottom: 0.625rem;
         background-position: -130px center;
     }
     .corner {
         padding: 0.3125rem;
-        margin-left: 23px;
+        margin-left: 1.4375rem;
     }
     .championName {
-        font-size: 13px;
-        margin-left: 78px;
-        margin-top: 5px;
+        font-size: 0.8125rem;
+        margin-left: 0.3125rem 0 0 4.875rem;
     }
     .back-card__info p {
-        font-size: 13px;
+        font-size: 0.8125rem;
     }
     .more-stats,
     .playButton {
-        font-size: 10px;
-        padding: 5px;
+        padding: 0.3125rem;
+        font-size: 0.625rem;
     }
     .welcomingBox {
         height: 75%;
         width: 100%;
-        font-size: 20px;
+        font-size: 1.25rem;
     }
     .ir-arriba {
         height: 40px;
@@ -1241,17 +1294,23 @@ color: rgb(250, 211, 137);
         height: 35px;
     }
     .builds p {
-        font-size: 9px;
+        font-size: 0.5625rem;
     }
     .dropdownMenu {
         width: 80%;
         display: block;
     }
     #lupa {
-        margin-left: 0px;
+        margin-left: 0rem;
     }
     #searchInputs {
         width: 60px;
+    }
+    .pTagsTop {
+        font-size: 0.5625rem;
+    }
+    .logingName {
+        width: 12.5%;
     }
 }
 
@@ -1259,37 +1318,33 @@ color: rgb(250, 211, 137);
     .modal {
         height: 330px;
         width: 310px;
-        /* padding: 1rem; */
     }
     .modal-header p,
     .modal-roles p {
         font-size: 1rem;
-        margin-bottom: 2px;
-        /* margin-top: -10px; */
         font-weight: bolder;
+        margin-bottom: 0.125rem;
         color: rgb(223, 201, 129);
     }
     .modal-header img {
         height: 20px;
         width: 20px;
-        margin-left: 5px;
+        margin-left: 0.3125rem;
     }
     .modal-stats_left,
     .modal-stats_right {
-        height: 90%;
-        margin-top: 3px;
         width: 50%;
+        height: 90%;
         display: flex;
         text-align: initial;
+        margin-top: 0.1875rem;
         flex-direction: column;
-        /* padding: 1rem 0; */
     }
     .modal-stats {
         height: 90%;
         width: 100%;
-        margin-top: -3px;
-        /* margin-top: -0px; */
         display: flex;
+        margin-top: -0.1875rem;
     }
     .close-button {
         top: -0.5rem;
@@ -1297,22 +1352,21 @@ color: rgb(250, 211, 137);
     }
     .modal-stats_left p,
     .modal-stats_right p {
-        font-size: 10px;
         padding: 0.1rem 0;
+        font-size: 0.625rem;
     }
     .modal-roles img {
-        height: auto;
         width: 40px;
+        height: auto;
     }
     #list {
-        margin-top: -20px;
+        margin-top: -1.25rem;
         grid-gap: 6vmin 3vmin;
-    		grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
     .card {
-				height: 250px;
-        margin-bottom: 7px;
-        /* margin-bottom: 4px; */
+        height: 250px;
+        margin-bottom: 0.4375rem;
         background-position: -130px center;
     }
     .text1 p {
@@ -1320,61 +1374,77 @@ color: rgb(250, 211, 137);
         padding: 0 0.3125rem 0rem 0.3125rem;
     }
     #mainElements1 p {
-        font-size: 13px;
-        margin-top: 12px;
+        margin-top: 0.75rem;
+        font-size: 0.8125rem;
     }
-    .footer {
+    footer {
         padding-top: 3%;
     }
-  
+    .pTagsTop {
+        font-size: 0.5625rem;
+        margin-left: -0.625rem;
+    }
+    .logingName {
+        width: 14%;
+    }
+    .logingName>img {
+        width: 40%;
+        margin-right: 0.125rem;
+    }
+    #buttonEnterSecondPage a {
+        width: 0px;
+    }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-    .footer {
+    .pTagsTop {
+        font-size: 0.5rem;
+        margin-left: -0.875rem;
+    }
+    .logingName {
+        width: 19%;
+    }
+    footer {
         padding-top: 5.5%;
     }
     .header-video video {
-        height: 120%;
         width: 120%;
-        filter: blur(18px);
+        height: 120%;
+        filter: blur(1.125rem);
     }
     .corner {
         width: 99%;
         margin: 1rem 0.2rem;
     }
     .nameSearch img {
-     width: 25px;
-    height: 20px;
-   
-    padding: 0.1rem 0.2125rem 0.3rem 0.3125rem;
-
+        width: 20px;
+        height: 20px;
     }
     .welcomingBox {
         height: 65%;
         width: 100%;
-        font-size: 20px;
+        font-size: 1.25rem;
     }
     #chooseYour {
-        font-size: 15px;
-        margin-bottom: -10px;
-        margin-left: 42px;
+        font-size: 0.9375rem;
+        margin: 0 0 -0.625rem 2.625rem;
         padding: 0;
     }
     #divider2 img {
         width: 50px;
     }
     #champion {
-        font-size: 30px;
+        font-size: 1.875rem;
     }
     .text1 p {
-        font-size: 11px;
+        font-size: 0.6875rem;
         padding: 0.3rem 0.3125rem 0.0625rem 0;
     }
     .header {
         height: 250px;
     }
     #mainElements1 p {
-        font-size: 13px;
+        font-size: 0.8125rem;
     }
     .form {
         width: 60%;
@@ -1385,34 +1455,31 @@ color: rgb(250, 211, 137);
     }
     #buttonContainer {
         position: absolute;
-        margin-top: 280px;
+        margin-top: 17.5rem;
     }
     .modal {
-        height: 450px;
         width: 80%;
+        height: 450px;
         margin-top: -2rem;
     }
     .modal-stats_left p,
     .modal-stats_right p {
         padding: 0.3rem 0;
-    }
-    .modal-stats_left p,
-    .modal-stats_right p {
-        font-size: 11px;
+        font-size: 0.6875rem;
     }
     #list {
-        padding: 0.75rem;
-        margin-bottom: 30px;
         grid-gap: 1rem;
+        padding: 0.75rem;
+        margin-bottom: 1.875rem;
         grid-template-columns: repeat(2, 1fr);
     }
     .card {
-				height: 250px;
+        height: 250px;
+        margin-bottom: 0.9375rem;
         background-position: -190px center;
-        margin-bottom: 15px;
     }
     .championName {
-        font-size: 15px;
+        font-size: 0.9375rem;
     }
     #left a:link,
     #left a img {
@@ -1424,9 +1491,9 @@ color: rgb(250, 211, 137);
     }
     #error {
         width: 80%;
+        font-size: 1rem;
         padding: 1.25rem;
         margin-bottom: 10%;
-        font-size: 1rem;
     }
     #error img {
         width: 32px;
@@ -1440,37 +1507,51 @@ color: rgb(250, 211, 137);
         height: 35px;
     }
     .greeting {
-        font-size: 16px;
+        font-size: 1rem;
+    }
+    #buttonEnterSecondPage a {
+        width: 0px;
     }
 }
 
 @media (max-width: 320px) {
+    #buttonEnterSecondPage a {
+        width: 0px;
+        font-size: 1rem;
+        padding: 2.2rem 3.5rem;
+    }
+    #buttonEnter,
+    .btnRole {
+        margin: 3rem 0;
+        font-size: 1rem;
+        padding: 1.5rem 3rem;
+    }
     #boxLine {
-        height: 90%;
         width: 75%;
+        height: 90%;
     }
     .modal {
         margin-top: 0;
     }
     .playButton {
-        margin-top: -30px;
+        margin-top: -1.875rem;
     }
     .close-button {
         top: -1.5rem;
         right: -2.2rem;
     }
     #buttonContainer {
-        position: initial;
         margin-top: 0;
+        position: initial;
     }
     .searchbar {
         padding-left: 0rem;
-        font-size: 10px;
+        font-size: 0.625rem;
     }
     #error {
         width: 80%;
-        padding: 1.25rem;
         font-size: 1rem;
+        padding: 1.25rem;
     }
     #error img {
         width: 22px;
@@ -1478,12 +1559,18 @@ color: rgb(250, 211, 137);
     }
     .builds a,
     .builds p {
-        font-size: 10.5px;
+        font-size: 0.6563rem;
     }
     .right p {
         font-size: 0.3rem;
     }
     .greeting {
-        font-size: 13px;
+        font-size: 0.8125rem;
+    }
+    .pTagsTop {
+        font-size: 0.4375rem;
+    }
+    .logingName {
+        width: 19%;
     }
 }

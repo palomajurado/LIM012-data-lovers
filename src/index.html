@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Cuprum|Marcellus+SC|Roboto|Trade+Winds&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="bar.css" />
+    <link rel="stylesheet" href="roles.css">
 </head>
 
 <body>
@@ -61,6 +62,10 @@
                         <div id="welcomingInside" class="animated pulse">
                             <p id="inputName_put" class="animated pulse greeting"></p>
                         </div>
+                    </div>
+                    <div class="logingName">
+                        <img src="./assets/user2.png" alt="helmet">
+                        <p class="pTagsTop"></p>
                     </div>
                     <div class="mainTittle">
                         <p id="chooseYour">CHOOSE YOUR</p>
@@ -148,88 +153,74 @@
             <img src="./assets/shield1.png" />
         </p>
 
+
         <div class="endPage">
             <div class="corner">
                 <div class="builds">
                     <p>CHAMPION'S GUIDE&nbsp; &nbsp;⋙</p>
-                    <a href="https://na.op.gg/champion/statistics" target="_blank">OP.GG</a
-            >
-            <a href="https://www.probuilds.net/champions" target="_blank"
-              >PROBUILDS</a
-            >
-            <a href="https://morelegends.com/es/champions" target="_blank"
-              >MORELEGENDS</a
-            >
-          </div>
+                    <span class="line"></span>
+                    <a href="https://na.op.gg/champion/statistics" target="_blank">OP.GG</a>
+                    <a href="https://www.probuilds.net/champions" target="_blank">PROBUILDS</a>
+                    <a href="https://morelegends.com/es/champions" target="_blank">MORELEGENDS</a>
+                </div>
+            </div>
         </div>
-      </div>
+        <div class="btnDownSs">
+            <button class="btnRole" data-value="btnline">Calc Roles</button>
+            <div id="buttonEnterSecondPage"></div>
+        </div>
+    </div>
 
-      <div id="buttonEnterSecondPage"></div>
-
-      <div id="overlay" class="overlay">
+    <div id="overlay" class="overlay">
         <div class="modal">
-          <div id="closeButton" class="close-button">
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              data-prefix="fas"
-              data-icon="times"
-              role="img"
-              xmlns="http://www.w3.org/2000/svg"
-              viewbox="0 0 352 512"
-              class="svg-inline--fa fa-times fa-w-11 fa-2x"
-            >
+            <div id="closeButton" class="close-button">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 352 512" class="svg-inline--fa fa-times fa-w-11 fa-2x">
               <path
                 fill="currentColor"
                 d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
                 class=""
               ></path>
             </svg>
-          </div>
-          <div class="modal-header">
-            <p>Other estadistics:</p>
-            <img src="assets/goldSword.png" alt="" />
-          </div>
-          <div class="modal-stats">
-            <div id="modal-stats-left" class="modal-stats_left"></div>
-            <div id="modal-stats-right" class="modal-stats_right"></div>
-          </div>
-          <div id="modal-roles" class="modal-roles"></div>
+            </div>
+            <div class="modal-header">
+                <p>Other estadistics:</p>
+                <img src="assets/goldSword.png" alt="" />
+            </div>
+            <div class="modal-stats">
+                <div id="modal-stats-left" class="modal-stats_left"></div>
+                <div id="modal-stats-right" class="modal-stats_right"></div>
+            </div>
+            <div id="modal-roles" class="modal-roles"></div>
         </div>
         <div id="buttonContainer"></div>
-      </div>
     </div>
 
-    <footer class="footer">
-      <div class="right">
-        <p>
-          &copy; <span id="year"></span> &nbsp;| &nbsp; Todos los Derechos
-          Reservados
-        </p>
-      </div>
-      <div id="left">
-        <a href="# ">
-          <img
-            src="./assets/shareLOGO.png"
-            id="compartir"
-            class="animated wobble"
-          />
-        </a>
-                    <a href="https:/facebook.com" class="nav-link" target="_blank">
-                        <img src="./assets/fbLOGO.png" class="imgRedes" />
-                    </a>
+    <footer id="footer">
+        <div class="right">
+            <p>
+                &copy; <span id="year"></span> &nbsp;| &nbsp; Todos los Derechos Reservados
+            </p>
+        </div>
+        <div id="left">
+            <a href="# ">
+                <img src="./assets/shareLOGO.png" id="compartir" class="animated wobble" />
+            </a>
+            <a href="https:/facebook.com" class="nav-link" target="_blank">
+                <img src="./assets/fbLOGO.png" class="imgRedes" />
+            </a>
 
-                    <a href="https://twitter.com" class="nav-link" target="_blank">
-                        <img src="./assets/twittLOGO.png" class="imgRedes" />
-                    </a>
+            <a href="https://twitter.com" class="nav-link" target="_blank">
+                <img src="./assets/twittLOGO.png" class="imgRedes" />
+            </a>
 
-                    <a href="https://www.instagram.com/" class="nav-link" target="_blank">
-                        <img src="./assets/instaLOGO11.png" class="imgRedes" />
-                    </a>
-                </div>
-                </footer>
-                <script src="./data.js " type="module"></script>
-                <script src="./main.js" type="module"></script>
+            <a href="https://www.instagram.com/" class="nav-link" target="_blank">
+                <img src="./assets/instaLOGO11.png" class="imgRedes" />
+            </a>
+        </div>
+    </footer>
+    <script src="./data.js " type="module"></script>
+    <script src="./main.js" type="module"></script>
+
 </body>
 
 </html>
