@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    background: url(./assets/backgroundNero.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    line-height: 1.5;
+    font-size: 1rem;
+    color: #333;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+span img {
+    border-radius: 100%;
+    border: 0.1px solid rgb(28, 98, 91);
+    outline: none;
+}
+
+.info {
+    text-align: center;
+    font-size: 20px;
+    color: #dfc981;
+    font-family: 'Marcellus SC', serif;
+    padding-right: 2rem;
+}
+
+.roles {
+    font-family: 'Marcellus SC', serif;
+    color: #dfc981;
+}
+
+.alignInfo {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-gap: 20px;
+}
+
+.percentagePage {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.slider {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 6px;
+}
+
+.slider ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: cambio 20s infinite alternate linear;
+}
+
+.slider:nth-child(2) ul {
+    animation-timing-function: steps(4);
+}
+
+.slider li {
+    width: 100%;
+    list-style: none;
+}
+
+.slider img {
+    max-width: 100%;
+}
+
+p {
+    text-align: justify;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem;
+    margin-bottom: 3rem;
+}
+
+.role {
+    cursor: pointer;
+    max-width: 130px;
+}
+
+#img {
+    width: 50px;
+}
+
+@keyframes cambio {
+    0% {
+        margin-left: 0;
+    }
+    20% {
+        margin-left: 0;
+    }
+    25% {
+        margin-left: -100%;
+    }
+    45% {
+        margin-left: -100%;
+    }
+    50% {
+        margin-left: -200%;
+    }
+    70% {
+        margin-left: -200%;
+    }
+    75% {
+        margin-left: -300%;
+    }
+    100% {
+        margin-left: -300%;
+    }
+}
+
+#tittle {
+    font-size: 50px;
+    justify-self: center;
+    align-self: center;
+    margin: 1rem;
+}

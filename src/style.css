@@ -17,7 +17,7 @@ Colores establecidos:
 - morado 9B51E0
 - inputs casi blanco EEEAEA
 - dorado LOL #B48643
-<iframe width="560" height="315" src="https://www.youtube.com/embed/A-wez_wSWEA?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+<iframe width='560' height='315' src='https://www.youtube.com/embed/A-wez_wSWEA?controls=0' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe> 
 https://www.youtube.com/watch?v=A-wez_wSWEA&feature=youtu.be -->
 Invision https://mararodriguez597039.invisionapp.com/freehand/datalovers-lol-AYIeTKBpY?v=X6JP0IPtqctW100IADvc3w%3D%3D&linkshare=urlcopied
 Links FIGMA https://www.figma.com/file/lr2q13Jdqztgdy6ag3oV7a/Untitled?node-id=77%3A177
@@ -397,7 +397,7 @@ body {
     width: 100%;
     display: flex;
     align-items: center;
-    font-family: "Marcellus SC", serif;
+    font-family: 'Marcellus SC', serif;
 }
 
 .modal-header p,
@@ -583,16 +583,25 @@ footer {
     padding-left: 5px;
     font-size: 3.125rem;
     padding: 0.1rem 0rem 0.1rem 0rem;
-    font-family: "Marcellus SC", serif;
+    font-family: 'Marcellus SC', serif;
 }
 
 #list {
     display: grid;
-    padding: 2rem;
-    grid-gap: 2rem;
+    padding: 3rem;
+    grid-gap: 4rem;
     color: #dfc981;
     padding-bottom: 50px;
     transition: 0.4s ease-in-out;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    margin-left: 2rem;
+}
+
+#filteredList {
+    display: grid;
+    padding: 3rem;
+    grid-gap: 3rem;
+    color: #dfc981;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
 
@@ -658,7 +667,7 @@ footer {
     transition: all ease 0.5s;
     backface-visibility: hidden;
     border: 0.0625rem solid #07cbe9;
-    font-family: "Marcellus SC", serif;
+    font-family: 'Marcellus SC', serif;
     transform: perspective(600px) rotateY(180deg);
     box-shadow: inset 0 0 1.25rem #07cbe9, 0 0 1.25rem #07cbe9;
 }
@@ -673,7 +682,7 @@ footer {
     font-size: 0.75rem;
     flex-flow: column nowrap;
     justify-content: space-evenly;
-    font-family: "Cuprum", sans-serif;
+    font-family: 'Cuprum', sans-serif;
 }
 
 .showFlex {
@@ -725,7 +734,7 @@ footer {
 .champion-name p {
     color: #dfc981;
     font-size: 1.375rem;
-    font-family: "Trade Winds", cursive;
+    font-family: 'Trade Winds', cursive;
 }
 
 .champion-name img {
@@ -803,7 +812,7 @@ footer {
     outline: none;
     color: wheat;
     font-size: 1.5625rem;
-    font-family: "Marcellus SC", serif;
+    font-family: 'Marcellus SC', serif;
     transition: all 0.3s ease;
     cursor: pointer;
 }
@@ -817,7 +826,7 @@ footer {
     outline: none;
     color: wheat;
     font-size: 1.5625rem;
-    font-family: "Marcellus SC", serif;
+    font-family: 'Marcellus SC', serif;
     transition: all 0.3s ease;
     cursor: pointer;
 }
@@ -838,7 +847,7 @@ footer {
     font-size: 1.25rem;
     margin-left: 35%;
     transition: all ease 0.5s;
-    font-family: "Trade Winds", cursive;
+    font-family: 'Trade Winds', cursive;
 }
 
 .championName:hover {
@@ -893,7 +902,7 @@ footer {
     font-size: 3.125rem;
     color: rgb(247, 221, 165);
     border: 0.0625rem solid turquoise;
-    font-family: "Trade Winds", cursive;
+    font-family: 'Trade Winds', cursive;
 }
 
 #error img {
@@ -1037,6 +1046,15 @@ footer {
 }
 
 .ir-arriba img {
+    border-radius: 100%;
+    border: 0.1px solid rgb(28, 98, 91);
+    outline: none;
+    width: 35px;
+    height: 35px;
+}
+
+.ir-arriba,
+.ir-arriba img {
     width: 35px;
     height: 35px;
     outline: none;
@@ -1056,6 +1074,10 @@ footer {
 .btnDownSs {
     display: flex;
     justify-content: space-evenly;
+}
+
+.descriptionClass {
+    width: 100%;
 }
 
 

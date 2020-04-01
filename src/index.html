@@ -11,7 +11,6 @@
     <link href="https://fonts.googleapis.com/css?family=Cuprum|Marcellus+SC|Roboto|Trade+Winds&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="bar.css" />
-    <link rel="stylesheet" href="roles.css">
 </head>
 
 <body>
@@ -54,7 +53,7 @@
     </div>
 
     <!-- segunda interfaz -->
-    <div id="secondScreenOne">
+    <div id="secondScreenOne" class="">
         <div id="secondScreen">
             <div class="backgroundHead">
                 <div class="secondScreenBox">
@@ -64,7 +63,7 @@
                         </div>
                     </div>
                     <div class="logingName">
-                        <img src="./assets/user2.png" alt="helmet">
+                        <img src="./assets/user2.png" alt="user">
                         <p class="pTagsTop"></p>
                     </div>
                     <div class="mainTittle">
@@ -145,57 +144,53 @@
                 </div>
             </div>
         </div>
-        <div class="ir-arriba" id="button-down"><img src="./assets/64pxBTNUP.png" alt="UP" /></div>
+        <span class="ir-arriba" id="button-down"><img src="./assets/64pxBTNUP.png" alt="UP"/></span>
         <div id="list"></div>
+        <div id="filteredList" class="hidden"></div>
 
-        <p id="error" class="hidden">
+        <h3 id="error" class="hidden">
             <img src="./assets/goldSword.png" /> Champion not found
             <img src="./assets/shield1.png" />
-        </p>
-
-
-        <div class="endPage">
-            <div class="corner">
-                <div class="builds">
-                    <p>CHAMPION'S GUIDE&nbsp; &nbsp;⋙</p>
-                    <span class="line"></span>
-                    <a href="https://na.op.gg/champion/statistics" target="_blank">OP.GG</a>
-                    <a href="https://www.probuilds.net/champions" target="_blank">PROBUILDS</a>
-                    <a href="https://morelegends.com/es/champions" target="_blank">MORELEGENDS</a>
-                </div>
+        </h3>
+        <div class="corner">
+            <div class="builds">
+                <p>CHAMPION'S GUIDE&nbsp; &nbsp;⋙</p>
+                <span class="line"></span>
+                <a href="https://morelegends.com/es/champions" target="_blank">MORELEGENDS</a>
+                <a href="https://na.op.gg/champion/statistics" target="_blank">OP.GG</a>
+                <a href="https://www.probuilds.net/champions" target="_blank">PROBUILDS</a>
             </div>
         </div>
         <div class="btnDownSs">
             <button class="btnRole" data-value="btnline">Calc Roles</button>
             <div id="buttonEnterSecondPage"></div>
         </div>
-    </div>
-
-    <div id="overlay" class="overlay">
-        <div class="modal">
-            <div id="closeButton" class="close-button">
-                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 352 512" class="svg-inline--fa fa-times fa-w-11 fa-2x">
-              <path
-                fill="currentColor"
-                d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
-                class=""
-              ></path>
-            </svg>
+        <div id="buttonEnterSecondPage"></div>
+        <div id="overlay" class="overlay">
+            <div class="modal">
+                <div id="closeButton" class="close-button">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 352 512" class="svg-inline--fa fa-times fa-w-11 fa-2x">
+                <path
+                  fill="currentColor"
+                  d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+                  class=""
+                ></path>
+              </svg>
+                </div>
+                <div class="modal-header">
+                    <p>Other estadistics:</p>
+                    <img src="assets/goldSword.png" alt="" />
+                </div>
+                <div class="modal-stats">
+                    <div id="modal-stats-left" class="modal-stats_left"></div>
+                    <div id="modal-stats-right" class="modal-stats_right"></div>
+                </div>
+                <div id="modal-roles" class="modal-roles"></div>
             </div>
-            <div class="modal-header">
-                <p>Other estadistics:</p>
-                <img src="assets/goldSword.png" alt="" />
-            </div>
-            <div class="modal-stats">
-                <div id="modal-stats-left" class="modal-stats_left"></div>
-                <div id="modal-stats-right" class="modal-stats_right"></div>
-            </div>
-            <div id="modal-roles" class="modal-roles"></div>
+            <div id="buttonContainer"></div>
         </div>
-        <div id="buttonContainer"></div>
     </div>
-
-    <footer id="footer">
+    <footer class="footer">
         <div class="right">
             <p>
                 &copy; <span id="year"></span> &nbsp;| &nbsp; Todos los Derechos Reservados
@@ -220,7 +215,6 @@
     </footer>
     <script src="./data.js " type="module"></script>
     <script src="./main.js" type="module"></script>
-
 </body>
 
 </html>

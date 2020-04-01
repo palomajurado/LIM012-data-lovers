@@ -14,7 +14,8 @@ import {
 } from './roles.js';
 
 const inputName = document.getElementById('inputName');
-document.getElementById('year').innerHTML = new Date().getFullYear();
+const footerYear = document.getElementById('year');
+footerYear.innerHTML = new Date().getFullYear();
 
 const setName = () => {
     const name = inputName.value;
@@ -32,7 +33,9 @@ const setName = () => {
 };
 
 document.getElementById('buttonEnter').addEventListener('click', setName);
-inputName.addEventListener('keypress', ({ keyCode }) => {
+inputName.addEventListener('keypress', ({
+    keyCode,
+}) => {
     if (keyCode === 13) setName();
 });
 
@@ -43,31 +46,22 @@ buttonDown.addEventListener('click', () => {
         behavior: 'smooth',
     });
 });
-
-// el metodo onscroll de window se ejecuta cada vez que el usuario haga scroll en la pagina
-window.onscroll = () => { // y ejecuta esta funcion anonima
-    // aqui guardamos en una variable la posicion actual del scroll en Y
+window.onscroll = () => {
     const windowScroll = window.pageYOffset;
-    // aqui obtenemos el valor que deberia pasar el scroll en Y para saber que llegamos al final de la pagina
     const breakpointScroll = document.documentElement.scrollHeight - window.outerHeight - 35;
-    // evaluamos si el scroll llego al final de la pagina para regarle la clase
     if (windowScroll >= breakpointScroll) {
         buttonDown.classList.add('almostFinalBTN');
     } else {
-        // si el scroll no esta al final de la pagina le quitamos la clase
         buttonDown.classList.remove('almostFinalBTN');
     }
-    // aqui evaluamos si el scroll supera los 400px del scrollHeight en Y para mostrar el boton
     if (windowScroll > 400) {
         buttonDown.classList.remove('hide');
         buttonDown.classList.add('shown');
     } else {
-        // si tiene menos de 400px de scroll en Y scrollHeight ocultamos el boton
         buttonDown.classList.remove('shown');
         buttonDown.classList.add('hide');
     }
 };
-/*-------------------------------------------*/
 
 // FUNCION:PLAY BUTTON
 const functionPlayButton = () => {
@@ -122,7 +116,7 @@ const functionCardsStructure = (listData) => {
 
         const championStats = document.createElement('div');
         championStats.className = 'champion-stats';
-        Object.entries(champion.info).map(([key, value]) => { // convierte un objeto en arrayas devolvie dos valores key y value
+        Object.entries(champion.info).map(([key, value]) => {
             const championStatsText = document.createElement('p');
             championStatsText.className = 'champion-stats__item';
             championStatsText.innerHTML = `${key}: ${value}`;
@@ -159,7 +153,7 @@ const functionCardsStructure = (listData) => {
             modalStatsRight.innerHTML = '';
             modalRoles.innerHTML = '';
 
-            // debemos crear una clase para este estilo
+            // debemos creando una clase para este estilo
             document.body.classList.remove('overflowHidden');
             document.body.classList.add('visible');
             modalOverlay.classList.remove('showFlex');
@@ -248,9 +242,9 @@ const li = document.querySelectorAll('.menu li');
 const li2 = document.querySelectorAll('.menu2 li');
 const difficulty1 = document.querySelectorAll('.difficulty1 div');
 const cleanClasses = () => {
-    ul.querySelector('.active').classList.remove('active'); // Quito todas las etiquetas active
+    ul.querySelector('.active').classList.remove('active');
     ul2.querySelector('.active').classList.remove('active');
-    li[0].classList.add('active'); // Agrego a la etiqueta incial All
+    li[0].classList.add('active');
     li2[0].classList.add('active');
 };
 
@@ -264,7 +258,7 @@ const cleanDifficulty = (cleanElements) => {
 };
 
 input.addEventListener('keyup', (evt) => {
-        const term = evt.target.value.toLowerCase(); // target coge el valor de un elemento form en este caso del input
+        const term = evt.target.value.toLowerCase();
         const filteredChampions = filterByName(championList, term);
 
         const errorMessage = document.querySelector('#error');
@@ -312,7 +306,7 @@ const filterClasses = (element) => {
         cleanDifficulty(difficulty1);
 
         // eslint-disable-next-line max-len
-        const filteredChampions = filteredbyClass(championList, term); // filtra la info de los campeones con la clase seleccionada que viene en el data value
+        const filteredChampions = filteredbyClass(championList, term);
         functionCardsStructure(filteredChampions);
     });
 };
@@ -321,53 +315,23 @@ li2.forEach(button => filterClasses(button));
 
 /*---------------------------------------------*/
 
-/* FILTRADO: POR DIFICULTAD   */ // Para poder usar map filter sort reduce necesito un array y no un node list por esto el spread operator [...nodeList] lo guarda en un array
 difficulty1.forEach((option) => {
     option.addEventListener('click', () => {
         let term = option.getAttribute('data-value');
         const activeButtons = document.querySelectorAll('.difficulty1 .levelFull');
         const arrButtons = [...difficulty1];
         const selectedButtons = arrButtons.filter((_, i) => i <= term - 1);
-        /*
-          term = 3
-          i = [0, 1, 2]
-          i <= term - 1      // 0 <= 2 = true
-          i <= term - 1      // 1 <= 2 =  true
-          i <= term - 1      // 2 <= 2 =  true
-
-          term = 2
-          i = [0, 1, 2]
-          i <= term - 1      // 0 <= 1 = true
-          i <= term - 1      // 1 <= 1 = true
-          i <= term - 1      // 2 <= 1 = false
-
-          term = 1
-          i = [0, 1, 2]
-          i <= term - 1      // 0 <= 0 = true
-          i <= term - 1      // 1 <= 0 = false
-          i <= term - 1      // 2 <= 0 = false
-        */
-
-        // Si el elemento seleccionado tiene un valor igual a los botones activos, esta variable es true
         const isSelected = activeButtons.length === parseInt(term, 10);
-
-        // Si isSelected es true retornamos toda la informacion de los campeones sin filtrar
         if (isSelected) {
             term = 0;
         }
-
-        // en cada click limpiamos la clase .levelFull de los elementos activos (activeButtons)
         cleanDifficulty(activeButtons);
-
-        // Si isSelected es false agregamos la clase .levelFull a los botones seleccionados (selectedButtons)
         if (!isSelected) {
             selectedButtons.forEach((button) => {
                 button.classList.remove('levelEmpty');
                 button.classList.add('levelFull');
             });
         }
-
-        // limpiando los seleccionados de otros filtrados
         input.value = '';
         list.innerHTML = '';
         cleanClasses();
