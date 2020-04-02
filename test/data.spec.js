@@ -45,23 +45,13 @@ describe('orderList', () => {
         expect(typeof orderList).toBe('function');
     });
 
-<<<<<<< HEAD
     it('Debería devolver el arreglo ordenado de la A a la Z', () => {
-        expect([...orderList(array, 'az')]).toStrictEqual(sortedArray);
+        expect([...orderList(array, 'az')]).toEqual(sortedArray);
     });
 
     it('Debería devolver el arreglo ordenado de la Z a la A', () => {
-        expect([...orderList(array, 'za')]).toStrictEqual(reversedArray);
+        expect([...orderList(array, 'za')]).toEqual(reversedArray);
     });
-=======
-  it('Debería devolver el arreglo ordenado de la A a la Z', () => {
-    expect([...orderList(array, 'az')]).toEqual(sortedArray);
-  });
-
-  it('Debería devolver el arreglo ordenado de la Z a la A', () => {
-    expect([...orderList(array, 'za')]).toEqual(reversedArray);
-  });
->>>>>>> 7007a80ac7a5f2812149908abeeb387203f1ddb8
 });
 
 describe('filterByName', () => {
