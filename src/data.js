@@ -14,7 +14,7 @@ export const filteredbyClass = (championList, term) => {
   });
   return term === 'ALL' ? championList : filteredbyClassArray;
 };
-
+/* search for name in class */
 export const filterByName = (championList, term) => {
   const filteredChampions = getArray(championList).filter((champion) => {
     if (champion.name.toLowerCase().indexOf(term) !== -1) {

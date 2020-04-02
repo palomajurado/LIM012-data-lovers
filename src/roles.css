@@ -18,10 +18,10 @@ body {
   .hidden {
   display: none !important;
 }
-.container {
+
+  .container {
     display: flex;
     flex-direction: column;
-    margin: 2rem;
   }
   
   span img {
@@ -45,7 +45,7 @@ body {
   
   .alignInfo {
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 30% 70%;
     grid-gap: 20px;
   }
   
@@ -53,7 +53,60 @@ body {
     display: flex;
     flex-direction: column;
     margin-left: 30px;
+  }
+
+  .average {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .attack {
+    border-bottom: #07CBE9 solid 2px;
+    width: 60%;
+    justify-self: center;
+  }
+
+  .defense {
+    border-bottom: #07CBE9 solid 2px;
+    width: 60%;
+    justify-self: center;
+  }
+
+  .difficulty {
+    border-bottom: #07CBE9 solid 2px;
+    width: 60%;
+    justify-self: center;
+  }
+  .magic {
+    border-bottom: #07CBE9 solid 2px;
+    width: 60%;
+    justify-self: center;
+  }
+
+  .HP {
+    border-bottom: #07CBE9 solid 2px;
+    width: 60%;
+    justify-self: center;
+  }
+
+  .mana {
+    border-bottom: #07CBE9 solid 2px;
+    width: 60%;
+    justify-self: center;
+  }
+
+  .armor {
+    border-bottom: #07CBE9 solid 2px;
+    width: 60%;
+    justify-self: center;
+  }
   
+  .HP {
+    border-bottom: #07CBE9 solid 2px;
+    width: 60%;
+    justify-self: center;
   }
   
   .slider {
@@ -96,12 +149,11 @@ p {
     align-items: center;
     justify-content: space-evenly;
     padding: 1rem;
-    margin-bottom: 3rem;
   }
   
   .role {
     cursor: pointer;
-    max-width: 130px;
+    max-width: 110px;
   }
   
   @keyframes cambio {
@@ -138,7 +190,7 @@ p {
   }
 
   #tittle {
-    font-size: 50px;
+    font-size: 40px;
     justify-self: center;
     align-self: center;
     margin: 1rem;
