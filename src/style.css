@@ -1516,6 +1516,10 @@ footer {
     #buttonEnterSecondPage a {
         width: 0px;
     }
+    #buttonEnter:hover,
+    .btnRole:hover {
+        letter-spacing: 0.1rem;
+    }
 }
 
 @media (max-width: 320px) {
