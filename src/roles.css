@@ -150,6 +150,7 @@ screen and (orientation: landscape) and (min-device-width: 320px) and (max-devic
     }
     .container {
         margin: 0 1rem 1rem 1rem;
+        height: 86vh;
     }
     .alignInfo {
         grid-template-rows: 100%;
