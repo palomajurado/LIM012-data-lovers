@@ -53,63 +53,64 @@ span img {
     display: flex;
     flex-direction: column;
     margin-left: 30px;
-  }
+}
 
-  .average {
+.average {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1.5rem;
     margin-top: 1rem;
-  }
+}
 
-  .attack {
+.attack {
     border-bottom: #07CBE9 solid 2px;
     width: 60%;
     justify-self: center;
-  }
+}
 
-  .defense {
+.defense {
     border-bottom: #07CBE9 solid 2px;
     width: 60%;
     justify-self: center;
-  }
+}
 
-  .difficulty {
+.difficulty {
     border-bottom: #07CBE9 solid 2px;
     width: 60%;
     justify-self: center;
-  }
-  .magic {
-    border-bottom: #07CBE9 solid 2px;
-    width: 60%;
-    justify-self: center;
-  }
+}
 
-  .HP {
+.magic {
     border-bottom: #07CBE9 solid 2px;
     width: 60%;
     justify-self: center;
-  }
+}
 
-  .mana {
+.HP {
     border-bottom: #07CBE9 solid 2px;
     width: 60%;
     justify-self: center;
-  }
+}
 
-  .armor {
+.mana {
     border-bottom: #07CBE9 solid 2px;
     width: 60%;
     justify-self: center;
-  }
-  
-  .HP {
+}
+
+.armor {
     border-bottom: #07CBE9 solid 2px;
     width: 60%;
     justify-self: center;
-  }
-  
-  .slider {
+}
+
+.HP {
+    border-bottom: #07CBE9 solid 2px;
+    width: 60%;
+    justify-self: center;
+}
+
+.slider {
     width: 100%;
     max-width: 1000px;
     margin: auto;
@@ -149,14 +150,14 @@ p {
     align-items: center;
     justify-content: space-evenly;
     padding: 1rem;
-  }
-  
-  .role {
+}
+
+.role {
     cursor: pointer;
     max-width: 110px;
-  }
-  
-  @keyframes cambio {
+}
+
+@keyframes cambio {
     0% {
         margin-left: 0;
     }
@@ -217,6 +218,9 @@ screen and (orientation: landscape) and (min-device-width: 320px) and (max-devic
     }
     .role {
         max-width: 45px;
+    }
+    .average {
+        font-size: 12px;
     }
 }
 
