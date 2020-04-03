@@ -1,14 +1,21 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable eol-last */
 /* eslint-disable indent */
 /* eslint-disable import/no-extraneous-dependencies */
 import {
+    getArray,
     filterByName,
     filteredbyClass,
     orderList,
     filteredByDifficulty,
-    getArray,
+    getAvgOnInfo,
+    getAvgOnStats,
 } from '../src/data.js';
+
+
 import {
+    calcInfo,
+    calcStats,
     array,
     sortedArray,
     reversedArray,
@@ -26,7 +33,9 @@ import {
 
 import data from '../src/data/lol/lol.js';
 
+
 const championList = data.data;
+
 
 describe('getArray', () => {
     it('debería ser una función', () => {
@@ -136,5 +145,32 @@ it('debería retornar campeones con dificultad media', () => {
 it('debería retornar campeones con dificultad dificil', () => {
     expect(filteredByDifficulty(championList, '3')).toStrictEqual(
         championsFilteredByHard,
+    );
+});
+
+it('debería retornar los valores calculados info', () => {
+    const infoChampions = getArray(championList);
+    const assasins = filteredbyClass(infoChampions, 'Assassin');
+    const assasinsInfo = {
+        attack: getAvgOnInfo('attack', assasins).toFixed(1),
+        defense: getAvgOnInfo('defense', assasins).toFixed(1),
+        magic: getAvgOnInfo('magic', assasins).toFixed(1),
+        difficulty: getAvgOnInfo('difficulty', assasins).toFixed(1),
+    };
+    expect(assasinsInfo).toEqual(
+        calcInfo,
+    );
+});
+
+it('debería retornar los valores calculados stats', () => {
+    const infoChampions = getArray(championList);
+    const assasins = filteredbyClass(infoChampions, 'Assassin');
+    const assasinStats = {
+        mp: getAvgOnStats('mp', assasins).toFixed(1),
+        hp: getAvgOnStats('hp', assasins).toFixed(1),
+        armor: getAvgOnStats('armor', assasins).toFixed(1),
+    };
+    expect(assasinStats).toEqual(
+        calcStats,
     );
 });

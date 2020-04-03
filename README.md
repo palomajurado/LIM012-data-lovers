@@ -467,7 +467,7 @@ HISTORIA DE USUARIO 2 (H.U.13):
 -Se muestra una definición de la clase, un slider de imágenes y los promedios de las estadísticas principales para determinar las fortalezas y debilidades de cada rol<br>
 -Hacer función reduce<br>
 
-*Definición de terminHdo:** ✔ <br>
+**Definición de terminado:** ✔ <br>
 
 -Realizar test unitarios.
 -Pasar Eslint
@@ -507,6 +507,23 @@ RESPONSIVE IPHONEX IPAD-PRO ( & ALL DEVICES SCREENS):
 ******************************** 
 ![](./src/assets/HU/ipadV.png)
 ******************************** 
+
+ <!-- Tipos de letras
+- font-family: 'Cuprum', sans-serif;
+- font-family: 'Trade Winds', cursive;
+- font-family: 'Marcellus SC', serif;
+- font-family: 'Roboto', sans-serif;
+-font-family: 'Ruda', sans-serif;
+Colores establecidos:
+- celeste #07CBE9
+- morado 9B51E0
+- inputs casi blanco EEEAEA
+- dorado LOL #B48643
+<iframe width='560' height='315' src='https://www.youtube.com/embed/A-wez_wSWEA?controls=0' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe> 
+https://www.youtube.com/watch?v=A-wez_wSWEA&feature=youtu.be -->
+<!-- Invision https://mararodriguez597039.invisionapp.com/freehand/datalovers-lol-AYIeTKBpY?v=X6JP0IPtqctW100IADvc3w%3D%3D&linkshare=urlcopied
+Links FIGMA https://www.figma.com/file/lr2q13Jdqztgdy6ag3oV7a/Untitled?node-id=77%3A177
+TRELLO : https://trello.com/b/ZbxxiHvY/datalovers -->
 
 
 

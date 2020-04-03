@@ -300,10 +300,13 @@ const filterClasses = (element) => {
         input.value = '';
         list.innerHTML = '';
         cleanDifficulty(difficulty1);
-
         // eslint-disable-next-line max-len
         const filteredChampions = filteredbyClass(championList, term);
-        functionCardsStructure(filteredChampions);
+        if (term === 'ALL') {
+            functionCardsStructure(championList);
+        } else {
+            functionCardsStructure(filteredChampions);
+        }
     });
 };
 li.forEach(button => filterClasses(button));
