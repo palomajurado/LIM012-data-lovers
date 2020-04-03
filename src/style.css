@@ -40,26 +40,6 @@ body {
     display: block;
 }
 
-.hide {
-    display: none;
-}
-
-.shown {
-    display: block;
-}
-
-.showFlex {
-    display: flex;
-}
-
-.visible {
-    overflow: visible;
-}
-
-.overflowHidden {
-    overflow: hidden;
-}
-
 
 /* HEADER */
 
@@ -279,8 +259,8 @@ body {
     text-shadow: 0.0625rem 0.0625rem 0.5rem #feb412, 0 0 1em #07cbe9, 0 0 0.2em #07cbe9;
 }
 
-#buttonEnter,
-.btnRole {
+.btnRole,
+#buttonEnter {
     outline: none;
     color: wheat;
     cursor: pointer;
@@ -293,17 +273,17 @@ body {
     font-family: "Marcellus SC", serif;
 }
 
-#buttonEnter:hover,
 .btnRole:hover,
-#imgRiot:hover {
+#imgRiot:hover,
+#buttonEnter:hover {
     letter-spacing: 0.375rem;
     border: 0.0625rem solid #b48643;
     box-shadow: 0 0 1.25rem #feb412, 0 0 1.25rem #feb412;
     text-shadow: 0.0625rem 0.0625rem 0.5rem #feb412, 0 0 1em #07cbe9, 0 0 0.2em #07cbe9;
 }
 
-#mainElements5,
-.nav-link {
+.nav-link,
+#mainElements5 {
     width: min-content;
 }
 
@@ -392,8 +372,8 @@ body {
     font-family: 'Marcellus SC', serif;
 }
 
-.modal-header p,
-.modal-roles p {
+.modal-roles p,
+.modal-header p {
     font-size: 1.25rem;
     font-weight: bolder;
     color: rgb(223, 201, 129);
@@ -545,6 +525,26 @@ footer {
     animation-delay: 0s;
     animation-duration: 3s;
     animation-iteration-count: infinite;
+}
+
+.hide {
+    display: none;
+}
+
+.shown {
+    display: block;
+}
+
+.showFlex {
+    display: flex;
+}
+
+.visible {
+    overflow: visible;
+}
+
+.overflowHidden {
+    overflow: hidden;
 }
 
 #lupa {

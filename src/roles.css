@@ -45,14 +45,13 @@ span img {
     grid-template-columns: repeat(3, 1fr);
 }
 
-.attack,
-.defense,
-.difficulty,
-.magic,
 .HP,
 .mana,
+.magic,
 .armor,
-.HP {
+.attack,
+.defense,
+.difficulty {
     width: 60%;
     justify-self: center;
     border-bottom: #07CBE9 solid 2px;
@@ -142,14 +141,6 @@ screen and (orientation: landscape) and (min-device-width: 320px) and (max-devic
     #tittle {
         font-size: 37px;
     }
-    .container {
-        height: 86vh;
-        margin: 0 1rem 1rem 1rem;
-    }
-    .alignInfo {
-        grid-gap: 17px;
-        grid-template-rows: 100%;
-    }
     .icons {
         padding: 0;
         margin-bottom: 1rem;
@@ -165,6 +156,14 @@ screen and (orientation: landscape) and (min-device-width: 320px) and (max-devic
     }
     .role {
         max-width: 45px;
+    }
+    .container {
+        height: 86vh;
+        margin: 0 1rem 1rem 1rem;
+    }
+    .alignInfo {
+        grid-gap: 17px;
+        grid-template-rows: 100%;
     }
 }
 
