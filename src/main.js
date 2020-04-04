@@ -271,7 +271,7 @@ input.addEventListener('keyup', (evt) => {
         functionCardsStructure(filteredChampions);
     },
     false);
-/*---------------------------------------------*/
+
 
 /* FUNCION: HOVER ACTIVE POR CLASE SELECCIONADA */
 
