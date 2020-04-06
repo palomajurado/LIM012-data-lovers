@@ -19,7 +19,6 @@ export const calcStats = {
     armor: '24.4',
 };
 
-
 export const array = [
     championList.Ahri,
     championList.Aatrox,
