@@ -52,7 +52,7 @@ export const filteredByDifficulty = (championList, term) => {
         });
     }
 
-    return filteredByDifficult;
+    return filteredByDifficult; // obtengo el valor de retorno
 };
 
 export const orderList = (championList, term) => getArray(championList).sort(() => (term === 'za' ? -1 : 1));

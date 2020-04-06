@@ -29,33 +29,34 @@ const setName = () => {
 };
 
 document.getElementById('buttonEnter').addEventListener('click', setName);
-inputName.addEventListener('keypress', ({
-    keyCode,
-}) => {
-    if (keyCode === 13) setName();
+inputName.addEventListener('keypress', (e) => {
+    if (e.keyCode === 13) setName();
 });
 
-const buttonDown = document.getElementById('button-down');
-buttonDown.addEventListener('click', () => {
+const buttonUp = document.getElementById('button-up');
+buttonUp.addEventListener('click', () => {
     window.scroll({
         top: 0,
         behavior: 'smooth',
     });
 });
+
 window.onscroll = () => {
-    const windowScroll = window.pageYOffset;
-    const breakpointScroll = document.documentElement.scrollHeight - window.outerHeight - 35;
-    if (windowScroll >= breakpointScroll) {
-        buttonDown.classList.add('almostFinalBTN');
+    const windowCurrentScroll = window.pageYOffset; // posicion actual del scroll
+    console.log(windowCurrentScroll);
+
+    const breakpointScroll = document.documentElement.scrollHeight - window.outerHeight - 35; // Altura de viewport
+    if (windowCurrentScroll >= breakpointScroll) {
+        buttonUp.classList.add('almostFinalBTN');
     } else {
-        buttonDown.classList.remove('almostFinalBTN');
+        buttonUp.classList.remove('almostFinalBTN');
     }
-    if (windowScroll > 400) {
-        buttonDown.classList.remove('hide');
-        buttonDown.classList.add('shown');
+    if (windowCurrentScroll > 400) {
+        buttonUp.classList.remove('hide');
+        buttonUp.classList.add('shown');
     } else {
-        buttonDown.classList.remove('shown');
-        buttonDown.classList.add('hide');
+        buttonUp.classList.remove('shown');
+        buttonUp.classList.add('hide');
     }
 };
 
@@ -78,8 +79,8 @@ playButtonContainer1.appendChild(functionPlayButton());
 /* CREANDO:Elementos del DOM, inyectando en nodo padre */
 const championList = data.data;
 const list = document.getElementById('list');
-
 const functionCardsStructure = (listData) => {
+
     const checkData = Array.isArray(listData) ? listData : Object.values(listData);
 
     checkData.map((champion) => {
@@ -112,12 +113,11 @@ const functionCardsStructure = (listData) => {
 
         const championStats = document.createElement('div');
         championStats.className = 'champion-stats';
-        Object.entries(champion.info).map(([key, value]) => {
+        Object.entries(champion.info).forEach(([key, value]) => {
             const championStatsText = document.createElement('p');
             championStatsText.className = 'champion-stats__item';
             championStatsText.innerHTML = `${key}: ${value}`;
             championStats.appendChild(championStatsText);
-            return false;
         });
 
         const divClassWord = document.createElement('div');
@@ -126,13 +126,12 @@ const functionCardsStructure = (listData) => {
         classWord.innerHTML = 'Class: ';
         divClassWord.appendChild(classWord);
 
-        champion.tags.map((tag, index) => {
+        champion.tags.forEach((tag, index) => {
             const modalRolesP = document.createElement('p');
             modalRolesP.className = 'pTags';
-            modalRolesP.innerHTML = champion.tags.length - 1 !== index ? `\xa0${tag},` : `\xa0${tag}`;
+            modalRolesP.innerHTML = champion.tags.length !== index ? `\xa0${tag},` : `\xa0${tag}`; // solo al ultimo elemento no le agrega la coma por eso resto -1 en el length
             divClassWord.appendChild(modalRolesP);
             championStats.appendChild(divClassWord);
-            return false;
         });
         backCardInfo.appendChild(championStats);
 
@@ -145,7 +144,7 @@ const functionCardsStructure = (listData) => {
         const modalStatsRight = document.getElementById('modal-stats-right');
 
         const closeModal = () => {
-            modalStatsLeft.innerHTML = '';
+            modalStatsLeft.innerHTML = ''; // limpio para cerrar y no acumular info de otro champion que no corresponda 
             modalStatsRight.innerHTML = '';
             modalRoles.innerHTML = '';
 
@@ -168,25 +167,22 @@ const functionCardsStructure = (listData) => {
 
             /*-----------------------------------------------------*/
 
-            moreStatsLeft.map(([key, value]) => {
+            moreStatsLeft.forEach(([key, value]) => {
                 const modalStatsLeftList = document.createElement('p');
                 modalStatsLeftList.innerHTML = `${key}: ${value}`;
                 modalStatsLeft.appendChild(modalStatsLeftList);
-                return false;
             });
 
-            moreStatsRight.map(([key, value]) => {
+            moreStatsRight.forEach(([key, value]) => {
                 const modalStatsRightList = document.createElement('p');
                 modalStatsRightList.innerHTML = `${key}: ${value}`;
                 modalStatsRight.appendChild(modalStatsRightList);
-                return false;
             });
 
-            champion.tags.map((tag, index) => {
+            champion.tags.forEach((tag, index) => {
                 const modalRolesP = document.createElement('p');
                 modalRolesP.innerHTML = champion.tags.length - 1 !== index ? `${tag},` : `${tag}`;
                 modalRoles.appendChild(modalRolesP);
-                return false;
             });
         };
         modalCloseButton.addEventListener('click', closeModal);
@@ -204,7 +200,6 @@ const functionCardsStructure = (listData) => {
             document.body.classList.add('overflowHidden');
             modalOverlay.classList.remove('hide');
             modalOverlay.classList.add('showFlex');
-            modalOverlay.style.top = `${window.pageYOffset}px`;
 
             const playButtonContainer = document.getElementById('buttonContainer');
             playButtonContainer.innerHTML = '';
@@ -229,7 +224,7 @@ const functionCardsStructure = (listData) => {
 functionCardsStructure(championList);
 /*-----------------------------------------------------*/
 
-/* FILTRADO: DIGITANDO NOMBRE (FALTA PULIR) */
+/* FILTRADO: DIGITANDO NOMBRE */
 const input = document.querySelector('#searchInputs');
 
 const ul = document.querySelector('.menu');
@@ -237,6 +232,7 @@ const ul2 = document.querySelector('.menu2');
 const li = document.querySelectorAll('.menu li');
 const li2 = document.querySelectorAll('.menu2 li');
 const difficulty1 = document.querySelectorAll('.difficulty1 div');
+
 const cleanClasses = () => {
     ul.querySelector('.active').classList.remove('active');
     ul2.querySelector('.active').classList.remove('active');
@@ -275,17 +271,17 @@ input.addEventListener('keyup', (evt) => {
 
 /* FUNCION: HOVER ACTIVE POR CLASE SELECCIONADA */
 
-li.forEach((el) => {
-    el.addEventListener('click', () => {
+li.forEach((li) => {
+    li.addEventListener('click', () => {
         ul.querySelector('.active').classList.remove('active');
-        el.classList.add('active');
+        li.classList.add('active');
     });
 });
 
-li2.forEach((el) => {
-    el.addEventListener('click', () => {
+li2.forEach((li) => {
+    li.addEventListener('click', () => {
         ul2.querySelector('.active').classList.remove('active');
-        el.classList.add('active');
+        li.classList.add('active');
     });
 });
 
@@ -293,9 +289,9 @@ li2.forEach((el) => {
 /*---------------------------------------------*/
 
 /* FILTRADO: POR CLASE */
-const filterClasses = (element) => {
-    element.addEventListener('click', () => {
-        const term = element.getAttribute('data-value');
+const filterClasses = (button) => {
+    button.addEventListener('click', () => {
+        const term = button.getAttribute('data-value');
 
         input.value = '';
         list.innerHTML = '';
@@ -319,8 +315,8 @@ difficulty1.forEach((option) => {
         let term = option.getAttribute('data-value');
         const activeButtons = document.querySelectorAll('.difficulty1 .levelFull');
         const arrButtons = [...difficulty1];
-        const selectedButtons = arrButtons.filter((_, i) => i <= term - 1);
-        const isSelected = activeButtons.length === parseInt(term, 10);
+        const selectedButtons = arrButtons.filter((_, i) => i <= term - 1); // filtro los botones dependiendo del que elija
+        const isSelected = activeButtons.length === parseInt(term, 10); // verificacion de el valor ya esta seleccionado
         if (isSelected) {
             term = 0;
         }
@@ -358,6 +354,8 @@ order1.forEach((option) => {
         functionCardsStructure(filteredChampions);
     });
 });
+
+/* Href de la tercera interfaz  */
 const btnRole = document.querySelector('.btnRole');
 btnRole.addEventListener('click', () => {
     document.location.href = './indexroles.html';
