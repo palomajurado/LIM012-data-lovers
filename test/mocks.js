@@ -5,6 +5,19 @@ import data from '../src/data/lol/lol';
 
 const championList = data.data;
 
+export const calcInfo = {
+    attack: '6.8',
+    defense: '3.7',
+    magic: '4.9',
+    difficulty: '6.4',
+};
+
+export const calcStats = {
+    mp: '256.6',
+    hp: '560.1',
+    armor: '24.4',
+};
+
 export const array = [
     championList.Ahri,
     championList.Aatrox,
