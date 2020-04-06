@@ -21,22 +21,18 @@ para crear estratégias que les permita llevarse la victoria en la grieta (campo
 
 `¿Cuáles son los datos mas importantes que quieren ver en la interfaz y por qué?`
 <br>
-* Para los nuevos usuarios que les indique las categorias de como seleccionar entre asesinos magos ,etc. Verlos por 
-  imagen y ver sus atributos tambien (los principales).<br>
-* Para usuarios experimentados son una barra para filtrar y ordenar la información de los campeones tales cómo:<br>
-<br>
-        Atack: 3,defense: 4,magic: 8, difficulty: 5, ovespeed: 350, armor: 26.38, étc.<br>
-<br>
+*Poder ver a los campeones por imagen y ver sus atributos principales<br>
+* Una barra de navegación para filtrar y ordenar la vista de la lista de campeones.<br>
+*Información estadística de los campeones, tales como su ataque, defensa, armadura, maná, poder de habilidad (mágia), entre otros. <br>
+* Un promedio de las estadísticas por rol para que el usuario pueda identificar las fortalezas y debilidades de cada clase. <br>
 
 `¿Cuáles son los objetivos de estos usuarios en relación con el producto?`
 <br>
-Su objetivo es seleccionar un campeón de acuerdo a su gusto y características para iniciar el juego.
+Su objetivo es tener la información mas completa del juego y sus personajes para seleccionar un campeón que se adecue mas a sus gustos para iniciar el juego.
 
 `¿Cuándo utilizan o utilizarían el producto?`
 <br>
-A la hora de planear una estrategia de juego, para conocer mejor a su campeón y poder acceder a los datos de sus counters, 
-y finalmente como hacen sinergia distintos campeones para conformar el mejor equipo. Los usuarios solemos buscar los 
-stats de nuestro equipo enemigo cuando estamos en pantalla de carga, antes de iniciar la partida.
+A la hora de planear una estrategia de juego, para conocer mejor a su campeón y poder acceder a los datos de sus counters, (campeones enemigos) y como hacen sinergia distintos campeones para conformar el mejor equipo. Los usuarios suelen buscar las estadisticas del equipo enemigo cuando estamos en pantalla de carga, antes de iniciar la partida.
 
 ***************************************
 ```js
@@ -54,20 +50,13 @@ experiencia más personalizada y tener una idea general de que trata el juego.
 
 **Definición de terminado:** ✔ 
 <br>
--Utilizar Html semántico.<br>
--Hacerle testing al resultado.<br>
--Pagina responsive con felxbox grid.<br>
+-Hacer test<br>
+-Pagina responsive .<br>
 -Usar lint para evaluación de código (correcciones de sintaxis).<br>
 -Subir a github <br>
--Desplegar en Git hub pagues.<br>
+-Desplegar en Github pages.<br>
 
 ![](./src/assets/HU/int1BFmofidicada.jpeg)
-
-**FEEDBACK coaches** : 
-
-1. Nos dijeron que definieramos mejor lo que nosotras como desarrolladoras definimos como Terminado.
-2. Separas en dos HU estilos de CSS, de las funciones JS.
-3. Nos sugirio pedirle feedback a Anahi.
 
 **Testing con usuarios** :
 
@@ -94,41 +83,34 @@ experiencia más personalizada y tener una idea general de que trata el juego.
 HISTORIA DE USUARIO 2 (H.U.2):
 ```
 
-**HU2**:  Visualizar lista de campeones : Como jugador@ de lol quiero visualizar una lista de campeones para ver 
-todos los campeones disponibles por nombre en orden alfabético 
+**HU2**:  Visualizar lista de campeones : Como jugador@ de lol quiero visualizar una lista de campeones para ver todos los campeones disponibles por nombre en orden alfabético y al reverso (de la Z a la A)
 
 **Criterios de aceptación:** 🤔<br>
 
 -Visualizar una lista de campeones con su nombre e imagen<br>
--Se organizan todos los campeones en orden alfabético de la A a la Z (por defecto de la data) <br>
--Tiene la vista de la barra de búsqueda icono de buscar con todas las clases <br>
- de campeones a elegir, icono de nivel de dificultad  (sin funcionalidad)<br>
+-Se organizan todos los campeones en orden alfabético de la A a la Z  <br>
+-Se organizan todos los campeones de la Z a la A <br> 
+-Tiene la vista de la barra de búsqueda: icono de buscar por nombre, por  clases 
+ por nivel de dificultad y el ícono de sort (ordenar A-Z Z-A)  (sin funcionalidad)<br>
 
 
 **Definición de terminado:** ✔ <br>
 
--Utilizar Html semántico.<br>
 -Hacerle testing al resultado (Pruebas unitarias)<br>
--Pagina responsive con felxbox grid.<br>
--Usar lint para evaluación de código (correcciones de sintaxis).<br>
+-Pagina responsive<br>
+-Usar slint para evaluación de código.<br>
 -Refactorizar <br>
 -Subir a github <br>
-hola caracol 
-haoasjahskjahskjahs
--Desplegar en Git hub pagues.<br>
-
+-Desplegar en Github pages.<br>
 
 
 ![](./src/assets/HU/HU2BF.jpeg)
 
-**FEEDBACK coaches** : 
 
-1. Nos dijeron que definieramos mejor lo que nosotras como desarrolladoras definimos como Terminado con subida a ghpages.
-2. Separas en dos HU estilos de CSS, de las funciones JS.
 
 **Testing con usuarios** :
 
-1. Les gusto el despliegue nos sugieron disminuir tamaño de letra 
+1. Les gusto el despliegue, nos recomendaron disminuir tamaño de letra 
 
 ## Prototipado BAJA FIDELIDAD 
 
@@ -152,22 +134,11 @@ HISTORIA DE USUARIO 3 (H.U.3):
 
 **Definición de terminado:** ✔ <br>
 
--Utilizar Html semántico.<br>
 -Hacerle testing al resultado (Pruebas unitarias)<br>
--Usar lint para evaluación de código (correcciones de sintaxis).<br>
+-Usar slint para evaluación de código..<br>
 -Refactorizar <br>
 -Subir a github <br>
--Desplegar en Git hub pagues.<br>
-
-
-**FEEDBACK coaches** : 
-
-1. Nos dijeron que definieramos mejor lo que nosotras como desarrolladoras definimos como Terminado.<br>
-2. Separas en dos HU estilos de CSS, de las funciones JS.<br>
-
-**Testing con usuarios** :
-1. Los usuarios testeados entendieron el dinamismo y les gusto<br>
-2. Nos sugieron cambiar el tamanño de letra<br>
+-Desplegar en Github pages.<br>
 
 ## Prototipado ALTA FIDELIDAD 
 
@@ -184,24 +155,19 @@ HISTORIA DE USUARIO 4 (H.U.4):
 
 -El usuario puede buscar por nombre de campeón<br>
 -Hacer que se actualice la lista con cada carácter colocado en la barra de búsqueda<br>
--que le de un mensaje de error al usuario si el input no coincide con ninguna búsqueda<br>
--Filtrar por nombre<br>
+-Que le dé un mensaje de error al usuario si el input no coincide con ninguna búsqueda<br>
+-Función filtrar por nombre<br>
 
 **Definición de terminado:** ✔ <br>
 
--Utilizar Html semántico.<br>
--Hacerle testing al resultado (Pruebas unitarias)<br>
--Usar lint para evaluación de código (correcciones de sintaxis).<br>
--Refactorizar <br>
--Subir a github <br>
--Desplegar en Git hub pagues.<br>
-
-**FEEDBACK coaches** : 
-1. Nos indicarnos fijarnos mas en el objetivo de aprendizaje que en el diseño<br>
-2. El terminado incluye el testing de funcion y desplegado en GHpages<br>
+-Hacerle testing al resultado.<br>
+-Usar slint para evaluación de código.<br>
+-Refactorizar. <br>
+-Subir a github. <br>
+-Desplegar en Github pages.<br>
 
 **Testing con usuarios** :
-1. No sugirieron colocar un champion not found cuando el usuario colocaque cualquier nombre<br>
+1. No sugirieron colocar un champion not found.<br>
 
 ## Prototipado ALTA FIDELIDAD 
 
@@ -213,29 +179,26 @@ HISTORIA DE USUARIO 4 (H.U.4):
 HISTORIA DE USUARIO 5 (H.U.5):
 ```
 
-**HU5**:YO como jugador@ de lol quiero poder filtrar por dificultad para saber cuantos campeones hay disponibles por cada dificultad
+**HU5**:YO como jugador@ de lol quiero poder filtrar por dificultad para saber cuántos campeones hay disponibles por cada dificultad
 
 **Criterios de aceptación:** 🤔<br>
 
--Filtrar por dificultad<br>
+-Función filtrar por dificultad<br>
 -Al presionar la barra donde dice "seleccionar la dificultad" se despliegan las opciones<br>
--El usuario puede filtrar a los campeones por dificultad<br>
 -Se organiza la lista de campeones por dificultad<br>
 
 **Definición de terminado:** ✔ <br>
 
--Utilizar Html semántico.<br>
--Hacer la funcion o funciones<br>
--Hacerle testing al resultado (Pruebas unitarias)<br>
--Usar lint para evaluación de código (correcciones de sintaxis).<br>
--Refactorizar <br>
--Subir a github <br>
--Desplegar en Git hub pagues.<br>
+-Hacerle testing al resultado.<br>
+-Usar slint para evaluación de código.<br>
+-Refactorizar. <br>
+-Subir a github. <br>
+-Desplegar en Github pages.<br>
 
 **Testing con usuarios** :
 
-1. La compañeras nos dijeron que ojala fuese una barra, transformando su sugerencia 
-2. Nos sugieron el color de shadow 
+1. Consideraron que sería mejor si fuera una sola barra.
+2. Nos sugieron el color de shadow.
 
 ## Prototipado ALTA FIDELIDAD 
 
@@ -247,22 +210,20 @@ HISTORIA DE USUARIO 5 (H.U.5):
 HISTORIA DE USUARIO 6 (H.U.6):
 ```
 
-**HU6**: Como jugador@ de lol quiero poder filtrar por clase de campeón para elegir con que tipo de juego me siento afín
+**HU6**: Como jugador@ de lol quiero poder filtrar por clase de campeón para elegir con que tipo de juego me siento afín.
 
 **Criterios de aceptación:** 🤔<br>
 
--Visualizar una lista de campeones con su nombre e imagen<br>
+-Visualizar una lista de campeones con su nombre e imagen por rol<br>
 -Se organizan todos los campeones en orden a su clase al darle click a un boton del navbar <br>
 
 **Definición de terminado:** ✔ <br>
 
--Utilizar Html semántico.<br>
--Hacerle testing al resultado (Pruebas unitarias)<br>
--Pagina responsive con felxbox grid.<br>
--Usar lint para evaluación de código (correcciones de sintaxis).<br>
+-Hacerle testing al resultado.<br>
+-Usar slint para evaluación de código.<br>
 -Refactorizar <br>
 -Subir a github <br>
--Desplegar en Git hub pagues.<br>
+-Desplegar en Github pages.<br>
 
 ## Prototipado ALTA FIDELIDAD 
 
@@ -274,28 +235,22 @@ HISTORIA DE USUARIO 6 (H.U.6):
 HISTORIA DE USUARIO 7 (H.U.7):
 ```
 
-**HU7**:  Como usuari@ quiero poder ordenar a los campeones de la A-Z y de Z-A para tener mas opciones de busqueda en la pagina
+**HU7**:  Como usuari@ quiero poder ordenar a los campeones de la A-Z y de la Z a la A para tener más opciones de búsqueda en la página.
 
 **Criterios de aceptación:** 🤔<br>
 
--Funcion sort para devolver el arreglo "ordenado"<br>
--Funcion reverse para devolver la funcion ordenada pero al reves<br>
+-Función sort para devolver el arreglo "ordenado"<br>
+-Función reverse para devolver la función ordenada al revés<br>
 -Se visualiza un dropdown con las opciones<br>
 
 **Definición de terminado:** ✔ <br>
 
--Utilizar Html semántico.<br>
--Hacer las funciones con el metodo sort<br>
 -Hacerle testing al resultado (Pruebas unitarias)<br>
 -Usar lint para evaluación de código (correcciones de sintaxis).<br>
 -Refactorizar <br>
 -Subir a github <br>
 -Desplegar en Git hub pagues.<br>
 
-**FEEDBACK coaches** : 
-
-1. Nos indicaron que el uncovered lines que aparecia en el test era por que el yarn no estaba tomando esa linea de codigo para evaluar<br>
-2. Nos pidieron revisar y analizar mejor la formulacion de test<br>
 
 ## Prototipado ALTA FIDELIDAD 
 
@@ -306,22 +261,21 @@ HISTORIA DE USUARIO 7 (H.U.7):
 HISTORIA DE USUARIO 8 (H.U.8):
 ```
 
-**HU8**:  Como jugador quiero 2 botones uno de jugar y otro par saber mas del camperon elegido
+**HU8**:  Como jugador quiero 2 botones uno de jugar y otro par saber mas del campeón elegido
 
 **Criterios de aceptación:** 🤔<br>
--El usuari@ tiene dos botones uno de play y otro de more stats para saber mas atributos de su campeon<br> 
--El usuario visualiza un modal con todos los atributos de su campeon mas su clase y un boton de jugar<br>
+-El usuari@ tiene dos botones uno de play y otro de more stats para saber más estadísticas de su campeon<br> 
+-Utilizar Html semántico.<br>
+-Utilizar manipulación de DOM para creacion del card.
+-Usar funciones para el dinamismo y mostrar las estadísticas a traves de la data.
+-El usuario visualiza un modal con todas las estadísticas de su campeón.
 -El usuario ve un botón X para retornar a la página anterior<br>
 
 
 **Definición de terminado:** ✔ <br>
 
--Utilizar Html semántico.<br>
--Utilizar manipulacion de DOM para creacion del card.
--Usar funciones para el dinamismo y muestra de estos atributos jalados a travez de la data.
--Hacerle testing al resultado (Pruebas unitarias)<br>
--Pagina responsive con felxbox grid.<br>
--Usar lint para evaluación de código (correcciones de sintaxis).<br>
+-Hacer test<br>
+-Usar slint para evaluación de código.<br>
 -Refactorizar <br>
 -Subir a github <br>
 -Desplegar en Git hub pagues.<br>
@@ -333,7 +287,7 @@ HISTORIA DE USUARIO 8 (H.U.8):
 1. Nos indicaron cambiar el color de letra<br> 
 2. Nos indicaron colocar los botones menos grandes<br>
 3. Entendieron el dinamismo hacia el modal<br> 
-4. Nos pidieron disminuit el size del boton x de retorno<br>
+4. Nos pidieron aumentar el tamaño del boton x de retorno<br>
 
 ## Prototipado ALTA FIDELIDAD Protitpo aplicado!
 
@@ -354,12 +308,10 @@ HISTORIA DE USUARIO 9 (H.U.9):
 
 **Definición de terminado:** ✔ <br>
 
--Utilizar Html semántico.<br>
--Hacerle testing al resultado (Pruebas unitarias)<br>
--Pagina responsive con felxbox grid.<br>
--Usar lint para evaluación de código (correcciones de sintaxis).<br>
--Subir a github <br>
--Desplegar en Git hub pagues.<br>
+-Página responsive.<br>
+-Usar slint para evaluación de código.<br>
+-Subir a github. <br>
+-Desplegar en Github pages.<br>
 
 **Testing con usuarios** :
 
@@ -378,20 +330,17 @@ HISTORIA DE USUARIO 10 (H.U.10):
 
 **Criterios de aceptación:** 🤔<br>
 
--El usuario visualiza un modal al darle click a backcard en more stats con estadísticas adicionales<br>
+-El usuario visualiza un modal al darle click al botón "more stats" con estadísticas adicionales<br>
 -Se despliega y encuentra 2 botones uno de play y una x para retornar<br>
 
 
 **Definición de terminado:** ✔ <br>
 
--Utilizar Html semántico.<br>
--Darle dinamismo con javascript<br>
--Hacerle testing al resultado (Pruebas unitarias)<br>
--Pagina responsive con felxbox grid.<br>
--Usar lint para evaluación de código (correcciones de sintaxis).<br>
+-Pagina responsive.<br>
+-Usar lint para evaluación de código.<br>
 -Refactorizar <br>
 -Subir a github <br>
--Desplegar en Git hub pagues.<br>
+-Desplegar en Github pages.<br>
 
 ## Prototipado ALTA FIDELIDAD 
 
@@ -402,7 +351,7 @@ HISTORIA DE USUARIO 10 (H.U.10):
 HISTORIA DE USUARIO 11 (H.U.11):
 ```
 
-**HU11**:  YO como usuari@ nuev@ quiero que mi nombre aparezca al inicio de la pagina para sentir que estoy en sesion.
+**HU11**:  YO como usuari@ nuev@ quiero que mi nombre aparezca al inicio de la página para sentir que estoy en sesión.
 
 **Criterios de aceptación:** 🤔<br>
 
@@ -411,16 +360,14 @@ HISTORIA DE USUARIO 11 (H.U.11):
 
 **Definición de terminado:** ✔ <br>
 
--Utilizar Html semántico.<br>
--Pagina responsive con felxbox grid.<br>
--Usar lint para evaluación de código (correcciones de sintaxis).<br>
+-Usar lint para evaluación de código.<br>
 -Subir a github <br>
 -Desplegar en Git hub pagues.<br>
 
 
 **Testing con usuarios** :
 
-1. Hicimos esta parte por sugerencia de un testing a una compañera<br>
+1. Hicimos esta parte por sugerencia de una compañera<br>
 
 ## Prototipado ALTA FIDELIDAD 
 
@@ -431,19 +378,18 @@ HISTORIA DE USUARIO 11 (H.U.11):
 HISTORIA DE USUARIO 12 (H.U.12):
 ```
 
-**HU12**: YO como usuari@ quiero tener un boton que me dirija a la parte superior cuando haya bajada hasta abajo para sentirme mas comodo al darle click y que suba automaticamente
+**HU12**: YO como usuari@ quiero tener un boton que me dirija a la parte superior cuando haya bajada hasta abajo para sentirme mas cómod@ al darle click y que suba automáticamente.
 
 **Criterios de aceptación:** 🤔<br>
 
--Que el usuario visualice su el boton up al bajar al cargar la segunda interfaz permanntemnt<br>
+-Que el usuario visualice el boton up al bajar desde la segunda interfaz permanentemente<br>
 
 **Definición de terminado:** ✔ <br>
 
--Utilizar Html semántico.<br>
--Pagina responsive con felxbox grid.<br>
--Usar lint para evaluación de código (correcciones de sintaxis).<br>
+-Pagina responsive.
+-Usar lint para evaluación de código <br>
 -Subir a github <br>
--Desplegar en Git hub pagues.<br>
+-Desplegar en Github pages.<br>
 
 **Testing con usuarios** :
 
@@ -462,12 +408,12 @@ HISTORIA DE USUARIO 2 (H.U.13):
 
 **Criterios de aceptación:** 🤔<br>
 
--Se visualiza un icono por cada clase<br>
--Al clickear un icono, se despliega información sobre el rol elegido<br>
+-Se visualiza un ícono por cada clase<br>
+-Al clickear un ícono, se despliega información sobre el rol elegido<br>
 -Se muestra una definición de la clase, un slider de imágenes y los promedios de las estadísticas principales para determinar las fortalezas y debilidades de cada rol<br>
--Hacer función reduce<br>
+-Hacer función reduce por cada rol<br>
 
-**Definición de terminado:** ✔ <br>
+*Definición de terminado:** ✔ <br>
 
 -Realizar test unitarios.
 -Pasar Eslint
@@ -478,10 +424,18 @@ HISTORIA DE USUARIO 2 (H.U.13):
 
 ![](./src/assets/HU/bajaFHU13.jpeg)
 
-**FEEDBACK coaches** : 
-
-1. La coach betsy indico que el reduce es lo mas efectivo para hacer el calculo dividida por la longitud del array en nuestro caso por clases de campeones.
-
+**FEEDBACK de las coaches** : 
+1. Testear el diseño de prototipos con usuarios. <br>
+2. Usar checklist en trello. <br>
+3. Definir mejor la definición de terminado.<br>
+4. Separar en dos HU los estilos de CSS de las funciones JS.<br>
+5. Replantearnos los test. (no calcular por lenght) <br>
+6. Hacer testing de función map. <br>
+7. Refactorizar archivos para evitar código repetitivo. <br>
+8. Mejorar el uso del HTML semántico. <br>
+9. Colocar el alt a las etiquetas img. <br>
+10. Nos ayudaron con las lineas sin cubrir de los test. <br>
+11. Usar método reduce para el cálculo agregado.
 
 ## Prototipado ALTA FIDELIDAD
 
@@ -524,7 +478,6 @@ https://www.youtube.com/watch?v=A-wez_wSWEA&feature=youtu.be -->
 <!-- Invision https://mararodriguez597039.invisionapp.com/freehand/datalovers-lol-AYIeTKBpY?v=X6JP0IPtqctW100IADvc3w%3D%3D&linkshare=urlcopied
 Links FIGMA https://www.figma.com/file/lr2q13Jdqztgdy6ag3oV7a/Untitled?node-id=77%3A177
 TRELLO : https://trello.com/b/ZbxxiHvY/datalovers -->
-
 
 
 
