@@ -413,11 +413,7 @@ HISTORIA DE USUARIO 2 (H.U.13):
 -Se muestra una definición de la clase, un slider de imágenes y los promedios de las estadísticas principales para determinar las fortalezas y debilidades de cada rol<br>
 -Hacer función reduce por cada rol<br>
 
-<<<<<<< HEAD
 *Definición de terminado:** ✔ <br>
-=======
-**Definición de terminado:** ✔ <br>
->>>>>>> 5dc83fa5dbb7e20cada3b67f37b040f343d2a962
 
 -Realizar test unitarios.
 -Pasar Eslint
