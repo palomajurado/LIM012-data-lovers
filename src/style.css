@@ -1217,8 +1217,11 @@ footer {
     }
     #chooseYour {
         font-size: 1.1875rem;
-        margin-bottom: 0 0 -1.875rem 1.25rem;
         padding: 0;
+        margin-left: 90px;
+    }
+    #divider2 {
+        margin-top: -25px;
     }
     #champion {
         font-size: 1.875rem;
@@ -1243,7 +1246,7 @@ footer {
     }
     .corner {
         padding: 0.3125rem;
-        margin-left: 1.4375rem;
+        margin-left: 1rem;
     }
     .championName {
         font-size: 0.8125rem;

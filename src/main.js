@@ -43,7 +43,7 @@ buttonUp.addEventListener('click', () => {
 
 window.onscroll = () => {
     const windowCurrentScroll = window.pageYOffset; // posicion actual del scroll
-    console.log(windowCurrentScroll);
+    // console.log(windowCurrentScroll);
 
     const breakpointScroll = document.documentElement.scrollHeight - window.outerHeight - 35; // Altura de viewport
     if (windowCurrentScroll >= breakpointScroll) {
