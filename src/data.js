@@ -3,9 +3,17 @@
 /* eslint-disable eol-last */
 export const getArray = championList => (Array.isArray(championList) ? championList : Object.values(championList));
 
+export const getAvgOnInfo = (property, championList) => championList.reduce(
+    (acc, champion) => acc + champion.info[property], 0,
+) / championList.length;
+
+export const getAvgOnStats = (property, championList) => championList.reduce(
+    (acc, champion) => acc + champion.stats[property], 0,
+) / championList.length;
+
 export const filteredbyClass = (championList, term) => {
     const filteredbyClassArray = getArray(championList).filter(champion => (champion.tags.indexOf(term) !== -1 ? champion : false));
-    return term === 'ALL' ? championList : filteredbyClassArray;
+    return filteredbyClassArray;
 };
 /* search for name in class */
 export const filterByName = (championList, term) => {

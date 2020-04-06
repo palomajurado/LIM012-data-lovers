@@ -1,16 +1,21 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable eol-last */
 /* eslint-disable indent */
 /* eslint-disable import/no-extraneous-dependencies */
 import {
+    getArray,
     filterByName,
     filteredbyClass,
     orderList,
     filteredByDifficulty,
-    getArray,
     getAvgOnInfo,
     getAvgOnStats,
 } from '../src/data.js';
+
+
 import {
+    calcInfo,
+    calcStats,
     array,
     sortedArray,
     reversedArray,
@@ -24,13 +29,13 @@ import {
     championsFilteredByEasy,
     championsFilteredByMedium,
     championsFilteredByHard,
-    calcInfo,
-    calcStats,
 } from './mocks.js';
 
 import data from '../src/data/lol/lol.js';
 
+
 const championList = data.data;
+
 
 describe('getArray', () => {
     it('debería ser una función', () => {
