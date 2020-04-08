@@ -29,6 +29,7 @@ const setName = () => {
 };
 
 document.getElementById('buttonEnter').addEventListener('click', setName);
+
 inputName.addEventListener('keypress', (e) => {
     if (e.keyCode === 13) setName();
 });
@@ -80,7 +81,6 @@ playButtonContainer1.appendChild(functionPlayButton());
 const championList = data.data;
 const list = document.getElementById('list');
 const functionCardsStructure = (listData) => {
-
     const checkData = Array.isArray(listData) ? listData : Object.values(listData);
 
     checkData.map((champion) => {
@@ -129,7 +129,7 @@ const functionCardsStructure = (listData) => {
         champion.tags.forEach((tag, index) => {
             const modalRolesP = document.createElement('p');
             modalRolesP.className = 'pTags';
-            modalRolesP.innerHTML = champion.tags.length !== index ? `\xa0${tag},` : `\xa0${tag}`; // solo al ultimo elemento no le agrega la coma por eso resto -1 en el length
+            modalRolesP.innerHTML = champion.tags.length - 1 !== index ? `\xa0${tag},` : `\xa0${tag}`; // solo al ultimo elemento no le agrega la coma por eso resto -1 en el length
             divClassWord.appendChild(modalRolesP);
             championStats.appendChild(divClassWord);
         });
@@ -144,7 +144,7 @@ const functionCardsStructure = (listData) => {
         const modalStatsRight = document.getElementById('modal-stats-right');
 
         const closeModal = () => {
-            modalStatsLeft.innerHTML = ''; // limpio para cerrar y no acumular info de otro champion que no corresponda 
+            modalStatsLeft.innerHTML = ''; // limpio para cerrar y no acumular info de otro champion que no corresponda
             modalStatsRight.innerHTML = '';
             modalRoles.innerHTML = '';
 
@@ -271,17 +271,17 @@ input.addEventListener('keyup', (evt) => {
 
 /* FUNCION: HOVER ACTIVE POR CLASE SELECCIONADA */
 
-li.forEach((li) => {
-    li.addEventListener('click', () => {
+li.forEach((liItem) => {
+    liItem.addEventListener('click', () => {
         ul.querySelector('.active').classList.remove('active');
-        li.classList.add('active');
+        liItem.classList.add('active');
     });
 });
 
-li2.forEach((li) => {
-    li.addEventListener('click', () => {
+li2.forEach((liItem) => {
+    liItem.addEventListener('click', () => {
         ul2.querySelector('.active').classList.remove('active');
-        li.classList.add('active');
+        liItem.classList.add('active');
     });
 });
 

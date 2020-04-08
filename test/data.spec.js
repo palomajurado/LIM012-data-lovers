@@ -42,7 +42,7 @@ describe('getArray', () => {
         expect(typeof getArray).toBe('function');
     });
     it('debería devolver un arreglo con la data', () => {
-        expect([...getArray(dataAsObject)]).toStrictEqual(sortedArray);
+        expect(getArray(dataAsObject)).toStrictEqual(sortedArray);
     });
     it('debería devolver el mismo arreglo', () => {
         expect(getArray(array)).toStrictEqual(array);
@@ -55,11 +55,11 @@ describe('orderList', () => {
     });
 
     it('Debería devolver el arreglo ordenado de la A a la Z', () => {
-        expect([...orderList(array, 'az')]).toEqual(sortedArray);
+        expect(orderList(array, 'az')).toEqual(sortedArray);
     });
 
     it('Debería devolver el arreglo ordenado de la Z a la A', () => {
-        expect([...orderList(array, 'za')]).toEqual(reversedArray);
+        expect(orderList(array, 'za')).toEqual(reversedArray);
     });
 });
 
@@ -129,13 +129,13 @@ describe('filterByName', () => {
 
 
 it('debería ser una función dificultad', () => {
-    expect(typeof filteredByDifficulty).toBe('function');
+    expect(typeof filteredByDifficulty).toBe('function'); //  dato atomico string
 });
 
 it('debería retornar campeones con dificultad fácil', () => {
     expect(filteredByDifficulty(championList, '1')).toStrictEqual(
         championsFilteredByEasy,
-    );
+    ); // dato estructurado objeto
 });
 it('debería retornar campeones con dificultad media', () => {
     expect(filteredByDifficulty(championList, '2')).toStrictEqual(
