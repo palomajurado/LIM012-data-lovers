@@ -215,6 +215,8 @@ const ul2 = document.querySelector('.menu2');
 const li = document.querySelectorAll('.menu li');
 const li2 = document.querySelectorAll('.menu2 li');
 const difficulty1 = document.querySelectorAll('.difficulty1 div');
+const buttons = document.querySelector('.difficulty1');
+const difficultyTitle = document.querySelector('.dif');
 
 const cleanClasses = () => {
     ul.querySelector('.active').classList.remove('active');
@@ -225,11 +227,16 @@ const cleanClasses = () => {
 
 // limpiador de difficulty
 
-const cleanDifficulty = (cleanElements) =>
+const cleanDifficulty = (cleanElements, hideButtons = true) => {
     cleanElements.forEach((button) => {
         button.classList.remove('levelFull');
         button.classList.add('levelEmpty');
     });
+    if (hideButtons) {
+        buttons.classList.remove('showFlex');
+        difficultyTitle.classList.remove('hide');
+    }
+}
 
 input.addEventListener('keyup', (evt) => {
         const term = evt.target.value.toLowerCase();
@@ -288,19 +295,10 @@ li.forEach(button => filterClasses(button));
 li2.forEach(button => filterClasses(button));
 
 /*---------------------------------------------*/
-let showButtons = false;
 
 document.querySelector('.difficultyContainer').addEventListener('click', () => {
-    const buttons = document.querySelector('.difficulty1');
-    const difficultyTitle = document.querySelector('.dif');
-    if (showButtons) {
-        buttons.classList.add('showFlex');
-        difficultyTitle.classList.add('hide');
-    } else {
-        buttons.classList.remove('showFlex');
-        difficultyTitle.classList.remove('hide');
-    }
-    showButtons = !showButtons;
+    buttons.classList.toggle('showFlex'); // Toggle hace que si es existe la clase en el elemento la quita, si no existe la agrega
+    difficultyTitle.classList.toggle('hide');
 });
 difficulty1.forEach((option) => {
     option.addEventListener('click', (e) => {
@@ -312,7 +310,7 @@ difficulty1.forEach((option) => {
         const isSelected = activeButtons.length === parseInt(term, 10); // verificacion de el valor ya esta seleccionado 
 
         if (isSelected) term = 0;
-        cleanDifficulty(activeButtons);
+        cleanDifficulty(activeButtons, false);
 
         if (!isSelected)
             selectedButtons.forEach((button) => {

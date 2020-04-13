@@ -1010,6 +1010,10 @@ footer {
     border: 0.1875rem solid rgb(28, 98, 91);
 }
 
+.ir-arriba img {
+    width: 46px;
+}
+
 .ir-arriba:hover {
     box-shadow: 0 0 1.25rem #feb412, 0 0 1.25rem #feb412;
 }

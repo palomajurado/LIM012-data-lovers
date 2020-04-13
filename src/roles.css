@@ -25,6 +25,7 @@ span img {
     text-shadow: 0 0 1.25rem #feb412, 0 0 1.25rem #feb412;
     font-size: 28px;
     text-align: center;
+    margin-bottom: -20px;
 }
 
 .roles {
