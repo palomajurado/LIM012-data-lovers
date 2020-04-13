@@ -14,8 +14,7 @@ const footerYear = document.getElementById('year');
 footerYear.innerHTML = new Date().getFullYear();
 
 const setName = () => {
-    const name = inputName.value;
-    const newStr = `${name[0].toUpperCase()}${name.slice(1)}`;
+    const newStr = `${inputName.value[0].toUpperCase()}${inputName.value.slice(1)}`;
     document.querySelector('.pTagsTop').innerHTML = newStr;
     document.getElementById('inputName_put').innerHTML = `!\n Welcome ${newStr}\n!`;
     document.getElementById('firstScreen').classList.add('hide');
@@ -30,29 +29,18 @@ const setName = () => {
 
 document.getElementById('buttonEnter').addEventListener('click', setName);
 
-inputName.addEventListener('keypress', (e) => {
-    if (e.keyCode === 13) setName();
-});
+inputName.addEventListener('keypress', ({ keyCode }) => keyCode === 13 && setName());
 
 const buttonUp = document.getElementById('button-up');
-buttonUp.addEventListener('click', () => {
-    window.scroll({
-        top: 0,
-        behavior: 'smooth',
-    });
-});
+buttonUp.addEventListener('click', () => window.scroll({ top: 0, behavior: 'smooth' }));
 
 window.onscroll = () => {
-    const windowCurrentScroll = window.pageYOffset; // posicion actual del scroll
-    // console.log(windowCurrentScroll);
-
-    const breakpointScroll = document.documentElement.scrollHeight - window.outerHeight - 35; // Altura de viewport
-    if (windowCurrentScroll >= breakpointScroll) {
+    if (window.pageYOffset >= document.documentElement.scrollHeight - window.outerHeight - 35) {
         buttonUp.classList.add('almostFinalBTN');
     } else {
         buttonUp.classList.remove('almostFinalBTN');
     }
-    if (windowCurrentScroll > 400) {
+    if (window.pageYOffset > 400) {
         buttonUp.classList.remove('hide');
         buttonUp.classList.add('shown');
     } else {
@@ -83,7 +71,7 @@ const list = document.getElementById('list');
 const functionCardsStructure = (listData) => {
     const checkData = Array.isArray(listData) ? listData : Object.values(listData);
 
-    checkData.map((champion) => {
+    checkData.forEach((champion) => {
         /* FRONT CARD */
         const div = document.createElement('div');
         div.className = 'card';
@@ -129,7 +117,7 @@ const functionCardsStructure = (listData) => {
         champion.tags.forEach((tag, index) => {
             const modalRolesP = document.createElement('p');
             modalRolesP.className = 'pTags';
-            modalRolesP.innerHTML = champion.tags.length - 1 !== index ? `\xa0${tag},` : `\xa0${tag}`; // solo al ultimo elemento no le agrega la coma por eso resto -1 en el length
+            modalRolesP.innerHTML = champion.tags.length - 1 !== index ? `\xa0${tag},` : `\xa0${tag}`;
             divClassWord.appendChild(modalRolesP);
             championStats.appendChild(divClassWord);
         });
@@ -181,16 +169,12 @@ const functionCardsStructure = (listData) => {
 
             champion.tags.forEach((tag, index) => {
                 const modalRolesP = document.createElement('p');
-                modalRolesP.innerHTML = champion.tags.length - 1 !== index ? `${tag},` : `${tag}`;
+                modalRolesP.innerHTML = champion.tags.length - 1 !== index ? `${tag},` : tag;
                 modalRoles.appendChild(modalRolesP);
             });
         };
         modalCloseButton.addEventListener('click', closeModal);
-        window.addEventListener('keypress', ({
-            keyCode,
-        }) => {
-            if (keyCode === 13) closeModal();
-        });
+        window.addEventListener('keypress', ({ keyCode }) => keyCode === 13 && closeModal());
 
         const moreStatsButton = document.createElement('div');
         moreStatsButton.className = 'more-stats';
@@ -218,7 +202,6 @@ const functionCardsStructure = (listData) => {
 
         div.appendChild(backCard);
         list.appendChild(div);
-        return false;
     });
 };
 functionCardsStructure(championList);
@@ -242,12 +225,11 @@ const cleanClasses = () => {
 
 // limpiador de difficulty
 
-const cleanDifficulty = (cleanElements) => {
+const cleanDifficulty = (cleanElements) =>
     cleanElements.forEach((button) => {
         button.classList.remove('levelFull');
         button.classList.add('levelEmpty');
     });
-};
 
 input.addEventListener('keyup', (evt) => {
         const term = evt.target.value.toLowerCase();
@@ -271,19 +253,19 @@ input.addEventListener('keyup', (evt) => {
 
 /* FUNCION: HOVER ACTIVE POR CLASE SELECCIONADA */
 
-li.forEach((liItem) => {
+li.forEach((liItem) =>
     liItem.addEventListener('click', () => {
         ul.querySelector('.active').classList.remove('active');
         liItem.classList.add('active');
-    });
-});
+    })
+);
 
-li2.forEach((liItem) => {
+li2.forEach((liItem) =>
     liItem.addEventListener('click', () => {
         ul2.querySelector('.active').classList.remove('active');
         liItem.classList.add('active');
-    });
-});
+    })
+);
 
 
 /*---------------------------------------------*/
@@ -296,37 +278,48 @@ const filterClasses = (button) => {
         input.value = '';
         list.innerHTML = '';
         cleanDifficulty(difficulty1);
-        // eslint-disable-next-line max-len
+
         const filteredChampions = filteredbyClass(championList, term);
-        if (term === 'ALL') {
-            functionCardsStructure(championList);
-        } else {
-            functionCardsStructure(filteredChampions);
-        }
+        if (term === 'ALL') functionCardsStructure(championList);
+        else functionCardsStructure(filteredChampions);
     });
 };
 li.forEach(button => filterClasses(button));
 li2.forEach(button => filterClasses(button));
 
 /*---------------------------------------------*/
+let showButtons = false;
 
+document.querySelector('.difficultyContainer').addEventListener('click', () => {
+    const buttons = document.querySelector('.difficulty1');
+    const difficultyTitle = document.querySelector('.dif');
+    if (showButtons) {
+        buttons.classList.add('showFlex');
+        difficultyTitle.classList.add('hide');
+    } else {
+        buttons.classList.remove('showFlex');
+        difficultyTitle.classList.remove('hide');
+    }
+    showButtons = !showButtons;
+});
 difficulty1.forEach((option) => {
-    option.addEventListener('click', () => {
+    option.addEventListener('click', (e) => {
+        e.stopPropagation();
         let term = option.getAttribute('data-value');
         const activeButtons = document.querySelectorAll('.difficulty1 .levelFull');
         const arrButtons = [...difficulty1];
         const selectedButtons = arrButtons.filter((_, i) => i <= term - 1); // filtro los botones dependiendo del que elija
-        const isSelected = activeButtons.length === parseInt(term, 10); // verificacion de el valor ya esta seleccionado
-        if (isSelected) {
-            term = 0;
-        }
+        const isSelected = activeButtons.length === parseInt(term, 10); // verificacion de el valor ya esta seleccionado 
+
+        if (isSelected) term = 0;
         cleanDifficulty(activeButtons);
-        if (!isSelected) {
+
+        if (!isSelected)
             selectedButtons.forEach((button) => {
                 button.classList.remove('levelEmpty');
                 button.classList.add('levelFull');
             });
-        }
+
         input.value = '';
         list.innerHTML = '';
         cleanClasses();
@@ -339,21 +332,20 @@ difficulty1.forEach((option) => {
 /*---------------------------------------------*/
 
 /* FILTRADO: ASCENDENTE Y DESCENDENTE */
-const order1 = document.querySelectorAll('.order1');
-order1.forEach((option) => {
-    option.addEventListener('click', () => {
-        const term = option.getAttribute('data-value');
+let orderAsc = true;
+document.getElementById('orderBy').addEventListener('click', () => {
+    const orderSpan = document.querySelector('#orderBy span');
+    orderSpan.classList.toggle('desc');
 
-        input.value = '';
-        list.innerHTML = '';
-        cleanClasses();
-        cleanDifficulty(difficulty1);
+    input.value = '';
+    list.innerHTML = '';
+    cleanClasses();
+    cleanDifficulty(difficulty1);
 
-        const filteredChampions = orderList(championList, term);
-
-        functionCardsStructure(filteredChampions);
-    });
+    functionCardsStructure(orderList(championList, orderAsc));
+    orderAsc = !orderAsc;
 });
+
 
 /* Href de la tercera interfaz  */
 const btnRole = document.querySelector('.btnRole');

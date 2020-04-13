@@ -9,9 +9,9 @@
     <link href="https://fonts.googleapis.com/css?family=Ruda&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Cuprum|Marcellus+SC|Roboto|Trade+Winds&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="bar.css" />
     <link rel="stylesheet" href="roles.css">
+    <link rel="stylesheet" href="bar.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -115,27 +115,22 @@
                         </ul>
 
                         <span class="line" style="margin-left: auto;"></span>
-                        <div class="dropdown">
+                        <div class="difficultyContainer">
                             <div class="dif">
                                 <img id="arrow" src="assets/arrow.png" alt="" />
                                 <span>Difficulty</span>
                             </div>
-                            <div id="myDropdown" class="dropdown-content">
-                                <div class="difficulty1">
-                                    <div class="levelEmpty" data-value="1" id="easy"></div>
-                                    <div class="levelEmpty" data-value="2" id="medium"></div>
-                                    <div class="levelEmpty" data-value="3" id="hard"></div>
-                                </div>
+                            <div class="difficulty1">
+                                <div class="levelEmpty" data-value="1" id="easy"></div>
+                                <div class="levelEmpty" data-value="2" id="medium"></div>
+                                <div class="levelEmpty" data-value="3" id="hard"></div>
                             </div>
                         </div>
                         <span class="line"></span>
                         <div class="orderArray">
-                            <div class="order">
+                            <div class="order" id="orderBy">
                                 <span>A<img src="./assets/arrowww.png" alt="Arrow" />Z</span>
-                                <div id="dropdownSort" class="SortContent">
-                                    <img class="order1" id="az" data-value="az" src="assets/az.png" alt="order A-Z" />
-                                    <img class="order1" id="za" data-value="za" src="assets/za.png" alt="order Z-A" />
-                                </div>
+
                             </div>
                         </div>
                     </div>

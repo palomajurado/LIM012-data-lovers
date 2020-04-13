@@ -903,7 +903,7 @@ footer {
     -moz-transform: skew(20deg);
     -webkit-transform: skew(20deg);
     background: rgb(8, 215, 247);
-    border: 0.0625rem solid rgb(36, 35, 35);
+    border: 0.0625rem solid rgb(217, 195, 125);
 }
 
 #easy {
@@ -937,7 +937,7 @@ footer {
     -moz-transform: skew(20deg);
     -webkit-transform: skew(20deg);
     background: rgba(8, 215, 247, 0.26);
-    border: 0.0625rem solid rgb(14, 13, 13);
+    border: 0.0625rem solid rgb(245, 222, 179);
 }
 
 #btnPlayFree {
@@ -1016,7 +1016,6 @@ footer {
 
 .ir-arriba,
 .ir-arriba img {
-    width: 45px;
     outline: none;
     border-radius: 100%;
     border: 0.0063rem solid rgb(28, 98, 91);
