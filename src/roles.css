@@ -21,9 +21,9 @@ span img {
     font-family: 'Marcellus SC', serif;
 }
 
-.pTitle {
+#pTitle {
     text-shadow: 0 0 1.25rem #feb412, 0 0 1.25rem #feb412;
-    font-size: xxx-large;
+    font-size: 28px;
     text-align: center;
 }
 

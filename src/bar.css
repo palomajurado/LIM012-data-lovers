@@ -163,6 +163,18 @@ li.active a {
 
 /* Dropdown Content (Hidden by Default) */
 
+.dropdown-content {
+    z-index: 1;
+    display: none;
+    cursor: pointer;
+    min-width: 100px;
+    color: #a87e3e;
+    padding: 0.4375rem;
+    position: absolute;
+    background-color: #dfdfdf2a;
+    box-shadow: 0rem 0.5rem 1rem 0rem rgba(0, 0, 0, 0.2);
+}
+
 .difficultyContainer {
     display: flex;
     align-items: center;
@@ -270,7 +282,7 @@ li.active a {
         border-left: 0.06rem solid #07cbe9;
     }
     .dropdown-content {
-        min-width: 26%;
+        min-width: 25%;
         padding-top: 0.375rem 0.1875rem 0 0.0625rem;
     }
     ul {
