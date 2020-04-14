@@ -15,83 +15,81 @@
 </head>
 
 <body>
-    <div id="firstScreen">
-        <header class="header">
-            <div class="header-video">
+    <section id="firstScreen">
+        <header>
+            <section class="header-video">
                 <video src="./assets/videoLol.mp4" autoplay loop muted></video>
-            </div>
-            <div class="header-overlay"></div>
+            </section>
+            <section class="header-overlay"></section>
             <img src="./assets/logoLOL.png" id="logoLOL" />
-            <div class="header-content">
-                <div class="videoCentral">
+            <section class="header-content">
+                <section class="videoCentral">
                     <video src="./assets/videoLol.mp4" autoplay loop muted></video>
-                    <div id="boxLine"></div>
-                </div>
-            </div>
+                    <section id="boxLine"></section>
+                </section>
+            </section>
         </header>
-        <main class="mainContainer">
-            <div id="mainElements1">
+        <main>
+            <section id="mainElements1">
                 <p>League of Legends is a MOBA type game (Multiplayer Online Battle Arena) where players work as a team to destroy the central structure (called Nexus) and gain victory.</p>
                 <img src="./assets/divider.png" />
-            </div>
-            <div class="form">
+            </section>
+            <section class="form">
                 <input type="text" name="name" autocomplete="off" required spellcheck="false" id="inputName" maxlength="13" />
                 <label for="name" class="label_name">
                     <span class="content-name">ENTER YOUR NAME</span>
                 </label>
-            </div>
-            <div>
+            </section>
+            <section>
                 <button id="buttonEnter">ENTER</button>
-            </div>
-            <div>
+            </section>
+            <section>
                 <a href="https://www.riotgames.com/en" class="nav-link" target="_blank">
                     <img src="./assets/riot.jpeg" id="imgRiot" />
                 </a>
-            </div>
+            </section>
         </main>
-    </div>
-
+    </section>
     <!-- segunda interfaz -->
-    <div id="secondScreenOne">
-        <div id="secondScreen">
-            <div class="backgroundHead">
-                <div class="secondScreenBox">
-                    <div class="welcomingBox">
-                        <div id="welcomingInside" class="animated pulse">
+    <section id="secondScreenOne">
+        <section id="secondScreen">
+            <section class="backgroundHead">
+                <section class="secondScreenBox">
+                    <section class="welcomingBox">
+                        <section id="welcomingInside" class="animated pulse">
                             <p id="inputName_put" class="animated pulse greeting"></p>
-                        </div>
-                    </div>
-                    <div class="logingName">
+                        </section>
+                    </section>
+                    <section class="logingName">
                         <img src="./assets/user2.png" alt="user">
                         <p class="pTagsTop"></p>
-                    </div>
-                    <div class="mainTittle">
+                    </section>
+                    <section class="mainTittle">
                         <p id="chooseYour">CHOOSE YOUR</p>
-                        <div id="divider2">
+                        <section id="divider2">
                             <img src="assets/casco1.png" alt="helmet" />
                             <p id="champion">CHAMPION</p>
-                        </div>
-                    </div>
-                    <div class="text1">
+                        </section>
+                    </section>
+                    <section class="text1">
                         <p>
                             Each champion has different statistics where their initial values ​​are measured and how these values ​​rise for each level. To know more click on a champion.
                         </p>
-                    </div>
-                </div>
-                <div id="searchBar" class="corner">
-                    <div class="searchbar">
-                        <div class="nameSearch">
+                    </section>
+                </section>
+                <section id="searchBar" class="corner">
+                    <section class="searchbar">
+                        <section class="nameSearch">
                             <img src="assets/search.png" alt="search" class="animated heartBeat" id="lupa" />
                             <input id="searchInputs" type="text" placeholder="Search" spellcheck="false" maxlength="6" />
-                        </div>
+                        </section>
                         <span class="line"></span>
-
-                        <div class="dropdownMenu">
-                            <div class="dropdownStyle">
+                        <section class="dropdownMenu">
+                            <section class="dropdownStyle">
                                 <img id="role" src="assets/shield1.png" alt="shield" />
                                 <span id="roleLetter">ROLE</span>
-                            </div>
-                            <div id="myDropdown2" class="dropdown-content">
+                            </section>
+                            <section id="myDropdown2" class="dropdown-content">
                                 <ul class="menu2">
                                     <li class="active" data-value="ALL"><a>ALL</a></li>
                                     <li data-value="Assassin"><a>ASSASSIN</a></li>
@@ -101,9 +99,8 @@
                                     <li data-value="Support"><a>SUPPORT</a></li>
                                     <li data-value="Marksman"><a>MARKSMAN</a></li>
                                 </ul>
-                            </div>
-                        </div>
-
+                            </section>
+                        </section>
                         <ul class="menu">
                             <li class="active" data-value="ALL"><a>ALL</a></li>
                             <li data-value="Assassin"><a>ASSASSIN</a></li>
@@ -113,97 +110,90 @@
                             <li data-value="Support"><a>SUPPORT</a></li>
                             <li data-value="Marksman"><a>MARKSMAN</a></li>
                         </ul>
-
                         <span class="line" style="margin-left: auto;"></span>
-                        <div class="difficultyContainer">
-                            <div class="dif">
+                        <section class="difficultyContainer">
+                            <section class="dif">
                                 <img id="arrow" src="assets/arrow.png" alt="" />
                                 <span>Difficulty</span>
-                            </div>
-                            <div class="difficulty1">
+                            </section>
+                            <section class="difficulty1">
                                 <div class="levelEmpty" data-value="1" id="easy"></div>
                                 <div class="levelEmpty" data-value="2" id="medium"></div>
                                 <div class="levelEmpty" data-value="3" id="hard"></div>
-                            </div>
-                        </div>
+                            </section>
+                        </section>
                         <span class="line"></span>
-                        <div class="orderArray">
-                            <div class="order" id="orderBy">
+                        <section class="orderArray">
+                            <section class="order" id="orderBy">
                                 <span>A<img src="./assets/arrowww.png" alt="Arrow" />Z</span>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </section>
         <span class="ir-arriba" id="button-up"><img src="./assets/64pxBTNUP.png" alt="UP"/></span>
-        <div id="list"></div>
-        <div id="filteredList" class="hidden"></div>
-
+        <section id="list"></section>
+        <section id="filteredList" class="hidden"></section>
         <h3 id="error" class="hidden">
-            <img src="./assets/goldSword.png" alt="sword" /> Champion not found
-            <img src="./assets/shield1.png" alt="shield" />
+            <img src="./assets/goldSword.png" alt="sword" />Champion not found<img src="./assets/shield1.png" alt="shield" />
         </h3>
-        <div class="corner">
-            <div class="builds">
+        <section class="corner">
+            <section class="builds">
                 <p>CHAMPION'S GUIDE&nbsp; &nbsp;⋙</p>
                 <span class="line"></span>
                 <a href="https://morelegends.com/es/champions" target="_blank">MORELEGENDS</a>
                 <a href="https://na.op.gg/champion/statistics" target="_blank">OP.GG</a>
                 <a href="https://www.probuilds.net/champions" target="_blank">PROBUILDS</a>
-            </div>
-        </div>
-        <div class="btnDownSs">
+            </section>
+        </section>
+        <section class="btnDownSs">
             <button class="btnRole" data-value="btnline">Calc Roles</button>
-            <div id="buttonEnterSecondPage"></div>
-        </div>
-
-        <div id="overlay" class="overlay">
-            <div class="modal">
-                <div id="closeButton" class="close-button">
+            <section id="buttonEnterSecondPage"></section>
+        </section>
+        <section id="overlay" class="overlay">
+            <section class="modal">
+                <section id="closeButton" class="close-button">
                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 352 512" class="svg-inline--fa fa-times fa-w-11 fa-2x">
                         <path
                             fill="currentColor"
                             d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z">
                         </path>
                     </svg>
-                </div>
-                <div class="modal-header">
+                </section>
+                <section class="modal-header">
                     <p>Other estadistics:</p>
                     <img src="assets/goldSword.png" alt="Sword" />
-                </div>
-                <div class="modal-stats">
-                    <div id="modal-stats-left" class="modal-stats_left"></div>
-                    <div id="modal-stats-right" class="modal-stats_right"></div>
-                </div>
-                <div id="modal-roles" class="modal-roles"></div>
-            </div>
-            <div id="buttonContainer"></div>
-        </div>
-    </div>
+                </section>
+                <section class="modal-stats">
+                    <section id="modal-stats-left" class="modal-stats_left"></section>
+                    <section id="modal-stats-right" class="modal-stats_right"></section>
+                </section>
+                <section id="modal-roles" class="modal-roles"></section>
+            </section>
+            <section id="buttonContainer"></section>
+        </section>
+    </section>
     <footer class="footer">
-        <div class="right">
-            <p>
-                &copy; <span id="year"></span> &nbsp;| &nbsp; Todos los Derechos Reservados
+        <section class="right">
+            <p>&copy; <span id="year"></span>
+                <a href="https://github.com/yeniferPaloma" class="nav-link" target="_blank"><img src="./assets/iconfinder_Github_381376.png" id="gitHUb"></a>|Todos los Derechos Reservados
             </p>
-        </div>
-        <div id="left">
+        </section>
+        <section class="left">
             <a href="# ">
                 <img src="./assets/shareLOGO.png" id="compartir" class="animated wobble" />
             </a>
             <a href="https:/facebook.com" class="nav-link" target="_blank">
                 <img src="./assets/fbLOGO.png" class="imgRedes" />
             </a>
-
             <a href="https://twitter.com" class="nav-link" target="_blank">
                 <img src="./assets/twittLOGO.png" class="imgRedes" />
             </a>
-
             <a href="https://www.instagram.com/" class="nav-link" target="_blank">
                 <img src="./assets/instaLOGO11.png" class="imgRedes" />
             </a>
-        </div>
+        </section>
     </footer>
     <script src="./main.js" type="module"></script>
 </body>
